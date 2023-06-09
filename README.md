@@ -201,31 +201,6 @@ DEFAULT_GRAVATAR_MAX_RATING=g
 DEFAULT_GRAVATAR_FORCE_DEFAULT=false
 DEFAULT_GRAVATAR_FORCE_EXTENSION=jpg
 
-DROPZONE_JS_CDN=https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/dropzone.js
-
-LARAVEL_LOGGER_DATABASE_CONNECTION=mysql
-LARAVEL_LOGGER_DATABASE_TABLE=laravel_logger_activity
-LARAVEL_LOGGER_ROLES_ENABLED=true
-LARAVEL_LOGGER_ROLES_MIDDLWARE=role:admin
-LARAVEL_LOGGER_MIDDLEWARE_ENABLED=true
-LARAVEL_LOGGER_USER_MODEL=App\Models\User
-LARAVEL_LOGGER_PAGINATION_ENABLED=true
-LARAVEL_LOGGER_PAGINATION_PER_PAGE=25
-LARAVEL_LOGGER_DATATABLES_ENABLED=false
-LARAVEL_LOGGER_DASHBOARD_MENU_ENABLED=true
-LARAVEL_LOGGER_DASHBOARD_DRILLABLE=true
-LARAVEL_LOGGER_LOG_RECORD_FAILURES_TO_FILE=true
-LARAVEL_LOGGER_FLASH_MESSAGE_BLADE_ENABLED=false
-LARAVEL_LOGGER_JQUERY_CDN_ENABLED=false
-LARAVEL_LOGGER_JQUERY_CDN_URL=https://code.jquery.com/jquery-2.2.4.min.js
-LARAVEL_LOGGER_BLADE_CSS_PLACEMENT_ENABLED=true
-LARAVEL_LOGGER_BLADE_JS_PLACEMENT_ENABLED=true
-LARAVEL_LOGGER_BOOTSTRAP_JS_CDN_ENABLED=false
-LARAVEL_LOGGER_BOOTSTRAP_JS_CDN_URL=https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js
-LARAVEL_LOGGER_FONT_AWESOME_CDN_ENABLED=false
-LARAVEL_LOGGER_FONT_AWESOME_CDN_URL=https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
-LARAVEL_LOGGER_BOOTSTRAP_CSS_CDN_ENABLED=false
-LARAVEL_LOGGER_BOOTSTRAP_CSS_CDN_URL=https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css
 
 LARAVEL_BLOCKER_USER_MODEL=App\Models\User
 LARAVEL_BLOCKER_AUTH_ENABLED=true
@@ -237,38 +212,6 @@ LARAVEL_BLOCKER_BLADE_PLACEMENT_JS='footer_scripts'
 LARAVEL_BLOCKER_USE_TYPES_SEED_PUBLISHED=true
 LARAVEL_BLOCKER_USE_ITEMS_SEED_PUBLISHED=true
 
-# Roles database information
-ROLES_DATABASE_CONNECTION=null
-
-# Roles Misc Settings
-ROLES_DEFAULT_SEPARATOR='.'
-
-# Roles GUI Settings
-ROLES_GUI_ENABLED=true
-ROLES_GUI_AUTH_ENABLED=true
-ROLES_GUI_MIDDLEWARE_ENABLED=true
-ROLES_GUI_MIDDLEWARE='role:admin'
-ROLES_GUI_BLADE_EXTENDED='layouts.app'
-ROLES_GUI_TITLE_EXTENDED='template_title'
-ROLES_GUI_LARAVEL_ROLES_ENABLED=true
-ROLES_GUI_DATATABLES_JS_ENABLED=false
-ROLES_GUI_FLASH_MESSAGES_ENABLED=false
-ROLES_GUI_BLADE_PLACEMENT_CSS=template_linked_css
-ROLES_GUI_BLADE_PLACEMENT_JS=footer_scripts
-
-# Google Analytics - If blank it will not render, default is false
-GOOGLE_ANALYTICS_ID=
-#GOOGLE_ANALYTICS_ID='UA-XXXXXXXX-X'
-
-# NOTE: YOU CAN REMOVE THE KEY CALL IN app.blade.php IF YOU GET A POP UP AND DO NOT WANT TO SETUP A KEY FOR DEV
-# Google Maps API v3 Key - https://developers.google.com/maps/documentation/javascript/get-api-key#get-an-api-key
-GOOGLEMAPS_API_STATUS=true
-GOOGLEMAPS_API_KEY=YOURGOOGLEMAPSkeyHERE
-
-# https://developers.google.com/youtube/v3/getting-started
-YOUTUBE_KEY=YOURKEYHERE
-YOUTUBE_SECRET=YOURSECRETHERE
-YOUTUBE_REDIRECT_URI=https://YOURWEBURLHERE.COM/social/handle/youtube
 
 ```
 
@@ -330,16 +273,8 @@ YOUTUBE_REDIRECT_URI=https://YOURWEBURLHERE.COM/social/handle/youtube
 
 ### Screenshots
 
-![Login](/github-project-images/laravel-auth/1laravel-auth2-login.jpg)
-![Register](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/2laravel-auth2-register.jpg)
-![Registration Confirmation](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/3laravel-auth2-account-req-activation.jpg)
-![Registration Email](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/4laravel-auth2-activation-email.jpg)
-![Registration Complete](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/5laravel-auth2-userhome-with-flash-success.jpg)
-![Intial User Profile](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/6laravel-auth2-profile-mapless.jpg)
-![Edit User Profile](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/7laravel-auth2-profile-edit.jpg)
-![Find Location Using Google Maps API v3](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/8laravel-auth2-edit-profile-lookup.jpg)
-![Profile Updated](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/9laravel-auth2-flash-success.jpg)
-![Profile Semi-completed](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/10laravel-auth2-profile-with-map.jpg)
+![Login](https://github.com/Chimennadi/cusorcart/blob/main/screenshots/login.png)
+![Register](https://github.com/Chimennadi/cusorcart/blob/main/screenshots/register.png)
 
 ![Admin Panel Users List](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/11laravel-auth2-users-list.jpg)
 ![Admin Panel Delete User](https://s3-us-west-2.amazonaws.com/github-project-images/laravel-auth/12laravel-auth2-modal-delete.jpg)
