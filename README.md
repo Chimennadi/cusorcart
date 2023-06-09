@@ -8,7 +8,7 @@
 
 [![GitHub Stars](https://img.shields.io/github/stars/Chimennadi/cusorcart?style=social)](https://github.com/Chimennadi)
 [![Follow on GitHub](https://img.shields.io/github/followers/Chimennadi?style=social)](https://github.com/Chimennadi)
-[![Follow on Twitter](https://img.shields.io/twitter/follow/developernator?style=social&logo=twitter)](https://twitter.com/intent/follow?screen_name=beekyhe)
+[![Follow on Twitter](https://img.shields.io/twitter/follow/beekyhe?style=social&logo=twitter)](https://twitter.com/intent/follow?screen_name=beekyhe)
 
 > This project is still under development.<br>
 > Please consider [supporting my work] if you use & find it useful. ❤️
