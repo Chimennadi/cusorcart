@@ -1,0 +1,14 @@
+header,
+        .btn1,
+        footer,
+        #navFooter,
+        #footer-links {
+            display: none !important;
+        }
+
+        #choice_form {
+            margin-bottom: 50px;
+        }
+.card, input,.bootstrap-select .dropdown-toggle, select,.aiz-tag-input{
+    border-radius: 20px !important;
+}

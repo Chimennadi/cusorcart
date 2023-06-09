@@ -1,0 +1,16 @@
+body, section,.aiz-main-wrapper{
+    color: #fff !important;
+    background: #000 !important;
+}
+.card,.modal-content{
+    background: #1F1F1F !important;
+    color: #fff !important;
+}
+td,th{
+    color: #fff !important;
+}
+
+input,.bootstrap-select, select,.aiz-tag-input ,.form-control{
+    background: transparent !important;
+    color: #fff !important;
+}

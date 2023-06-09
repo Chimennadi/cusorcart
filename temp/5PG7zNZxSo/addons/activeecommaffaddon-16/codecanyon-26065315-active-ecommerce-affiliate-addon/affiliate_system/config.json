@@ -1,0 +1,128 @@
+{
+    "name" : "affiliate",
+
+    "unique_identifier" : "affiliate_system",
+
+    "version" : "1.6",
+
+    "minimum_item_version" : "4.2",
+
+    "addon_banner" : "affiliate_banner.jpg",
+
+    "directory" :
+    [
+        {
+          "name" : ["resources/views/affiliate", "resources/views/affiliate/frontend"]
+        }
+    ],
+
+    "sql_file"  : "",
+
+    "files"     :
+    [
+        {
+            "root_directory"    : "addons/affiliate_system/views/affiliate/frontend/apply_for_affiliate.blade.php",
+            "update_directory"  : "resources/views/affiliate/frontend/apply_for_affiliate.blade.php"
+        },
+        {
+            "root_directory"    : "addons/affiliate_system/views/affiliate/frontend/index.blade.php",
+            "update_directory"  : "resources/views/affiliate/frontend/index.blade.php"
+        },
+        {
+            "root_directory"    : "addons/affiliate_system/views/affiliate/frontend/payment_history.blade.php",
+            "update_directory"  : "resources/views/affiliate/frontend/payment_history.blade.php"
+        },
+        {
+            "root_directory"    : "addons/affiliate_system/views/affiliate/frontend/payment_settings.blade.php",
+            "update_directory"  : "resources/views/affiliate/frontend/payment_settings.blade.php"
+        },
+        {
+            "root_directory"    : "addons/affiliate_system/views/affiliate/frontend/withdraw_request_history.blade.php",
+            "update_directory"  : "resources/views/affiliate/frontend/withdraw_request_history.blade.php"
+        },
+        {
+            "root_directory"    : "addons/affiliate_system/views/affiliate/affiliate_logs.blade.php",
+            "update_directory"  : "resources/views/affiliate/affiliate_logs.blade.php"
+        },
+        {
+            "root_directory"    : "addons/affiliate_system/views/affiliate/affiliate_withdraw_modal.blade.php",
+            "update_directory"  : "resources/views/affiliate/affiliate_withdraw_modal.blade.php"
+        },
+        {
+            "root_directory"    : "addons/affiliate_system/views/affiliate/affiliate_withdraw_requests.blade.php",
+            "update_directory"  : "resources/views/affiliate/affiliate_withdraw_requests.blade.php"
+        },
+        {
+            "root_directory"    : "addons/affiliate_system/views/affiliate/configs.blade.php",
+            "update_directory"  : "resources/views/affiliate/configs.blade.php"
+        },
+        {
+            "root_directory"    : "addons/affiliate_system/views/affiliate/index.blade.php",
+            "update_directory"  : "resources/views/affiliate/index.blade.php"
+        },
+        {
+            "root_directory"    : "addons/affiliate_system/views/affiliate/payment_history.blade.php",
+            "update_directory"  : "resources/views/affiliate/payment_history.blade.php"
+        },
+        {
+            "root_directory"    : "addons/affiliate_system/views/affiliate/payment_modal.blade.php",
+            "update_directory"  : "resources/views/affiliate/payment_modal.blade.php"
+        },
+        {
+            "root_directory"    : "addons/affiliate_system/views/affiliate/refferal_users.blade.php",
+            "update_directory"  : "resources/views/affiliate/refferal_users.blade.php"
+        },
+        {
+            "root_directory"    : "addons/affiliate_system/views/affiliate/show_verification_request.blade.php",
+            "update_directory"  : "resources/views/affiliate/show_verification_request.blade.php"
+        },
+        {
+            "root_directory"    : "addons/affiliate_system/views/affiliate/users.blade.php",
+            "update_directory"  : "resources/views/affiliate/users.blade.php"
+        },
+        {
+            "root_directory"    : "addons/affiliate_system/controllers/AffiliateController.php",
+            "update_directory"  : "app/Http/Controllers/AffiliateController.php"
+        },
+        {
+            "root_directory"    : "addons/affiliate_system/models/AffiliateConfig.php",
+            "update_directory"  : "app/AffiliateConfig.php"
+        },
+        {
+            "root_directory"    : "addons/affiliate_system/models/AffiliateEarningDetail.php",
+            "update_directory"  : "app/AffiliateEarningDetail.php"
+        },
+        {
+            "root_directory"    : "addons/affiliate_system/models/AffiliateOption.php",
+            "update_directory"  : "app/AffiliateOption.php"
+        },
+        {
+            "root_directory"    : "addons/affiliate_system/models/AffiliatePayment.php",
+            "update_directory"  : "app/AffiliatePayment.php"
+        },
+        {
+            "root_directory"    : "addons/affiliate_system/models/AffiliateUser.php",
+            "update_directory"  : "app/AffiliateUser.php"
+        },
+        {
+            "root_directory"    : "addons/affiliate_system/models/AffiliateWithdrawRequest.php",
+            "update_directory"  : "app/AffiliateWithdrawRequest.php"
+        },
+        {
+            "root_directory"    : "addons/affiliate_system/models/AffiliateLog.php",
+            "update_directory"  : "app/AffiliateLog.php"
+        },
+        {
+            "root_directory"    : "addons/affiliate_system/models/AffiliateStats.php",
+            "update_directory"  : "app/AffiliateStats.php"
+        },
+        {
+            "root_directory"    : "addons/affiliate_system/routes/affiliate.php",
+            "update_directory"  : "routes/affiliate.php"
+        },
+        {
+            "root_directory"    : "addons/affiliate_system/assets/affiliate_banner.jpg",
+            "update_directory"  : "public/affiliate_banner.jpg"
+        }
+    ]
+}

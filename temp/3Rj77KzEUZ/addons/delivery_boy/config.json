@@ -1,0 +1,113 @@
+{
+    "name" : "delivery_boy",
+
+    "unique_identifier" : "delivery_boy",
+
+    "version" : "1.3",
+
+    "minimum_item_version" : "5.5",
+
+    "addon_banner" : "delivery_boy.png",
+
+    "directory" :
+    [
+        {
+          "name" : ["resources/views/delivery_boys", "resources/views/delivery_boys/frontend"]
+        }
+    ],
+
+    "sql_file"  : "",
+
+    "files"     :
+    [
+
+        {
+            "root_directory"    : "addons/delivery_boy/views/delivery_boys/index.blade.php",
+            "update_directory"  : "resources/views/delivery_boys/index.blade.php"
+        },
+		{
+            "root_directory"    : "addons/delivery_boy/views/delivery_boys/create.blade.php",
+            "update_directory"  : "resources/views/delivery_boys/create.blade.php"
+        },
+		{
+            "root_directory"    : "addons/delivery_boy/views/delivery_boys/edit.blade.php",
+            "update_directory"  : "resources/views/delivery_boys/edit.blade.php"
+        },
+		{
+            "root_directory"    : "addons/delivery_boy/views/delivery_boys/delivery_boy_configure.blade.php",
+            "update_directory"  : "resources/views/delivery_boys/delivery_boy_configure.blade.php"
+        },
+		{
+            "root_directory"    : "addons/delivery_boy/views/delivery_boys/cancel_request_list.blade.php",
+            "update_directory"  : "resources/views/delivery_boys/cancel_request_list.blade.php"
+        },
+		{
+            "root_directory"    : "addons/delivery_boy/views/delivery_boys/order_collection_form.blade.php",
+            "update_directory"  : "resources/views/delivery_boys/order_collection_form.blade.php"
+        },
+        {
+            "root_directory"    : "addons/delivery_boy/views/delivery_boys/delivery_boys_collection_list.blade.php",
+            "update_directory"  : "resources/views/delivery_boys/delivery_boys_collection_list.blade.php"
+        },
+        {
+            "root_directory"    : "addons/delivery_boy/views/delivery_boys/delivery_boys_payment_list.blade.php",
+            "update_directory"  : "resources/views/delivery_boys/delivery_boys_payment_list.blade.php"
+        },
+        {
+            "root_directory"    : "addons/delivery_boy/views/delivery_boys/frontend/assigned_delivery.blade.php",
+            "update_directory"  : "resources/views/delivery_boys/frontend/assigned_delivery.blade.php"
+        },
+		{
+            "root_directory"    : "addons/delivery_boy/views/delivery_boys/frontend/cancel_request_list.blade.php",
+            "update_directory"  : "resources/views/delivery_boys/frontend/cancel_request_list.blade.php"
+        },
+		{
+            "root_directory"    : "addons/delivery_boy/views/delivery_boys/frontend/cancelled_delivery.blade.php",
+            "update_directory"  : "resources/views/delivery_boys/frontend/cancelled_delivery.blade.php"
+        },
+		{
+            "root_directory"    : "addons/delivery_boy/views/delivery_boys/frontend/completed_delivery.blade.php",
+            "update_directory"  : "resources/views/delivery_boys/frontend/completed_delivery.blade.php"
+        },
+		{
+            "root_directory"    : "addons/delivery_boy/views/delivery_boys/frontend/dashboard.blade.php",
+            "update_directory"  : "resources/views/delivery_boys/frontend/dashboard.blade.php"
+        },
+		{
+            "root_directory"    : "addons/delivery_boy/views/delivery_boys/frontend/on_the_way_delivery.blade.php",
+            "update_directory"  : "resources/views/delivery_boys/frontend/on_the_way_delivery.blade.php"
+        },
+		{
+            "root_directory"    : "addons/delivery_boy/views/delivery_boys/frontend/pending_delivery.blade.php",
+            "update_directory"  : "resources/views/delivery_boys/frontend/pending_delivery.blade.php"
+        },
+		{
+            "root_directory"    : "addons/delivery_boy/views/delivery_boys/frontend/pickup_delivery.blade.php",
+            "update_directory"  : "resources/views/delivery_boys/frontend/pickup_delivery.blade.php"
+        },
+		{
+            "root_directory"    : "addons/delivery_boy/views/delivery_boys/frontend/profile.blade.php",
+            "update_directory"  : "resources/views/delivery_boys/frontend/profile.blade.php"
+        },
+		{
+            "root_directory"    : "addons/delivery_boy/views/delivery_boys/frontend/total_collection_list.blade.php",
+            "update_directory"  : "resources/views/delivery_boys/frontend/total_collection_list.blade.php"
+        },
+		{
+            "root_directory"    : "addons/delivery_boy/views/delivery_boys/frontend/total_earning_list.blade.php",
+            "update_directory"  : "resources/views/delivery_boys/frontend/total_earning_list.blade.php"
+        },
+        {
+            "root_directory"    : "addons/delivery_boy/controllers/DeliveryBoyController.php",
+            "update_directory"  : "app/Http/Controllers/DeliveryBoyController.php"
+        },
+        {
+            "root_directory"    : "addons/delivery_boy/routes/delivery_boy.php",
+            "update_directory"  : "routes/delivery_boy.php"
+        },
+        {
+            "root_directory"    : "addons/delivery_boy/assets/delivery_boy.png",
+            "update_directory"  : "public/delivery_boy.png"
+        }
+    ]
+}
