@@ -8,7 +8,7 @@
 
 [![GitHub Stars](https://img.shields.io/github/stars/Chimennadi/cusorcart?style=social)](https://github.com/Chimennadi)
 [![Follow on GitHub](https://img.shields.io/github/followers/Chimennadi?style=social)](https://github.com/Chimennadi)
-[![Follow on Twitter](https://img.shields.io/twitter/follow/developernator?style=social&logo=twitter)](https://twitter.com/intent/follow?screen_name=developernator)
+[![Follow on Twitter](https://img.shields.io/twitter/follow/developernator?style=social&logo=twitter)](https://twitter.com/intent/follow?screen_name=beekyhe)
 
 > This project is still under development.<br>
 > Please consider [supporting my work] if you use & find it useful. ❤️
@@ -109,24 +109,31 @@ Laravel-based e-commerce application, a B2B(Business-to-business) online store w
 ![FrontPage](https://github.com/Chimennadi/cusorcart/blob/main/screenshots/frontpage.png)
 
 `Admin Panel`
+
 ![Admin Panel](https://github.com/Chimennadi/cusorcart/blob/main/screenshots/admin.png)
 
 `Seller Panel`
+
 ![Seller Panel](https://github.com/Chimennadi/cusorcart/blob/main/screenshots/seller.png)
 
 `Staff Panel`
+
 ![Staff Panel](https://github.com/Chimennadi/cusorcart/blob/main/screenshots/staff.png)
 
 `Customer Panel`
+
 ![Customer Panel](https://github.com/Chimennadi/cusorcart/blob/main/screenshots/customer.png)
 
 `Delivery Panel`
+
 ![Delivery Boy Panel](https://github.com/Chimennadi/cusorcart/blob/main/screenshots/delivery_boy.png)
 
 `Email Verification`
+
 ![Email Verification](https://github.com/Chimennadi/cusorcart/blob/main/screenshots/email_register.png)
 
 `MYSQL Database`
+
 ![Database](https://github.com/Chimennadi/cusorcart/blob/main/screenshots/database.png)
 
 
