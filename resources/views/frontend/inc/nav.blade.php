@@ -744,7 +744,7 @@
                                         });
                                     }
                                 </script>
-                                @foreach (\App\Currency::where('status', 0)->get() as $key => $currency)
+                                @foreach (\App\Currency::where('status', 1)->get() as $key => $currency)
                                 <li>
                                     <a  class="dropdown-item @if($currency_code == $currency->code) active @endif" href="javascript:void(0)" data-currency="{{ $currency->code }}">{{ $currency->name }} ({{ $currency->symbol }})</a>
                                 </li>

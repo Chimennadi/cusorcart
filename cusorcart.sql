@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 10, 2023 at 03:26 AM
+-- Generation Time: Jun 11, 2023 at 01:38 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -49,6 +49,7 @@ CREATE TABLE `addresses` (
   `user_id` int(11) NOT NULL,
   `address` varchar(255) DEFAULT NULL,
   `country` varchar(255) DEFAULT NULL,
+  `state` varchar(255) DEFAULT NULL,
   `city` varchar(255) DEFAULT NULL,
   `postal_code` varchar(255) DEFAULT NULL,
   `phone` varchar(255) DEFAULT NULL,
@@ -56,6 +57,13 @@ CREATE TABLE `addresses` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `addresses`
+--
+
+INSERT INTO `addresses` (`id`, `user_id`, `address`, `country`, `state`, `city`, `postal_code`, `phone`, `set_default`, `created_at`, `updated_at`) VALUES
+(1, 1, '234-CFSD Mall', 'Nigeria', 'Akwa Ibom', 'Abak', '230170', '09033688922', 0, '2023-06-10 21:34:16', '2023-06-10 21:34:16');
 
 -- --------------------------------------------------------
 
@@ -128,7 +136,8 @@ CREATE TABLE `attribute_translations` (
 
 INSERT INTO `attribute_translations` (`id`, `attribute_id`, `name`, `lang`, `created_at`, `updated_at`) VALUES
 (1, 3, 'Gender', 'en', '2023-05-28 13:07:29', '2023-05-28 13:07:29'),
-(2, 2, 'Fabric Sizes', 'en', '2023-05-28 19:37:28', '2023-05-28 19:37:28');
+(2, 2, 'Fabric Sizes', 'en', '2023-05-28 19:37:28', '2023-05-28 19:37:28'),
+(3, 1, 'Size', 'en', '2023-06-10 22:03:40', '2023-06-10 22:03:40');
 
 -- --------------------------------------------------------
 
@@ -156,7 +165,10 @@ INSERT INTO `attribute_values` (`id`, `attribute_id`, `value`, `color_code`, `cr
 (4, 2, 'Medium', NULL, '2023-05-28 19:38:22', '2023-05-28 19:38:22'),
 (5, 2, 'Large', NULL, '2023-05-28 19:38:31', '2023-05-28 19:38:31'),
 (6, 2, 'X-Large', NULL, '2023-05-28 19:38:44', '2023-05-28 19:38:44'),
-(7, 2, 'XX-Large', NULL, '2023-05-28 19:38:56', '2023-05-28 19:38:56');
+(7, 2, 'XX-Large', NULL, '2023-05-28 19:38:56', '2023-05-28 19:38:56'),
+(8, 1, '64 GB', NULL, '2023-06-10 22:04:21', '2023-06-10 22:04:21'),
+(9, 1, '256 GB', NULL, '2023-06-10 22:04:32', '2023-06-10 22:04:32'),
+(10, 1, '512 GB', NULL, '2023-06-10 22:04:44', '2023-06-10 22:04:44');
 
 -- --------------------------------------------------------
 
@@ -459,8 +471,8 @@ INSERT INTO `business_settings` (`id`, `type`, `value`, `created_at`, `updated_a
 (100, 'meta_keywords', 'Shop Anywhere & Ships Everywhere', '2020-11-16 07:26:36', '2023-05-28 21:45:33'),
 (101, 'meta_image', NULL, '2020-11-16 07:26:36', '2020-11-16 07:26:36'),
 (102, 'site_name', 'Cusorcart', '2020-11-16 07:26:36', '2023-05-25 03:15:35'),
-(103, 'system_logo_white', '10', '2020-11-16 07:26:36', '2023-05-25 03:15:35'),
-(104, 'system_logo_black', NULL, '2020-11-16 07:26:36', '2020-11-16 07:26:36'),
+(103, 'system_logo_white', '137', '2020-11-16 07:26:36', '2023-06-10 21:55:14'),
+(104, 'system_logo_black', '137', '2020-11-16 07:26:36', '2023-06-10 21:56:02'),
 (105, 'timezone', NULL, '2020-11-16 07:26:36', '2020-11-16 07:26:36'),
 (106, 'admin_login_background', NULL, '2020-11-16 07:26:36', '2023-05-29 05:56:39'),
 (107, 'iyzico_sandbox', '1', '2020-12-30 16:45:56', '2020-12-30 16:45:56'),
@@ -1982,32 +1994,32 @@ CREATE TABLE `currencies` (
 --
 
 INSERT INTO `currencies` (`id`, `name`, `symbol`, `exchange_rate`, `status`, `code`, `created_at`, `updated_at`) VALUES
-(1, 'U.S. Dollar', '$', 1.00000, 0, 'USD', '2018-10-09 11:35:08', '2018-10-17 05:50:52'),
-(2, 'Australian Dollar', '$', 1.28000, 0, 'AUD', '2018-10-09 11:35:08', '2019-02-04 05:51:55'),
-(5, 'Brazilian Real', 'R$', 3.25000, 0, 'BRL', '2018-10-09 11:35:08', '2018-10-17 05:51:00'),
-(6, 'Canadian Dollar', '$', 1.27000, 0, 'CAD', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(7, 'Czech Koruna', 'Kč', 20.65000, 0, 'CZK', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(8, 'Danish Krone', 'kr', 6.05000, 0, 'DKK', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(9, 'Euro', '€', 0.85000, 0, 'EUR', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(10, 'Hong Kong Dollar', '$', 7.83000, 0, 'HKD', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(11, 'Hungarian Forint', 'Ft', 255.24000, 0, 'HUF', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(12, 'Israeli New Sheqel', '₪', 3.48000, 0, 'ILS', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(13, 'Japanese Yen', '¥', 107.12000, 0, 'JPY', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(14, 'Malaysian Ringgit', 'RM', 3.91000, 0, 'MYR', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(15, 'Mexican Peso', '$', 18.72000, 0, 'MXN', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(16, 'Norwegian Krone', 'kr', 7.83000, 0, 'NOK', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(17, 'New Zealand Dollar', '$', 1.38000, 0, 'NZD', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(18, 'Philippine Peso', '₱', 52.26000, 0, 'PHP', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(19, 'Polish Zloty', 'zł', 3.39000, 0, 'PLN', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(20, 'Pound Sterling', '£', 0.72000, 0, 'GBP', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(21, 'Russian Ruble', 'руб', 55.93000, 0, 'RUB', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(22, 'Singapore Dollar', '$', 1.32000, 0, 'SGD', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(23, 'Swedish Krona', 'kr', 8.19000, 0, 'SEK', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(24, 'Swiss Franc', 'CHF', 0.94000, 0, 'CHF', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(26, 'Thai Baht', '฿', 31.39000, 0, 'THB', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(27, 'Taka', '৳', 84.00000, 0, 'BDT', '2018-10-09 11:35:08', '2018-12-02 05:16:13'),
-(28, 'Indian Rupee', 'Rs', 68.45000, 0, 'Rupee', '2019-07-07 10:33:46', '2019-07-07 10:33:46'),
-(29, 'Nigerian Naira', '₦', 750.00000, 0, 'NGN', '2023-05-28 20:22:35', '2023-06-02 22:30:16');
+(1, 'U.S. Dollar', '$', 1.00000, 1, 'USD', '2018-10-09 11:35:08', '2018-10-17 05:50:52'),
+(2, 'Australian Dollar', '$', 1.28000, 1, 'AUD', '2018-10-09 11:35:08', '2019-02-04 05:51:55'),
+(5, 'Brazilian Real', 'R$', 3.25000, 1, 'BRL', '2018-10-09 11:35:08', '2018-10-17 05:51:00'),
+(6, 'Canadian Dollar', '$', 1.27000, 1, 'CAD', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(7, 'Czech Koruna', 'Kč', 20.65000, 1, 'CZK', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(8, 'Danish Krone', 'kr', 6.05000, 1, 'DKK', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(9, 'Euro', '€', 0.85000, 1, 'EUR', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(10, 'Hong Kong Dollar', '$', 7.83000, 1, 'HKD', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(11, 'Hungarian Forint', 'Ft', 255.24000, 1, 'HUF', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(12, 'Israeli New Sheqel', '₪', 3.48000, 1, 'ILS', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(13, 'Japanese Yen', '¥', 107.12000, 1, 'JPY', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(14, 'Malaysian Ringgit', 'RM', 3.91000, 1, 'MYR', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(15, 'Mexican Peso', '$', 18.72000, 1, 'MXN', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(16, 'Norwegian Krone', 'kr', 7.83000, 1, 'NOK', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(17, 'New Zealand Dollar', '$', 1.38000, 1, 'NZD', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(18, 'Philippine Peso', '₱', 52.26000, 1, 'PHP', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(19, 'Polish Zloty', 'zł', 3.39000, 1, 'PLN', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(20, 'Pound Sterling', '£', 0.72000, 1, 'GBP', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(21, 'Russian Ruble', 'руб', 55.93000, 1, 'RUB', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(22, 'Singapore Dollar', '$', 1.32000, 1, 'SGD', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(23, 'Swedish Krona', 'kr', 8.19000, 1, 'SEK', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(24, 'Swiss Franc', 'CHF', 0.94000, 1, 'CHF', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(26, 'Thai Baht', '฿', 31.39000, 1, 'THB', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(27, 'Taka', '৳', 84.00000, 1, 'BDT', '2018-10-09 11:35:08', '2018-12-02 05:16:13'),
+(28, 'Indian Rupee', 'Rs', 68.45000, 1, 'Rupee', '2019-07-07 10:33:46', '2019-07-07 10:33:46'),
+(29, 'Nigerian Naira', '₦', 750.00000, 1, 'NGN', '2023-05-28 20:22:35', '2023-06-02 22:30:16');
 
 -- --------------------------------------------------------
 
@@ -2214,7 +2226,11 @@ CREATE TABLE `flash_deal_products` (
 --
 
 INSERT INTO `flash_deal_products` (`id`, `flash_deal_id`, `product_id`, `discount`, `discount_type`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, 0.00, NULL, '2023-05-29 06:13:06', '2023-05-29 06:13:06');
+(1, 1, 1, 0.00, NULL, '2023-05-29 06:13:06', '2023-05-29 06:13:06'),
+(2, 1, 2, 0.00, NULL, '2023-06-10 21:24:19', '2023-06-10 21:24:19'),
+(3, 1, 3, 0.00, NULL, '2023-06-10 21:25:54', '2023-06-10 21:25:54'),
+(4, 1, 4, 0.00, NULL, '2023-06-10 21:26:17', '2023-06-10 21:26:17'),
+(5, 1, 6, 0.00, NULL, '2023-06-10 22:32:33', '2023-06-10 22:32:33');
 
 -- --------------------------------------------------------
 
@@ -2804,7 +2820,10 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `added_by`, `user_id`, `category_id`, `brand_id`, `photos`, `thumbnail_img`, `video_provider`, `video_link`, `tags`, `description`, `unit_price`, `price_currecny`, `purchase_price`, `variant_product`, `attributes`, `choice_options`, `choice_no`, `colors`, `variations`, `todays_deal`, `published`, `approved`, `approval_status`, `stock_visibility_state`, `cash_on_delivery`, `featured`, `seller_featured`, `current_stock`, `unit`, `price`, `kg`, `min_qty`, `low_stock_quantity`, `discount`, `discount_type`, `discount_start_date`, `discount_end_date`, `tax`, `qty`, `tax_type`, `shipping_type`, `shipping_cost`, `is_quantity_multiplied`, `est_shipping_days`, `num_of_sale`, `meta_title`, `meta_description`, `meta_img`, `pdf`, `slug`, `rating`, `barcode`, `digital`, `file_name`, `file_path`, `created_at`, `updated_at`) VALUES
-(1, 'Men Letter Graphic Colorblock Tee', 'admin', 1, 33, 28, '85,84,83', '85,84,83', 'youtube', NULL, 'men', '<p><strong>Men Letter Graphic Colorblock Tee is perfect for you.</strong></p>', 3.02, '1', NULL, 0, '[]', '[]', NULL, '[]', NULL, 1, 1, 1, 'Approved', 'quantity', 1, 1, 0, 0, 'lb', NULL, 11, 1, 4, 1.00, 'percent', 1685404800, 1686095940, NULL, NULL, NULL, 'free', '0', 0, 7, 0, 'Men Letter Graphic Colorblock Tee', 'Men Letter Graphic Colorblock Tee', '85,84,83', NULL, 'Men-Letter-Graphic-Colorblock-Tee-u5iGY', 0.00, NULL, 0, NULL, NULL, '2023-05-29 05:33:13', '2023-05-29 06:13:06');
+(1, 'Men Letter Graphic Colorblock Tee', 'admin', 1, 33, 28, '85,84,83', '85,84,83', 'youtube', NULL, 'men', '<p><strong>Men Letter Graphic Colorblock Tee is perfect for you.</strong></p>', 3.02, '1', NULL, 0, '[]', '[]', NULL, '[]', NULL, 1, 1, 1, 'Approved', 'quantity', 1, 1, 0, 0, 'lb', NULL, 11, 1, 4, 1.00, 'percent', 1685404800, 1686095940, NULL, NULL, NULL, 'free', '0', 0, 7, 0, 'Men Letter Graphic Colorblock Tee', 'Men Letter Graphic Colorblock Tee', '85,84,83', NULL, 'Men-Letter-Graphic-Colorblock-Tee-u5iGY', 0.00, NULL, 0, NULL, NULL, '2023-05-29 05:33:13', '2023-05-29 06:13:06'),
+(2, 'Custom Made Adjustable Fitory Mens Sandals', 'admin', 1, 33, 2, '134,129,131,132,133,130', '134,129,131,132,133,130', 'youtube', NULL, 'Men', '<p>We are making efforts to produce reliable products for the clients through doing well in every detail. Wear the classic design of Men\'s Sandals. Your moment in all life,FITORY is gonna be around.</p><p><br></p><p>No matter where you are, who you are and what you are passionate about we want to be able to provide you with a custom products that helps you Express Yourself...to help you express who you really are!</p>', 6.78, '1', NULL, 0, '[]', '[]', NULL, '[]', NULL, 1, 1, 1, 'Approved', 'quantity', 1, 1, 0, 0, NULL, NULL, NULL, 2, 5, 1.20, 'amount', 1686355200, 1687046340, NULL, NULL, NULL, 'free', '0', 0, 5, 0, 'Custom Made Adjustable Fitory Mens Sandals', 'Custom Made Adjustable Fitory Mens Sandals', '130,129,131,132,133,134', NULL, 'Custom-Made-Adjustable-Fitory-Mens-Sandals-S3xZP', 0.00, NULL, 0, NULL, NULL, '2023-06-10 21:24:19', '2023-06-10 21:24:19'),
+(5, 'Renewed Apple iPhone 11 Pro, US Version, Space Grey', 'admin', 1, 6, 4, '138,140,139,141', '140,138,139,141', 'youtube', 'https://www.youtube.com/watch?v=hVpkbiQ9E4c', 'phones', '<p><br></p>', 371.67, '1', NULL, 0, '[\"1\"]', '[{\"attribute_id\":\"1\",\"values\":[\"64 GB\",\"256 GB\",\"512 GB\"]}]', NULL, '[]', NULL, 1, 1, 1, 'Approved', 'quantity', 1, 1, 0, 0, NULL, NULL, NULL, 1, 5, 3.00, 'percent', 1686355200, 1687046340, NULL, NULL, NULL, 'free', '0', 0, 7, 0, 'Renewed Apple iPhone 11 Pro, US Version, Space Grey', 'Renewed Apple iPhone 11 Pro, US Version, Space Grey', '140,138,139,141', NULL, 'Renewed-Apple-iPhone-11-Pro-US-Version-Space-Grey-1NX1E', 0.00, NULL, 0, NULL, NULL, '2023-06-10 22:10:22', '2023-06-10 22:10:22'),
+(6, 'Cusorcart Men\'s Classic Fit Performance Work Polo', 'admin', 1, 33, 21, '143,142,144', '143,142,144', 'youtube', NULL, 'Men', '<p><strong>Product details</strong></p><ul><li> 100% Polyester</li><li> Nigeria Made</li><li> Button Closure</li><li> Machine Wash</li></ul><p><br></p><p><strong>Materials &amp; Care</strong></p><ul><li> Machine Washable</li><li>Cotton/Polyester/Spandex</li></ul>', 6.94, '1', NULL, 1, '[\"2\"]', '[{\"attribute_id\":\"2\",\"values\":[\"Medium\",\"Large\",\"X-Large\"]}]', NULL, '[]', NULL, 1, 1, 1, 'Approved', 'quantity', 1, 1, 0, 0, NULL, NULL, NULL, 1, 20, 2.30, 'percent', 1686441600, 1687132740, NULL, NULL, NULL, 'free', '0', 0, 4, 0, 'Cusorcart Men\'s Classic Fit Performance Work Polo', 'Cusorcart Men\'s Classic Fit Performance Work Polo', '143,142,144', NULL, 'Cusorcart-Mens-Classic-Fit-Performance-Work-Polo-Rrict', 0.00, NULL, 0, NULL, NULL, '2023-06-10 22:32:33', '2023-06-10 22:32:33');
 
 -- --------------------------------------------------------
 
@@ -2829,7 +2848,13 @@ CREATE TABLE `product_stocks` (
 --
 
 INSERT INTO `product_stocks` (`id`, `product_id`, `variant`, `sku`, `price`, `qty`, `image`, `created_at`, `updated_at`) VALUES
-(6, 1, '', 'MLGCT001', 3.02, 24, NULL, '2023-05-29 05:33:13', '2023-05-29 05:33:13');
+(6, 1, '', 'MLGCT001', 3.02, 24, NULL, '2023-05-29 05:33:13', '2023-05-29 05:33:13'),
+(7, 2, '', 'CMA-100S', 6.78, 25, NULL, '2023-06-10 21:24:19', '2023-06-10 21:24:19'),
+(8, 3, '', 'CMA-100S', 6.78, 25, NULL, '2023-06-10 21:25:54', '2023-06-10 21:25:54'),
+(9, 4, '', 'CMA-100S', 6.78, 25, NULL, '2023-06-10 21:26:17', '2023-06-10 21:26:17'),
+(10, 6, 'Medium', 'CMC-100S', 6.94, 10, 143, '2023-06-10 22:32:33', '2023-06-10 22:32:33'),
+(11, 6, 'Large', 'CMC-200M', 6.94, 10, 142, '2023-06-10 22:32:33', '2023-06-10 22:32:33'),
+(12, 6, 'X-Large', 'CMC-300L', 6.94, 10, 144, '2023-06-10 22:32:33', '2023-06-10 22:32:33');
 
 -- --------------------------------------------------------
 
@@ -2880,7 +2905,12 @@ INSERT INTO `product_taxes` (`id`, `product_id`, `tax_id`, `tax`, `tax_type`, `c
 (60, 5, 3, 1.00, 'percent', '2023-05-28 20:52:13', '2023-05-28 20:52:13'),
 (64, 20, 3, 0.50, 'percent', '2023-05-28 21:13:56', '2023-05-28 21:13:56'),
 (65, 21, 3, 2.00, 'percent', '2023-05-29 05:27:21', '2023-05-29 05:27:21'),
-(66, 1, 3, 1.00, 'amount', '2023-05-29 05:33:13', '2023-05-29 05:33:13');
+(66, 1, 3, 1.00, 'amount', '2023-05-29 05:33:13', '2023-05-29 05:33:13'),
+(67, 2, 3, 1.00, 'percent', '2023-06-10 21:24:19', '2023-06-10 21:24:19'),
+(68, 3, 3, 1.00, 'percent', '2023-06-10 21:25:54', '2023-06-10 21:25:54'),
+(69, 4, 3, 1.00, 'percent', '2023-06-10 21:26:17', '2023-06-10 21:26:17'),
+(70, 5, 3, 3.00, 'amount', '2023-06-10 22:10:22', '2023-06-10 22:10:22'),
+(71, 6, 3, 2.00, 'amount', '2023-06-10 22:32:33', '2023-06-10 22:32:33');
 
 -- --------------------------------------------------------
 
@@ -2904,7 +2934,11 @@ CREATE TABLE `product_translations` (
 --
 
 INSERT INTO `product_translations` (`id`, `product_id`, `name`, `unit`, `description`, `lang`, `created_at`, `updated_at`) VALUES
-(29, 1, 'Men Letter Graphic Colorblock Tee', 'lb', '<p><strong>Men Letter Graphic Colorblock Tee is perfect for you.</strong></p>', 'en', '2023-05-29 05:33:13', '2023-05-29 05:33:13');
+(29, 1, 'Men Letter Graphic Colorblock Tee', 'lb', '<p><strong>Men Letter Graphic Colorblock Tee is perfect for you.</strong></p>', 'en', '2023-05-29 05:33:13', '2023-05-29 05:33:13'),
+(30, 2, 'Custom Made Adjustable Fitory Mens Sandals', NULL, '<p>We are making efforts to produce reliable products for the clients through doing well in every detail. Wear the classic design of Men\'s Sandals. Your moment in all life,FITORY is gonna be around.</p><p><br></p><p>No matter where you are, who you are and what you are passionate about we want to be able to provide you with a custom products that helps you Express Yourself...to help you express who you really are!</p>', 'en', '2023-06-10 21:24:19', '2023-06-10 21:24:19'),
+(31, 3, 'Custom Made Adjustable Fitory Mens Sandals', NULL, '<p>We are making efforts to produce reliable products for the clients through doing well in every detail. Wear the classic design of Men\'s Sandals. Your moment in all life,FITORY is gonna be around.</p><p><br></p><p>No matter where you are, who you are and what you are passionate about we want to be able to provide you with a custom products that helps you Express Yourself...to help you express who you really are!</p>', 'en', '2023-06-10 21:25:54', '2023-06-10 21:25:54'),
+(32, 4, 'Custom Made Adjustable Fitory Mens Sandals', NULL, '<p>We are making efforts to produce reliable products for the clients through doing well in every detail. Wear the classic design of Men\'s Sandals. Your moment in all life,FITORY is gonna be around.</p><p><br></p><p>No matter where you are, who you are and what you are passionate about we want to be able to provide you with a custom products that helps you Express Yourself...to help you express who you really are!</p>', 'en', '2023-06-10 21:26:18', '2023-06-10 21:26:18'),
+(33, 6, 'Cusorcart Men\'s Classic Fit Performance Work Polo', NULL, '<p><strong>Product details</strong></p><ul><li> 100% Polyester</li><li> Nigeria Made</li><li> Button Closure</li><li> Machine Wash</li></ul><p><br></p><p><strong>Materials &amp; Care</strong></p><ul><li> Machine Washable</li><li>Cotton/Polyester/Spandex</li></ul>', 'en', '2023-06-10 22:32:33', '2023-06-10 22:32:33');
 
 -- --------------------------------------------------------
 
@@ -4912,7 +4946,9 @@ INSERT INTO `translations` (`id`, `lang`, `lang_key`, `lang_value`, `created_at`
 (1849, 'en', 'Arrival State', 'Arrival State', '2023-06-04 11:49:19', '2023-06-04 11:49:19'),
 (1850, 'en', 'Arrival City', 'Arrival City', '2023-06-04 11:49:19', '2023-06-04 11:49:19'),
 (1851, 'en', 'Unit in KG', 'Unit in KG', '2023-06-04 12:38:13', '2023-06-04 12:38:13'),
-(1852, 'en', 'Tracking Order', 'Tracking Order', '2023-06-05 23:53:02', '2023-06-05 23:53:02');
+(1852, 'en', 'Tracking Order', 'Tracking Order', '2023-06-05 23:53:02', '2023-06-05 23:53:02'),
+(1853, 'en', 'Global Tax', 'Global Tax', '2023-06-10 21:34:42', '2023-06-10 21:34:42'),
+(1854, 'en', 'Your email should be verified before order', 'Your email should be verified before order', '2023-06-10 21:35:25', '2023-06-10 21:35:25');
 
 -- --------------------------------------------------------
 
@@ -5065,7 +5101,23 @@ INSERT INTO `uploads` (`id`, `file_original_name`, `file_name`, `user_id`, `file
 (125, 'office_icon', 'uploads/all/kOmZrmRXanQwwCRlZkpTcp7vq1kabuC1tBGfixcW.png', 1, 9533, 'png', 'image', '2023-06-09 00:26:44', '2023-06-09 00:26:44', NULL),
 (126, 'office', 'uploads/all/NLqzNMrcV4iW0oArHmV6Zf4x34WNsDtmxWzED2qO.png', 1, 9857, 'png', 'image', '2023-06-09 00:26:44', '2023-06-09 00:26:44', NULL),
 (127, 'sport_icon', 'uploads/all/9jwAU0I7GCaBHbgMk0vd8l0LqOlHn0omvcUDQb4F.png', 1, 4877, 'png', 'image', '2023-06-09 00:35:54', '2023-06-09 00:35:54', NULL),
-(128, 'sport', 'uploads/all/Zs8lWO4DhGGCsbCNH313jMM7FWqgZjUWjueX3SPo.webp', 1, 34448, 'jpg', 'image', '2023-06-09 00:35:55', '2023-06-09 00:35:55', NULL);
+(128, 'sport', 'uploads/all/Zs8lWO4DhGGCsbCNH313jMM7FWqgZjUWjueX3SPo.webp', 1, 34448, 'jpg', 'image', '2023-06-09 00:35:55', '2023-06-09 00:35:55', NULL),
+(129, 'scandal6', 'uploads/all/n9NuUPAZ5crt3bwFDQEI78Cv4e4K3s0pvmF62lpT.jpg', 1, 94478, 'jpg', 'image', '2023-06-10 21:01:59', '2023-06-10 21:01:59', NULL),
+(130, 'scandal3', 'uploads/all/z6aC4LoxxFdOHJ8mRt2uJYHWmQ0k3SKH7f2VFyKO.jpg', 1, 70688, 'jpg', 'image', '2023-06-10 21:01:59', '2023-06-10 21:01:59', NULL),
+(131, 'scandal5', 'uploads/all/KHiwmdizdPL5mnSWWLHaeb8pWOOGtb1gtHEzQLIh.jpg', 1, 135125, 'jpg', 'image', '2023-06-10 21:02:00', '2023-06-10 21:02:00', NULL),
+(132, 'scandal2', 'uploads/all/dlRUDIkBf4T8mthjRQUkE4sHk9vqIcTNtIcBnB6j.jpg', 1, 148071, 'jpg', 'image', '2023-06-10 21:02:01', '2023-06-10 21:02:01', NULL),
+(133, 'scandal4', 'uploads/all/sOsbiAjVBzjlyQ6NWoH3Mz8Zm9nDPEp1UVvIRDgS.jpg', 1, 113932, 'jpg', 'image', '2023-06-10 21:02:02', '2023-06-10 21:02:02', NULL),
+(134, 'scandal1', 'uploads/all/RlvSFYPBurJKmEd15ZlEAQCAftCzIXwKI9YHMuto.jpg', 1, 158416, 'jpg', 'image', '2023-06-10 21:02:03', '2023-06-10 21:02:03', NULL),
+(135, 'black_asoeke_banner', 'uploads/all/oOwk2pD43tHsV89IjUcy42ZW2FPMYKTwxMa5RNz7.png', 1, 218170, 'png', 'image', '2023-06-10 21:40:04', '2023-06-10 21:40:04', NULL),
+(136, 'nike_banner', 'uploads/all/X4Xi1ByKnJNZGL8tY7FMRf6nVy2jQsnrDOMSpJOl.png', 1, 546137, 'png', 'image', '2023-06-10 21:40:05', '2023-06-10 21:40:05', NULL),
+(137, 'fg02RUZTggvmtwJ3798sX7gRP1brvSjxQ1TWqmXb', 'uploads/all/9s0kS1r6VxQ9S2ZwwF4wEvsxfENRz0KH7S6JgvLy.png', 1, 3436, 'png', 'image', '2023-06-10 21:55:01', '2023-06-10 21:55:01', NULL),
+(138, 'Iphone4', 'uploads/all/Hv3QnKm9nDEWyXHW8UW3Zs8DsusYn95Y3jMBmfXC.png', 1, 96337, 'png', 'image', '2023-06-10 21:57:58', '2023-06-10 21:57:58', NULL),
+(139, 'Iphoone3', 'uploads/all/NLdzuVAoREArraSc8Y553LUqbOVNDOkho4041FKX.png', 1, 110871, 'png', 'image', '2023-06-10 21:57:59', '2023-06-10 21:57:59', NULL),
+(140, 'Iphone', 'uploads/all/mkF2m4R1iIyJF0AU8lG2LQfe4nwdbJ1kSHQX27ZX.png', 1, 96337, 'png', 'image', '2023-06-10 21:57:59', '2023-06-10 21:57:59', NULL),
+(141, '0yuIktHhf7IunTtGwi5XqTm0RPrduvRJa28ufqos', 'uploads/all/lKNwXmgkb2Zfbx1HbiPuctOZLRor8T1YsilLa3Pn.png', 1, 94344, 'png', 'image', '2023-06-10 21:58:00', '2023-06-10 21:58:00', NULL),
+(142, 'polo3', 'uploads/all/NuaBJjMUlHnjkFMdR5FMH9AbOIVSxUCsyhs3K8bE.png', 1, 109252, 'png', 'image', '2023-06-10 22:24:57', '2023-06-10 22:24:57', NULL),
+(143, 'polo', 'uploads/all/Tqt25AzcNLYoGlscZpjoJovOFP7jQiLmKsqEjDPs.png', 1, 64817, 'png', 'image', '2023-06-10 22:24:57', '2023-06-10 22:24:57', NULL),
+(144, 'polo2', 'uploads/all/1a4Rrlo3sNIwddGL2K9yVOLE8jhwRQYOkKekmwuP.png', 1, 113189, 'png', 'image', '2023-06-10 22:24:59', '2023-06-10 22:24:59', NULL);
 
 -- --------------------------------------------------------
 
@@ -5106,12 +5158,12 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `referred_by`, `provider_id`, `user_type`, `name`, `email`, `email_verified_at`, `verification_code`, `new_email_verificiation_code`, `password`, `remember_token`, `avatar`, `avatar_original`, `address`, `country`, `city`, `postal_code`, `phone`, `balance`, `banned`, `referral_code`, `customer_package_id`, `remaining_uploads`, `created_at`, `updated_at`) VALUES
-(1, NULL, NULL, 'admin', 'Nnadi', 'admin@admin.com', NULL, 'eyJpdiI6IjVlYWNPYy9MM2VqQ2orUkE3RmlKakE9PSIsInZhbHVlIjoiSTI0bjZrd1htREk2TFBCU3lidGd1Zz09IiwibWFjIjoiMWZkNjhkNmE5MGJjNTEyZDIxOTcxMGM5NTlhMTg3OWE3YzYyYTU5MTcyMTUzM2JhYjQ2NzI4NzRhZGRiZjA2NSIsInRhZyI6IiJ9', NULL, '$2y$10$GW32NfSKwQwhij./pbosCOsAnl0Qe2X7dLm3nVzCM6PxKoKIVJPFi', 'rR8g3pVqVA5KJ8iEBeS7Cqxyqel7i4QMNRKrBD7Xqa6Zw2VqUV8stitq5MuV', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2023-05-29 22:26:14', '2023-05-29 22:26:14'),
-(2, NULL, NULL, 'staff', 'Chime', 'beekyhe@gmail.com', NULL, 'eyJpdiI6IkpVNUt6VEtJcWpIT0ZWQXAvTzhjWmc9PSIsInZhbHVlIjoiQ1lDOG80Sjc1L05HVVE5eXYwYk5zUT09IiwibWFjIjoiNmU1MjdmYjMzM2FmY2FkZThlYzBjYWExMGMyNjVjZDVjMGM5OGUwZTUzMDdlYTQzZTYzNmUyOTRiOTY5MjIzMCIsInRhZyI6IiJ9', NULL, '$2y$10$9cuqD0CjC9dOwfKFUtZucubpti2ErHr3Ug8NSCGPNFdB1uc4fMot.', 'kiZUXoJri8hKrmDBgeXZqgqMs1YRAgjoS2Ccyvp9jv9uNWcw1ZIKbUWTBPX2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2023-05-29 22:29:24', '2023-05-29 22:29:24'),
+(1, NULL, NULL, 'admin', 'Nnadi', 'admin@admin.com', NULL, 'eyJpdiI6IjVlYWNPYy9MM2VqQ2orUkE3RmlKakE9PSIsInZhbHVlIjoiSTI0bjZrd1htREk2TFBCU3lidGd1Zz09IiwibWFjIjoiMWZkNjhkNmE5MGJjNTEyZDIxOTcxMGM5NTlhMTg3OWE3YzYyYTU5MTcyMTUzM2JhYjQ2NzI4NzRhZGRiZjA2NSIsInRhZyI6IiJ9', NULL, '$2y$10$GW32NfSKwQwhij./pbosCOsAnl0Qe2X7dLm3nVzCM6PxKoKIVJPFi', 'EunJCcdrGBbWeT0IzrZpL3PKAyV3NDX08stNVjEKYGNYBIbMnPEfvNJ3mtRz', NULL, '82', NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2023-05-29 22:26:14', '2023-06-10 21:50:43'),
+(2, NULL, NULL, 'staff', 'Chime', 'beekyhe@gmail.com', NULL, 'eyJpdiI6IkpVNUt6VEtJcWpIT0ZWQXAvTzhjWmc9PSIsInZhbHVlIjoiQ1lDOG80Sjc1L05HVVE5eXYwYk5zUT09IiwibWFjIjoiNmU1MjdmYjMzM2FmY2FkZThlYzBjYWExMGMyNjVjZDVjMGM5OGUwZTUzMDdlYTQzZTYzNmUyOTRiOTY5MjIzMCIsInRhZyI6IiJ9', NULL, '$2y$10$9cuqD0CjC9dOwfKFUtZucubpti2ErHr3Ug8NSCGPNFdB1uc4fMot.', 'juJtfrmCiGe9SegCMYkga6knrVi8jFfVAKbr7BjsCXWwGiWZmN8ifdbhMq2I', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2023-05-29 22:29:24', '2023-05-29 22:29:24'),
 (3, NULL, NULL, 'customer', 'Ugo', 'chimennadi66@gmail.com', NULL, 'eyJpdiI6InJuUHl0OEQzOUNIOW5xb1AxVDZXWkE9PSIsInZhbHVlIjoibHdiMVBVQ2IvdHNTVVJNSlpzZjcxUT09IiwibWFjIjoiOGRiMWUxOTQ0NDkyYjI4OTVkMjc0ODY5ZTBlMTMzYzJhZTI3M2I3ZmI1ZDE2ZGQzNTA2N2MwNmRkNjk5N2VhYiIsInRhZyI6IiJ9', NULL, '$2y$10$BYohnu5mXhad86/1P0ymsuN/uRMfOa3O2.iNDVs78mDqLqzstwO9y', 'Zpy6Hk1KiYiDP9H0O3SMzKk7zA71iLxBbPa6BlBL2S9A3kkwexBO1pCx1bUi', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2023-05-29 22:31:48', '2023-05-29 22:31:49'),
 (4, NULL, NULL, 'delivery_boy', 'Oly', 'olynnadi@gmail.com', NULL, 'eyJpdiI6InpLVk16NG1EbVIwK25MTncyU2liOEE9PSIsInZhbHVlIjoiR1RxK0tsQTc3Q1NqV0Z1K296ZjVtQT09IiwibWFjIjoiMjc5ZjM3OThmMmE5OWMwYzJiMWZhZTc0MWMzMjQ0ODM0OTA0YmEzNTU0OThmZjZhOGI3Nzg4NzgzYmE0YTJlOCIsInRhZyI6IiJ9', NULL, '$2y$10$0E1XjDg.BjqozasaPHoCXuo3c34kj/9s9FQ9uOKDUj.LXaBsl56LS', 'BIeAzN1vU7ss4FxwyddL2hHdcCMkhjT9mCmyaBCTBpsBVUpkPEZYn0kRPW1J', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2023-05-29 22:35:44', '2023-05-29 22:35:44'),
-(5, NULL, NULL, 'seller', 'Ada', 'ada@gmail.com', NULL, 'eyJpdiI6ImlBWWZ5emNtUTRPb3BRWmJHWUV2K0E9PSIsInZhbHVlIjoicE5wMGF6emNDYXVzb0x5Smh3TFJOZz09IiwibWFjIjoiYTkyNDE5Y2NkMjMxOTdjY2QwZGYxZWU3NmQxOTlmMDQ0MGMyYTU5MWY2MTZlZTkyY2EwMjZjZjgwYTJjZTU1OCIsInRhZyI6IiJ9', 'SmsQ9iBFcklg9JjN5lGAYWxF5W4IDtNh', '$2y$10$u1bBhvcbn/H3xRDXqMd9u.eNd2C0G4JcyBy2GV.HkXYymLhhPnQIG', 'tqXwA4mKXgSTv4o8lTrKHdJZ9DAgXvFqXPO4HsNJaQENqnoxYnzSHPv6hKVE', NULL, '111', NULL, NULL, NULL, NULL, '09033688922', 0.00, 0, NULL, NULL, 0, '2023-05-29 23:11:10', '2023-05-29 23:37:54'),
-(6, NULL, NULL, 'logistic', 'Ife', 'ife@gmail.com', NULL, 'eyJpdiI6IlJiQ2lqUFliQ1orMGI0MythcVE3ZEE9PSIsInZhbHVlIjoid1dldmU2L3JFWmxRcnZzZ2xVdzVEUT09IiwibWFjIjoiOWFmODg3M2VjYTY2MTA0NmQ2NmYxMjUzYjhkNGEwYmVhN2VmNDJmOWI1NjgxYjVlZWNmYmI4ZmE1NTYxOTY4OCIsInRhZyI6IiJ9', NULL, '$2y$10$Nth4iUpKN9Rvi.UcQMGBYuoflInddp62YThN2CUJtE1iu1G3Xlt1.', 'RrxHp1ROmX4ZadZKfg0nZXPHk1Zax8xVDWpnq2WDFl4NuaG37ajCGzGlCjNf', NULL, '113', '234-CFSD Mall', NULL, NULL, NULL, '09033688922', 0.00, 0, NULL, NULL, 0, '2023-05-30 07:30:51', '2023-06-03 23:02:31');
+(5, NULL, NULL, 'seller', 'Ada', 'ada@gmail.com', NULL, 'eyJpdiI6ImlBWWZ5emNtUTRPb3BRWmJHWUV2K0E9PSIsInZhbHVlIjoicE5wMGF6emNDYXVzb0x5Smh3TFJOZz09IiwibWFjIjoiYTkyNDE5Y2NkMjMxOTdjY2QwZGYxZWU3NmQxOTlmMDQ0MGMyYTU5MWY2MTZlZTkyY2EwMjZjZjgwYTJjZTU1OCIsInRhZyI6IiJ9', 'SmsQ9iBFcklg9JjN5lGAYWxF5W4IDtNh', '$2y$10$u1bBhvcbn/H3xRDXqMd9u.eNd2C0G4JcyBy2GV.HkXYymLhhPnQIG', 'NePMKRnQurcHSGjFap1yrKmRpntIKnwuPoWNxQ9ZrnsgoSPImhACltQSWTcg', NULL, '111', NULL, NULL, NULL, NULL, '09033688922', 0.00, 0, NULL, NULL, 0, '2023-05-29 23:11:10', '2023-05-29 23:37:54'),
+(6, NULL, NULL, 'logistic', 'Ife', 'ife@gmail.com', NULL, 'eyJpdiI6IlJiQ2lqUFliQ1orMGI0MythcVE3ZEE9PSIsInZhbHVlIjoid1dldmU2L3JFWmxRcnZzZ2xVdzVEUT09IiwibWFjIjoiOWFmODg3M2VjYTY2MTA0NmQ2NmYxMjUzYjhkNGEwYmVhN2VmNDJmOWI1NjgxYjVlZWNmYmI4ZmE1NTYxOTY4OCIsInRhZyI6IiJ9', NULL, '$2y$10$Nth4iUpKN9Rvi.UcQMGBYuoflInddp62YThN2CUJtE1iu1G3Xlt1.', '2oYGxuCp8uDP7J6XheGHJnRGzHoVuXIBRn0Z40b7hAf4jVkYjtxDq1UGuRoh', NULL, '113', '234-CFSD Mall', NULL, NULL, NULL, '09033688922', 0.00, 0, NULL, NULL, 0, '2023-05-30 07:30:51', '2023-06-03 23:02:31');
 
 -- --------------------------------------------------------
 
@@ -5689,7 +5741,7 @@ ALTER TABLE `addons`
 -- AUTO_INCREMENT for table `addresses`
 --
 ALTER TABLE `addresses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `app_settings`
@@ -5707,13 +5759,13 @@ ALTER TABLE `attributes`
 -- AUTO_INCREMENT for table `attribute_translations`
 --
 ALTER TABLE `attribute_translations`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `attribute_values`
 --
 ALTER TABLE `attribute_values`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `bank_details`
@@ -5761,7 +5813,7 @@ ALTER TABLE `business_settings`
 -- AUTO_INCREMENT for table `carts`
 --
 ALTER TABLE `carts`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -5893,7 +5945,7 @@ ALTER TABLE `flash_deals`
 -- AUTO_INCREMENT for table `flash_deal_products`
 --
 ALTER TABLE `flash_deal_products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `flash_deal_translations`
@@ -6013,25 +6065,25 @@ ALTER TABLE `policies`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `product_stocks`
 --
 ALTER TABLE `product_stocks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `product_taxes`
 --
 ALTER TABLE `product_taxes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- AUTO_INCREMENT for table `product_translations`
 --
 ALTER TABLE `product_translations`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `proxypay_payments`
@@ -6133,13 +6185,13 @@ ALTER TABLE `ticket_replies`
 -- AUTO_INCREMENT for table `translations`
 --
 ALTER TABLE `translations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1853;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1855;
 
 --
 -- AUTO_INCREMENT for table `uploads`
 --
 ALTER TABLE `uploads`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=145;
 
 --
 -- AUTO_INCREMENT for table `users`

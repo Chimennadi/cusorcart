@@ -407,7 +407,7 @@ $defaultImages[] = $row;
                             </div>
                         </form>
                         <div class="mt-3">
-                            <button type="button" class="btn btn-soft-primary mr-2 add-to-cart fw-600" onclick="addToCart()">
+                            <button type="button" class="btn btn-soft-primary mr-2 add-to-cart fw-600" onclick="addToCart()" style="background: #FC9F01; border-color: #FC9F01">
                             <i class="las la-shopping-bag"></i>
                             <span class="d-none d-md-inline-block"> {{ translate('Add to cart') }}</span>
                             </button>
