@@ -2,25 +2,25 @@
     <div class="container">
         <div class="row no-gutters">
             <div class="col-lg-3 col-md-6 col-sm-3 col-xs-3">
-                <a class="text-reset border-left text-center p-4 d-block" href="https://global.{{ env('APP_DOMAIN') }}/terms-and-conditions/">
+                <a class="text-reset border-left text-center p-4 d-block" href="https://global.cusorcart/terms-and-conditions/">
                     <i class="la la-file-text la-3x text-primary mb-2"></i>
                     <h4 class="h6">{{ translate('Terms & conditions') }}</h4>
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-3 col-xs-3">
-                <a class="text-reset border-left text-center p-4 d-block" href="{{ env('APP_DOMAIN') }}/send-refund-request">
+                <a class="text-reset border-left text-center p-4 d-block" href="cusorcart/send-refund-request">
                     <i class="la la-mail-reply la-3x text-primary mb-2"></i>
                     <h4 class="h6">{{ translate('Return Policy') }}</h4>
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-3 col-xs-3">
-                <a class="text-reset border-left text-center p-4 d-block" href="https://global.{{ env('APP_DOMAIN') }}/privacy-policy/">
+                <a class="text-reset border-left text-center p-4 d-block" href="https://global.cusorcart/privacy-policy/">
                     <i class="la la-support la-3x text-primary mb-2"></i>
                     <h4 class="h6">{{ translate('Support Policy') }}</h4>
                 </a>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-3 col-xs-3">
-                <a class="text-reset border-left border-right text-center p-4 d-block" href="https://global.{{ env('APP_DOMAIN') }}/privacy-policy/">
+                <a class="text-reset border-left border-right text-center p-4 d-block" href="https://global.cusorcart/privacy-policy/">
                     <i class="las la-exclamation-circle la-3x text-primary mb-2"></i>
                     <h4 class="h6">{{ translate('Privacy Policy') }}</h4>
                 </a>
@@ -411,13 +411,13 @@
                             <a href="/support_tickets" class="nav_a">Customer Help Center</a>
                         </li>
                         <li>
-                            <a href="https://global.{{ env('APP_DOMAIN') }}/shop-on-cusorcart/" class="nav_a">How to Shop on Cusorcart</a>
+                            <a href="https://global.cusorcart/shop-on-cusorcart/" class="nav_a">How to Shop on Cusorcart</a>
                         </li>
                         <li>
                             <a href="#" class="nav_a">Shopping/Delivery Timelines </a>
                         </li>
                         <li>
-                            <a href="{{ env('APP_DOMAIN') }}/send-refund-request" class="nav_a">Return a Product</a>
+                            <a href=cusorcart/send-refund-request" class="nav_a">Return a Product</a>
                         </li>
                         <li class="nav_last ">
                             <a href="https://forms.gle/8o9o83jNqa6qVS2p6" class="nav_a"> Report a Product</a>
@@ -439,19 +439,19 @@
                     <div class="navFooterColHead">ABOUT CUSORCART</div>
                     <ul>
                         <li class="nav_first">
-                            <a href="https://global.{{ env('APP_DOMAIN') }}/about-us/" class="nav_a">About Us </a>
+                            <a href="https://global.cusorcart/about-us/" class="nav_a">About Us </a>
                         </li>
                         <li>
                             <a href="/blog" class="nav_a">Blog</a>
                         </li>
                         <li>
-                            <a href="https://global.{{ env('APP_DOMAIN') }}/terms-and-conditions/" class="nav_a">Terms & Conditions</a>
+                            <a href="https://global.cusorcart/terms-and-conditions/" class="nav_a">Terms & Conditions</a>
                         </li>
                         <li>
-                            <a href="https://global.{{ env('APP_DOMAIN') }}/privacy-policy/" class="nav_a">Privacy Policy</a>
+                            <a href="https://global.cusorcart/privacy-policy/" class="nav_a">Privacy Policy</a>
                         </li>
                         <li>
-                            <a href="https://global.{{ env('APP_DOMAIN') }}/how-to-stay-safe/" class="nav_a">How to Stay Safe</a>
+                            <a href="https://global.cusorcart/how-to-stay-safe/" class="nav_a">How to Stay Safe</a>
                         </li>
                         
                     </ul>
@@ -468,13 +468,13 @@
                             <a href="/purchase_history" class="nav_a">Your Orders</a>
                         </li>
                         <li class="nav_last ">
-                            <a href="https://global.{{ env('APP_DOMAIN') }}/returnpolicy/" class="nav_a">Returns & Replacements</a>
+                            <a href="https://global.cusorcart/returnpolicy/" class="nav_a">Returns & Replacements</a>
                         </li>
                       <li class="nav_last ">
-                            <a href="https://global.{{ env('APP_DOMAIN') }}/shipping-rates-and-policies/" class="nav_a">Shipping Rates & Policies</a>
+                            <a href="https://global.cusorcart/shipping-rates-and-policies/" class="nav_a">Shipping Rates & Policies</a>
                         </li>
                         <li class="nav_last ">
-                            <a href="https://global.{{ env('APP_DOMAIN') }}/faq/" class="nav_a">FAQ</a>
+                            <a href="https://global.cusorcart/faq/" class="nav_a">FAQ</a>
                         </li>
                     </ul>
                 </div>
@@ -483,18 +483,18 @@
                     <div class="navFooterColHead">MAKE MONEY WITH CUSORCART</div>
                     <ul>
                         <li class="nav_first">
-                            <a href="https://global.{{ env('APP_DOMAIN') }}/seller-hub/" class="nav_a">Sell Product on Cusorcart</a>
+                            <a href="https://global.cusorcart/seller-hub/" class="nav_a">Sell Product on Cusorcart</a>
                         </li>
                         
                         <li>
-                            <a href="https://global.{{ env('APP_DOMAIN') }}/seller-hub/" class="nav_a">Sell Apps on Cusorcart</a>
+                            <a href="https://global.cusorcart/seller-hub/" class="nav_a">Sell Apps on Cusorcart</a>
                         </li>
                         <li>
-                            <a href="https://global.{{ env('APP_DOMAIN') }}/affiliates/" class="nav_a">Become An Affiliate</a>
+                            <a href="https://global.cusorcart/affiliates/" class="nav_a">Become An Affiliate</a>
                         </li>
                        
                         <li>
-                            <a href="https://global.{{ env('APP_DOMAIN') }}/advertising/" class="nav_a">Advertise Your Products</a>
+                            <a href="https://global.cusorcart/advertising/" class="nav_a">Advertise Your Products</a>
                         </li>
                         
                     </ul>
@@ -549,7 +549,7 @@
 
     
         <div class="navFooterLine navFooterLinkLine navFooterPadItemLine navFooterCopyright">
-            <span>© 2021, {{ env('APP_DOMAIN') }}</span>
+            <span>© 2021, Cusorcart</span>
         </div>
     
     
@@ -578,7 +578,7 @@
         <ul id="nav-ftr-links" class="nav-ftr-links-two-column">
 
             <li class="nav-li nav-li-right">
-                <a class="nav-a " href="https://global.{{ env('APP_DOMAIN') }}/terms-and-conditions/">
+                <a class="nav-a " href="https://global.cusorcart/terms-and-conditions/">
                     <span class="nav-ftr-text">
                         
                         Terms & Conditions
@@ -587,7 +587,7 @@
                 </a>
             </li>
             <li class="nav-li nav-li-right">
-                <a class="nav-a " href="https://global.{{ env('APP_DOMAIN') }}/about-us/">
+                <a class="nav-a " href="https://global.cusorcart/about-us/">
                     <span class="nav-ftr-text">
                         About Us
                     </span>
@@ -595,7 +595,7 @@
                 </a>
             </li>
             <li class="nav-li nav-li-right">
-                <a class="nav-a " href="https://global.{{ env('APP_DOMAIN') }}/seller-hub/">
+                <a class="nav-a " href="https://global.cusorcart/seller-hub/">
                     <span class="nav-ftr-text">
                         Become a Seller
                     </span>
@@ -620,7 +620,7 @@
             </li>
           
             <li class="nav-li ">
-                <a class="nav-a " href="{{ env('APP_DOMAIN') }}/users/login">
+                <a class="nav-a " href=cusorcart/users/login">
                     <span class="nav-ftr-text">
                         Your Account
                     </span>
@@ -628,7 +628,7 @@
                 </a>
             </li>
             <li class="nav-li ">
-                <a class="nav-a " href="{{ env('APP_DOMAIN') }}/users/login">
+                <a class="nav-a " href=cusorcart/users/login">
                     <span class="nav-ftr-text">
                         Your Orders
                     </span>
@@ -636,7 +636,7 @@
                 </a>
             </li>
             <li class="nav-li ">
-                <a class="nav-a " href="{{ env('APP_DOMAIN') }}/returnpolicy/">
+                <a class="nav-a " href=cusorcart/returnpolicy/">
                     <span class="nav-ftr-text">
                         Returns
                     </span>
@@ -644,7 +644,7 @@
                 </a>
             </li>
             <li class="nav-li ">
-                <a class="nav-a " href="https://global.{{ env('APP_DOMAIN') }}/docs/">
+                <a class="nav-a " href="https://global.cusorcart/docs/">
                     <span class="nav-ftr-text">
                         Customer Service
                     </span>
@@ -689,7 +689,7 @@
 
 <!--<div class="aiz-mobile-bottom-nav d-xl-none fixed-bottom bg-white shadow-lg border-top">-->
 <!--    <div class="d-flex justify-content-around align-items-center">-->
-<!--        <a href="{{ env('APP_DOMAIN') }}" class="text-reset flex-grow-1 text-center py-3 border-right {{ areActiveRoutes(['home'],'bg-soft-primary')}}">-->
+<!--        <a href=cusorcart" class="text-reset flex-grow-1 text-center py-3 border-right {{ areActiveRoutes(['home'],'bg-soft-primary')}}">-->
 <!--            <i class="las la-home la-2x"></i>-->
 <!--        </a>-->
 <!--        <a href="{{ route('categories.all') }}" class="text-reset flex-grow-1 text-center py-3 border-right {{ areActiveRoutes(['categories.all'],'bg-soft-primary')}}">-->
