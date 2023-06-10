@@ -61,18 +61,18 @@
                             <div class="nav-sprite nav-progressive-attribute" id="nav-packard-glow-loc-icon"></div>
                             <div id="glow-ingress-block">
                                 <span class="nav-line-1 nav-progressive-content" id="glow-ingress-line1">
-                                Shopper In
+                                Shopper In 
                                 </span>
                                 <span class="nav-line-2 nav-progressive-content" id="glow-ingress-line2">
                                     Nigeria
                                     <?php
                                         // use Stevebauman\Location\Facades\Location;
                                         // $ip = Request::ip();
-                                        // if ($position = Location::get($ip)) {
-                                        //  Successfully retrieved position.
-                                        // echo $position->countryName;
-                                        // } else {
-                                        //  Failed retrieving position.
+                                            // if ($position = Location::get($ip)) {
+                                            // Successfully retrieved position.
+                                            // echo $position->countryName;
+                                            // } else {
+                                            // Failed retrieving position.
                                         // }
                                     ?>
                                 </span>
@@ -87,24 +87,38 @@
                     {{-- @if(get_setting('show_language_switcher') == 'on')
                     <li class="list-inline-item dropdown mr-3" id="lang-change">
                         @php
-                        if(Session::has('locale')){
-                        $locale = Session::get('locale', Config::get('app.locale'));
-                        }
-                        else{
-                        $locale = 'en';
-                        }
+                            if(Session::has('locale')){
+                                $locale = Session::get('locale', Config::get('app.locale'));
+                            }
+                            else{
+                                $locale = 'en';
+                            }
                         @endphp
                         <a href="javascript:void(0)" class="dropdown-toggle text-reset py-2" data-toggle="dropdown" data-display="static">
-                        <img src="{{ static_asset('assets/img/placeholder.jpg') }}" data-src="{{ static_asset('assets/img/flags/'.$locale.'.png') }}" class="mr-2 lazyload" alt="{{ \App\Language::where('code', $locale)->first()->name }}" height="11">
-                        <span class="opacity-60">{{ \App\Language::where('code', $locale)->first()->name }}</span>
+                            <img src="{{ static_asset('assets/img/placeholder.jpg') }}" data-src="{{ static_asset('assets/img/flags/'.$locale.'.png') }}" class="mr-2 lazyload" alt="{{ \App\Language::where('code', $locale)->first()->name }}" height="11">
+                            <span class="opacity-60">{{ \App\Language::where('code', $locale)->first()->name }}</span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-left">
                             @foreach (\App\Language::all() as $key => $language)
                             <li>
                                 <a href="javascript:void(0)" data-flag="{{ $language->code }}" class="dropdown-item @if($locale == $language) active @endif">
-                                <img src="{{ static_asset('assets/img/placeholder.jpg') }}" data-src="{{ static_asset('assets/img/flags/'.$language->code.'.png') }}" class="mr-1 lazyload" alt="{{ $language->name }}" height="11">
-                                <span class="language">{{ $language->name }}</span>
+                                    <img src="{{ static_asset('assets/img/placeholder.jpg') }}" data-src="{{ static_asset('assets/img/flags/'.$language->code.'.png') }}" class="mr-1 lazyload" alt="{{ $language->name }}" height="11">
+                                    <span class="language">{{ $language->name }}</span>
                                 </a>
+                                <script>
+                                    if ($('#lang-change').length > 0) {
+                                        $('#lang-change .dropdown-menu a').each(function() {
+                                            $(this).on('click', function(e){
+                                                e.preventDefault();
+                                                var $this = $(this);
+                                                var locale = $this.data('flag');
+                                                $.post('{{ route('language.change') }}',{_token: AIZ.data.csrf, locale:locale}, function(data){
+                                                    location.reload();
+                                                });
+                                            });
+                                        });
+                                    }
+                                </script>
                             </li>
                             @endforeach
                         </ul>
@@ -126,7 +140,22 @@
                             {{ (\App\Currency::where('code', $currency_code)->first()->name) }} {{ (\App\Currency::where('code', $currency_code)->first()->symbol) }}
                         </a>
                         <ul class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
-                            @foreach (\App\Currency::where('status', 1)->get() as $key => $currency)
+                            <script>
+                                if ($('#currency-change').length > 0) {
+                                    $('#currency-change .dropdown-menu a').each(function() {
+                                        $(this).on('click', function(e){
+                                            e.preventDefault();
+                                            var $this = $(this);
+                                            var currency_code = $this.data('currency');
+                                            $.post('{{ route('currency.change') }}',{_token: AIZ.data.csrf, currency_code:currency_code}, function(data){
+                                                location.reload();
+                                            });
+                            
+                                        });
+                                    });
+                                }
+                            </script>
+                            @foreach (\App\Currency::where('status', 0)->get() as $key => $currency)
                             <li>
                                 <a  class="dropdown-item @if($currency_code == $currency->code) active @endif" href="javascript:void(0)" data-currency="{{ $currency->code }}">{{ $currency->name }} ({{ $currency->symbol }})</a>
                             </li>
@@ -156,6 +185,78 @@
                                 </div>
                                 <div class="input-group">
                                     <input type="text" class="border-0 border-lg form-control" id="search" name="q" placeholder="{{translate('I am shopping for...')}}" autocomplete="off" required>
+                                    <script>
+                                        $('#search').on('keyup', function(){
+                                            search();
+                                        });
+                                        
+                                        $('#search').on('focus', function(){
+                                            search();
+                                        });
+
+                                        function search() {
+                                            var searchKey = $('#search').val();
+                                            if(searchKey.length > 0) {
+                                                $('body').addClass("typed-search-box-shown");
+                                        
+                                                $('.typed-search-box').removeClass('d-none');
+                                                $('.search-preloader').removeClass('d-none');
+                                                $.post('{{ route('search.ajax') }}', { _token: AIZ.data.csrf, search:searchKey}, function(data){
+                                                    if(data == '0'){
+                                                        // $('.typed-search-box').addClass('d-none');
+                                                        $('#search-content').html(null);
+                                                        $('.typed-search-box .search-nothing').removeClass('d-none').html('Sorry, nothing found for <strong>"'+searchKey+'"</strong>');
+                                                        $('.search-preloader').addClass('d-none');
+                                        
+                                                    }
+                                                    else{
+                                                        $('.typed-search-box .search-nothing').addClass('d-none').html(null);
+                                                        $('#search-content').html(data);
+                                                        $('.search-preloader').addClass('d-none');
+                                                    }
+                                                });
+                                            }
+                                            else {
+                                                $('.typed-search-box').addClass('d-none');
+                                                $('body').removeClass("typed-search-box-shown");
+                                            }
+                                        }
+                                        $('#search1').on('keyup', function(){
+                                            search1();
+                                        });
+                                        
+                                        $('#search1').on('focus', function(){
+                                            search1();
+                                        });
+                                            
+                                        function search1(){
+                                            var searchKey = $('#search1').val();
+                                            if(searchKey.length > 0){
+                                                $('body').addClass("typed-search-box-shown");
+                                        
+                                                $('.typed-search-box').removeClass('d-none');
+                                                $('.search-preloader').removeClass('d-none');
+                                                $.post('{{ route('search.ajax') }}', { _token: AIZ.data.csrf, search:searchKey}, function(data){
+                                                    if(data == '0'){
+                                                        // $('.typed-search-box').addClass('d-none');
+                                                        $('#search1-content').html(null);
+                                                        $('.typed-search-box .search-nothing').removeClass('d-none').html('Sorry, nothing found for <strong>"'+searchKey+'"</strong>');
+                                                        $('.search-preloader').addClass('d-none');
+                                        
+                                                    }
+                                                    else{
+                                                        $('.typed-search-box .search-nothing').addClass('d-none').html(null);
+                                                        $('#search1-content').html(data);
+                                                        $('.search-preloader').addClass('d-none');
+                                                    }
+                                                });
+                                            }
+                                            else {
+                                                $('.typed-search-box').addClass('d-none');
+                                                $('body').removeClass("typed-search-box-shown");
+                                            }
+                                        }
+                                    </script>
                                     <div class="input-group-append d-none d-lg-block">
                                         <button style="background: #f3c11b;color: black;font-weight: bolder;border: 1px solid #f3c11b;" class="btn btn-primary" type="submit">
                                         <i class="la la-search la-flip-horizontal fs-18"></i>
@@ -563,43 +664,57 @@
             <div class="a-declarative" data-action="glow-sheet-trigger" id="nav-global-location-slot">
                 <div id="glow-ingress-block">
                     <span style="width: 77%;" class="nav-single-line nav-persist-content" id="glow-ingress-single-line">
-                    Shopper In  <?php
-                        $ip = Request::ip();
-                        if ($position = Location::get($ip)) {
+                    Shopper In  Nigeria<?php
+                        // $ip = Request::ip();
+                        // if ($position = Location::get($ip)) {
                         // Successfully retrieved position.
-                        echo $position->countryName;
-                        } else {
+                        // echo $position->countryName;
+                        // } else {
                         // Failed retrieving position.
-                        }
+                        // }
                         ?>
                     </span>
                     <ul class="list-inline d-flex justify-content-between justify-content-lg-start mb-0">
-                        @if(get_setting('show_language_switcher') == 'on')
+                        {{-- @if(get_setting('show_language_switcher') == 'on')
                         <li class="list-inline-item dropdown mr-3" id="lang-change">
                             @php
-                            if(Session::has('locale')){
-                            $locale = Session::get('locale', Config::get('app.locale'));
-                            }
-                            else{
-                            $locale = 'en';
-                            }
+                                if(Session::has('locale')){
+                                    $locale = Session::get('locale', Config::get('app.locale'));
+                                }
+                                else{
+                                    $locale = 'en';
+                                }
                             @endphp
                             <a href="javascript:void(0)" class="dropdown-toggle text-reset py-2" data-toggle="dropdown" data-display="static">
-                            <img src="{{ static_asset('assets/img/placeholder.jpg') }}" data-src="{{ static_asset('assets/img/flags/'.$locale.'.png') }}" class="mr-2 lazyload" alt="{{ \App\Language::where('code', $locale)->first()->name }}" height="11">
-                            <span class="opacity-60">{{ \App\Language::where('code', $locale)->first()->name }}</span>
+                                <img src="{{ static_asset('assets/img/placeholder.jpg') }}" data-src="{{ static_asset('assets/img/flags/'.$locale.'.png') }}" class="mr-2 lazyload" alt="{{ \App\Language::where('code', $locale)->first()->name }}" height="11">
+                                <span class="opacity-60">{{ \App\Language::where('code', $locale)->first()->name }}</span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-left">
                                 @foreach (\App\Language::all() as $key => $language)
                                 <li>
                                     <a href="javascript:void(0)" data-flag="{{ $language->code }}" class="dropdown-item @if($locale == $language) active @endif">
-                                    <img src="{{ static_asset('assets/img/placeholder.jpg') }}" data-src="{{ static_asset('assets/img/flags/'.$language->code.'.png') }}" class="mr-1 lazyload" alt="{{ $language->name }}" height="11">
-                                    <span class="language">{{ $language->name }}</span>
+                                        <img src="{{ static_asset('assets/img/placeholder.jpg') }}" data-src="{{ static_asset('assets/img/flags/'.$language->code.'.png') }}" class="mr-1 lazyload" alt="{{ $language->name }}" height="11">
+                                        <span class="language">{{ $language->name }}</span>
                                     </a>
+                                    <script>
+                                        if ($('#lang-change').length > 0) {
+                                            $('#lang-change .dropdown-menu a').each(function() {
+                                                $(this).on('click', function(e){
+                                                    e.preventDefault();
+                                                    var $this = $(this);
+                                                    var locale = $this.data('flag');
+                                                    $.post('{{ route('language.change') }}',{_token: AIZ.data.csrf, locale:locale}, function(data){
+                                                        location.reload();
+                                                    });
+                                                });
+                                            });
+                                        }
+                                    </script>
                                 </li>
                                 @endforeach
                             </ul>
                         </li>
-                        @endif
+                        @endif --}}
                         @if(get_setting('show_currency_switcher') == 'on')
                         <li style="margin-top: 0px;" class="list-inline-item dropdown" id="currency-change">
                             @php
@@ -614,7 +729,22 @@
                             {{ \App\Currency::where('code', $currency_code)->first()->name }} {{ (\App\Currency::where('code', $currency_code)->first()->symbol) }}
                             </a>
                             <ul class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
-                                @foreach (\App\Currency::where('status', 1)->get() as $key => $currency)
+                                <script>
+                                    if ($('#currency-change').length > 0) {
+                                        $('#currency-change .dropdown-menu a').each(function() {
+                                            $(this).on('click', function(e){
+                                                e.preventDefault();
+                                                var $this = $(this);
+                                                var currency_code = $this.data('currency');
+                                                $.post('{{ route('currency.change') }}',{_token: AIZ.data.csrf, currency_code:currency_code}, function(data){
+                                                    location.reload();
+                                                });
+                                
+                                            });
+                                        });
+                                    }
+                                </script>
+                                @foreach (\App\Currency::where('status', 0)->get() as $key => $currency)
                                 <li>
                                     <a  class="dropdown-item @if($currency_code == $currency->code) active @endif" href="javascript:void(0)" data-currency="{{ $currency->code }}">{{ $currency->name }} ({{ $currency->symbol }})</a>
                                 </li>

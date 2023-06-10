@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 09, 2023 at 01:00 PM
+-- Generation Time: Jun 10, 2023 at 03:05 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -418,7 +418,7 @@ INSERT INTO `business_settings` (`id`, `type`, `value`, `created_at`, `updated_a
 (59, 'shipping_cost_admin', '0', '2020-07-01 13:49:56', '2020-07-01 13:49:56'),
 (60, 'payhere_sandbox', '0', '2020-07-30 18:23:53', '2020-07-30 18:23:53'),
 (61, 'payhere', '1', '2020-07-30 18:23:53', '2023-05-28 21:38:21'),
-(62, 'google_recaptcha', '1', '2020-08-17 07:13:37', '2023-06-09 09:38:21'),
+(62, 'google_recaptcha', '0', '2020-08-17 07:13:37', '2023-06-09 10:13:51'),
 (63, 'ngenius', '1', '2020-09-22 10:58:21', '2023-05-28 21:38:23'),
 (64, 'header_logo', '8', '2020-11-16 07:26:36', '2023-05-25 20:50:48'),
 (65, 'show_language_switcher', 'on', '2020-11-16 07:26:36', '2020-11-16 07:26:36'),
@@ -1982,32 +1982,32 @@ CREATE TABLE `currencies` (
 --
 
 INSERT INTO `currencies` (`id`, `name`, `symbol`, `exchange_rate`, `status`, `code`, `created_at`, `updated_at`) VALUES
-(1, 'U.S. Dollar', '$', 1.00000, 1, 'USD', '2018-10-09 11:35:08', '2018-10-17 05:50:52'),
-(2, 'Australian Dollar', '$', 1.28000, 1, 'AUD', '2018-10-09 11:35:08', '2019-02-04 05:51:55'),
-(5, 'Brazilian Real', 'R$', 3.25000, 1, 'BRL', '2018-10-09 11:35:08', '2018-10-17 05:51:00'),
-(6, 'Canadian Dollar', '$', 1.27000, 1, 'CAD', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(7, 'Czech Koruna', 'Kč', 20.65000, 1, 'CZK', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(8, 'Danish Krone', 'kr', 6.05000, 1, 'DKK', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(9, 'Euro', '€', 0.85000, 1, 'EUR', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(10, 'Hong Kong Dollar', '$', 7.83000, 1, 'HKD', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(11, 'Hungarian Forint', 'Ft', 255.24000, 1, 'HUF', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(12, 'Israeli New Sheqel', '₪', 3.48000, 1, 'ILS', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(13, 'Japanese Yen', '¥', 107.12000, 1, 'JPY', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(14, 'Malaysian Ringgit', 'RM', 3.91000, 1, 'MYR', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(15, 'Mexican Peso', '$', 18.72000, 1, 'MXN', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(16, 'Norwegian Krone', 'kr', 7.83000, 1, 'NOK', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(17, 'New Zealand Dollar', '$', 1.38000, 1, 'NZD', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(18, 'Philippine Peso', '₱', 52.26000, 1, 'PHP', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(19, 'Polish Zloty', 'zł', 3.39000, 1, 'PLN', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(20, 'Pound Sterling', '£', 0.72000, 1, 'GBP', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(21, 'Russian Ruble', 'руб', 55.93000, 1, 'RUB', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(22, 'Singapore Dollar', '$', 1.32000, 1, 'SGD', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(23, 'Swedish Krona', 'kr', 8.19000, 1, 'SEK', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(24, 'Swiss Franc', 'CHF', 0.94000, 1, 'CHF', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(26, 'Thai Baht', '฿', 31.39000, 1, 'THB', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
-(27, 'Taka', '৳', 84.00000, 1, 'BDT', '2018-10-09 11:35:08', '2018-12-02 05:16:13'),
-(28, 'Indian Rupee', 'Rs', 68.45000, 1, 'Rupee', '2019-07-07 10:33:46', '2019-07-07 10:33:46'),
-(29, 'Nigerian Naira', '₦', 750.00000, 1, 'NGN', '2023-05-28 20:22:35', '2023-06-02 22:30:16');
+(1, 'U.S. Dollar', '$', 1.00000, 0, 'USD', '2018-10-09 11:35:08', '2018-10-17 05:50:52'),
+(2, 'Australian Dollar', '$', 1.28000, 0, 'AUD', '2018-10-09 11:35:08', '2019-02-04 05:51:55'),
+(5, 'Brazilian Real', 'R$', 3.25000, 0, 'BRL', '2018-10-09 11:35:08', '2018-10-17 05:51:00'),
+(6, 'Canadian Dollar', '$', 1.27000, 0, 'CAD', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(7, 'Czech Koruna', 'Kč', 20.65000, 0, 'CZK', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(8, 'Danish Krone', 'kr', 6.05000, 0, 'DKK', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(9, 'Euro', '€', 0.85000, 0, 'EUR', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(10, 'Hong Kong Dollar', '$', 7.83000, 0, 'HKD', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(11, 'Hungarian Forint', 'Ft', 255.24000, 0, 'HUF', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(12, 'Israeli New Sheqel', '₪', 3.48000, 0, 'ILS', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(13, 'Japanese Yen', '¥', 107.12000, 0, 'JPY', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(14, 'Malaysian Ringgit', 'RM', 3.91000, 0, 'MYR', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(15, 'Mexican Peso', '$', 18.72000, 0, 'MXN', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(16, 'Norwegian Krone', 'kr', 7.83000, 0, 'NOK', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(17, 'New Zealand Dollar', '$', 1.38000, 0, 'NZD', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(18, 'Philippine Peso', '₱', 52.26000, 0, 'PHP', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(19, 'Polish Zloty', 'zł', 3.39000, 0, 'PLN', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(20, 'Pound Sterling', '£', 0.72000, 0, 'GBP', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(21, 'Russian Ruble', 'руб', 55.93000, 0, 'RUB', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(22, 'Singapore Dollar', '$', 1.32000, 0, 'SGD', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(23, 'Swedish Krona', 'kr', 8.19000, 0, 'SEK', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(24, 'Swiss Franc', 'CHF', 0.94000, 0, 'CHF', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(26, 'Thai Baht', '฿', 31.39000, 0, 'THB', '2018-10-09 11:35:08', '2018-10-09 11:35:08'),
+(27, 'Taka', '৳', 84.00000, 0, 'BDT', '2018-10-09 11:35:08', '2018-12-02 05:16:13'),
+(28, 'Indian Rupee', 'Rs', 68.45000, 0, 'Rupee', '2019-07-07 10:33:46', '2019-07-07 10:33:46'),
+(29, 'Nigerian Naira', '₦', 750.00000, 0, 'NGN', '2023-05-28 20:22:35', '2023-06-02 22:30:16');
 
 -- --------------------------------------------------------
 
@@ -2031,7 +2031,8 @@ INSERT INTO `customers` (`id`, `user_id`, `created_at`, `updated_at`) VALUES
 (2, 3, '2023-05-29 22:31:48', '2023-05-29 22:31:48'),
 (3, 4, '2023-05-29 22:35:44', '2023-05-29 22:35:44'),
 (4, 5, '2023-05-29 23:11:10', '2023-05-29 23:11:10'),
-(5, 6, '2023-05-30 07:30:51', '2023-05-30 07:30:51');
+(5, 6, '2023-05-30 07:30:51', '2023-05-30 07:30:51'),
+(6, 7, '2023-06-09 22:05:06', '2023-06-09 22:05:06');
 
 -- --------------------------------------------------------
 
@@ -5105,11 +5106,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `referred_by`, `provider_id`, `user_type`, `name`, `email`, `email_verified_at`, `verification_code`, `new_email_verificiation_code`, `password`, `remember_token`, `avatar`, `avatar_original`, `address`, `country`, `city`, `postal_code`, `phone`, `balance`, `banned`, `referral_code`, `customer_package_id`, `remaining_uploads`, `created_at`, `updated_at`) VALUES
-(1, NULL, NULL, 'admin', 'Nnadi', 'admin@admin.com', NULL, 'eyJpdiI6IjVlYWNPYy9MM2VqQ2orUkE3RmlKakE9PSIsInZhbHVlIjoiSTI0bjZrd1htREk2TFBCU3lidGd1Zz09IiwibWFjIjoiMWZkNjhkNmE5MGJjNTEyZDIxOTcxMGM5NTlhMTg3OWE3YzYyYTU5MTcyMTUzM2JhYjQ2NzI4NzRhZGRiZjA2NSIsInRhZyI6IiJ9', NULL, '$2y$10$GW32NfSKwQwhij./pbosCOsAnl0Qe2X7dLm3nVzCM6PxKoKIVJPFi', '2cvCowzduOXLV5RPRFW3JQYSgFqYQLxwfgCQftdFdh3Rc6naHnPXTENBJyvQ', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2023-05-29 22:26:14', '2023-05-29 22:26:14'),
-(2, NULL, NULL, 'staff', 'Chime', 'beekyhe@gmail.com', NULL, 'eyJpdiI6IkpVNUt6VEtJcWpIT0ZWQXAvTzhjWmc9PSIsInZhbHVlIjoiQ1lDOG80Sjc1L05HVVE5eXYwYk5zUT09IiwibWFjIjoiNmU1MjdmYjMzM2FmY2FkZThlYzBjYWExMGMyNjVjZDVjMGM5OGUwZTUzMDdlYTQzZTYzNmUyOTRiOTY5MjIzMCIsInRhZyI6IiJ9', NULL, '$2y$10$9cuqD0CjC9dOwfKFUtZucubpti2ErHr3Ug8NSCGPNFdB1uc4fMot.', 'lPu1iVTnUTLQw60iFcsYzQlvwxTMRq2DIdxOs9DS42Al9u8HTZ8ZfRlzWLmB', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2023-05-29 22:29:24', '2023-05-29 22:29:24'),
-(3, NULL, NULL, 'customer', 'Ugo', 'chimennadi66@gmail.com', NULL, 'eyJpdiI6InJuUHl0OEQzOUNIOW5xb1AxVDZXWkE9PSIsInZhbHVlIjoibHdiMVBVQ2IvdHNTVVJNSlpzZjcxUT09IiwibWFjIjoiOGRiMWUxOTQ0NDkyYjI4OTVkMjc0ODY5ZTBlMTMzYzJhZTI3M2I3ZmI1ZDE2ZGQzNTA2N2MwNmRkNjk5N2VhYiIsInRhZyI6IiJ9', NULL, '$2y$10$BYohnu5mXhad86/1P0ymsuN/uRMfOa3O2.iNDVs78mDqLqzstwO9y', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2023-05-29 22:31:48', '2023-05-29 22:31:49'),
-(4, NULL, NULL, 'delivery_boy', 'Oly', 'olynnadi@gmail.com', NULL, 'eyJpdiI6InpLVk16NG1EbVIwK25MTncyU2liOEE9PSIsInZhbHVlIjoiR1RxK0tsQTc3Q1NqV0Z1K296ZjVtQT09IiwibWFjIjoiMjc5ZjM3OThmMmE5OWMwYzJiMWZhZTc0MWMzMjQ0ODM0OTA0YmEzNTU0OThmZjZhOGI3Nzg4NzgzYmE0YTJlOCIsInRhZyI6IiJ9', NULL, '$2y$10$0E1XjDg.BjqozasaPHoCXuo3c34kj/9s9FQ9uOKDUj.LXaBsl56LS', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2023-05-29 22:35:44', '2023-05-29 22:35:44'),
-(5, NULL, NULL, 'seller', 'Ada', 'ada@gmail.com', NULL, 'eyJpdiI6ImlBWWZ5emNtUTRPb3BRWmJHWUV2K0E9PSIsInZhbHVlIjoicE5wMGF6emNDYXVzb0x5Smh3TFJOZz09IiwibWFjIjoiYTkyNDE5Y2NkMjMxOTdjY2QwZGYxZWU3NmQxOTlmMDQ0MGMyYTU5MWY2MTZlZTkyY2EwMjZjZjgwYTJjZTU1OCIsInRhZyI6IiJ9', 'SmsQ9iBFcklg9JjN5lGAYWxF5W4IDtNh', '$2y$10$u1bBhvcbn/H3xRDXqMd9u.eNd2C0G4JcyBy2GV.HkXYymLhhPnQIG', '5qPQolWD3GvuTRdSMKhBzAJ8jqhEoR0SzeERHdHSWrhxv2itrdnQiq6Vn8Xn', NULL, '111', NULL, NULL, NULL, NULL, '09033688922', 0.00, 0, NULL, NULL, 0, '2023-05-29 23:11:10', '2023-05-29 23:37:54'),
+(1, NULL, NULL, 'admin', 'Nnadi', 'admin@admin.com', NULL, 'eyJpdiI6IjVlYWNPYy9MM2VqQ2orUkE3RmlKakE9PSIsInZhbHVlIjoiSTI0bjZrd1htREk2TFBCU3lidGd1Zz09IiwibWFjIjoiMWZkNjhkNmE5MGJjNTEyZDIxOTcxMGM5NTlhMTg3OWE3YzYyYTU5MTcyMTUzM2JhYjQ2NzI4NzRhZGRiZjA2NSIsInRhZyI6IiJ9', NULL, '$2y$10$GW32NfSKwQwhij./pbosCOsAnl0Qe2X7dLm3nVzCM6PxKoKIVJPFi', 'rR8g3pVqVA5KJ8iEBeS7Cqxyqel7i4QMNRKrBD7Xqa6Zw2VqUV8stitq5MuV', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2023-05-29 22:26:14', '2023-05-29 22:26:14'),
+(2, NULL, NULL, 'staff', 'Chime', 'beekyhe@gmail.com', NULL, 'eyJpdiI6IkpVNUt6VEtJcWpIT0ZWQXAvTzhjWmc9PSIsInZhbHVlIjoiQ1lDOG80Sjc1L05HVVE5eXYwYk5zUT09IiwibWFjIjoiNmU1MjdmYjMzM2FmY2FkZThlYzBjYWExMGMyNjVjZDVjMGM5OGUwZTUzMDdlYTQzZTYzNmUyOTRiOTY5MjIzMCIsInRhZyI6IiJ9', NULL, '$2y$10$9cuqD0CjC9dOwfKFUtZucubpti2ErHr3Ug8NSCGPNFdB1uc4fMot.', 'kiZUXoJri8hKrmDBgeXZqgqMs1YRAgjoS2Ccyvp9jv9uNWcw1ZIKbUWTBPX2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2023-05-29 22:29:24', '2023-05-29 22:29:24'),
+(3, NULL, NULL, 'customer', 'Ugo', 'chimennadi66@gmail.com', NULL, 'eyJpdiI6InJuUHl0OEQzOUNIOW5xb1AxVDZXWkE9PSIsInZhbHVlIjoibHdiMVBVQ2IvdHNTVVJNSlpzZjcxUT09IiwibWFjIjoiOGRiMWUxOTQ0NDkyYjI4OTVkMjc0ODY5ZTBlMTMzYzJhZTI3M2I3ZmI1ZDE2ZGQzNTA2N2MwNmRkNjk5N2VhYiIsInRhZyI6IiJ9', NULL, '$2y$10$BYohnu5mXhad86/1P0ymsuN/uRMfOa3O2.iNDVs78mDqLqzstwO9y', 'Zpy6Hk1KiYiDP9H0O3SMzKk7zA71iLxBbPa6BlBL2S9A3kkwexBO1pCx1bUi', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2023-05-29 22:31:48', '2023-05-29 22:31:49'),
+(4, NULL, NULL, 'delivery_boy', 'Oly', 'olynnadi@gmail.com', NULL, 'eyJpdiI6InpLVk16NG1EbVIwK25MTncyU2liOEE9PSIsInZhbHVlIjoiR1RxK0tsQTc3Q1NqV0Z1K296ZjVtQT09IiwibWFjIjoiMjc5ZjM3OThmMmE5OWMwYzJiMWZhZTc0MWMzMjQ0ODM0OTA0YmEzNTU0OThmZjZhOGI3Nzg4NzgzYmE0YTJlOCIsInRhZyI6IiJ9', NULL, '$2y$10$0E1XjDg.BjqozasaPHoCXuo3c34kj/9s9FQ9uOKDUj.LXaBsl56LS', 'BIeAzN1vU7ss4FxwyddL2hHdcCMkhjT9mCmyaBCTBpsBVUpkPEZYn0kRPW1J', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2023-05-29 22:35:44', '2023-05-29 22:35:44'),
+(5, NULL, NULL, 'seller', 'Ada', 'ada@gmail.com', NULL, 'eyJpdiI6ImlBWWZ5emNtUTRPb3BRWmJHWUV2K0E9PSIsInZhbHVlIjoicE5wMGF6emNDYXVzb0x5Smh3TFJOZz09IiwibWFjIjoiYTkyNDE5Y2NkMjMxOTdjY2QwZGYxZWU3NmQxOTlmMDQ0MGMyYTU5MWY2MTZlZTkyY2EwMjZjZjgwYTJjZTU1OCIsInRhZyI6IiJ9', 'SmsQ9iBFcklg9JjN5lGAYWxF5W4IDtNh', '$2y$10$u1bBhvcbn/H3xRDXqMd9u.eNd2C0G4JcyBy2GV.HkXYymLhhPnQIG', 'tqXwA4mKXgSTv4o8lTrKHdJZ9DAgXvFqXPO4HsNJaQENqnoxYnzSHPv6hKVE', NULL, '111', NULL, NULL, NULL, NULL, '09033688922', 0.00, 0, NULL, NULL, 0, '2023-05-29 23:11:10', '2023-05-29 23:37:54'),
 (6, NULL, NULL, 'logistic', 'Ife', 'ife@gmail.com', NULL, 'eyJpdiI6IlJiQ2lqUFliQ1orMGI0MythcVE3ZEE9PSIsInZhbHVlIjoid1dldmU2L3JFWmxRcnZzZ2xVdzVEUT09IiwibWFjIjoiOWFmODg3M2VjYTY2MTA0NmQ2NmYxMjUzYjhkNGEwYmVhN2VmNDJmOWI1NjgxYjVlZWNmYmI4ZmE1NTYxOTY4OCIsInRhZyI6IiJ9', NULL, '$2y$10$Nth4iUpKN9Rvi.UcQMGBYuoflInddp62YThN2CUJtE1iu1G3Xlt1.', 'RrxHp1ROmX4ZadZKfg0nZXPHk1Zax8xVDWpnq2WDFl4NuaG37ajCGzGlCjNf', NULL, '113', '234-CFSD Mall', NULL, NULL, NULL, '09033688922', 0.00, 0, NULL, NULL, 0, '2023-05-30 07:30:51', '2023-06-03 23:02:31');
 
 -- --------------------------------------------------------
@@ -5838,7 +5839,7 @@ ALTER TABLE `currencies`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `customer_packages`
@@ -6144,7 +6145,7 @@ ALTER TABLE `uploads`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `wallets`
