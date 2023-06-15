@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 11, 2023 at 01:38 AM
+-- Generation Time: Jun 15, 2023 at 08:42 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -63,7 +63,9 @@ CREATE TABLE `addresses` (
 --
 
 INSERT INTO `addresses` (`id`, `user_id`, `address`, `country`, `state`, `city`, `postal_code`, `phone`, `set_default`, `created_at`, `updated_at`) VALUES
-(1, 1, '234-CFSD Mall', 'Nigeria', 'Akwa Ibom', 'Abak', '230170', '09033688922', 0, '2023-06-10 21:34:16', '2023-06-10 21:34:16');
+(1, 1, '234-CFSD Mall', 'Nigeria', 'Akwa Ibom', 'Abak', '230170', '09033688922', 0, '2023-06-10 21:34:16', '2023-06-10 21:34:16'),
+(2, 10, '234-CFSD Mall', 'Nigeria', 'Akwa Ibom', 'Abak', '230170', '09033688922', 0, '2023-06-15 16:28:51', '2023-06-15 16:28:51'),
+(3, 10, '234-CFSD Mall', 'Nigeria', 'Adamawa', 'Demsa', '230170', '09033688922', 0, '2023-06-15 17:40:59', '2023-06-15 17:40:59');
 
 -- --------------------------------------------------------
 
@@ -113,7 +115,8 @@ CREATE TABLE `attributes` (
 INSERT INTO `attributes` (`id`, `name`, `created_at`, `updated_at`) VALUES
 (1, 'Size', '2020-02-24 05:55:07', '2020-02-24 05:55:07'),
 (2, 'Fabric Sizes', '2020-02-24 05:55:13', '2023-05-28 19:37:28'),
-(3, 'Gender', '2023-05-28 13:07:29', '2023-05-28 13:07:29');
+(3, 'Gender', '2023-05-28 13:07:29', '2023-05-28 13:07:29'),
+(4, 'Shoe Size', '2023-06-15 16:27:14', '2023-06-15 16:27:14');
 
 -- --------------------------------------------------------
 
@@ -312,7 +315,9 @@ INSERT INTO `brands` (`id`, `name`, `logo`, `top`, `slug`, `meta_title`, `meta_d
 (25, 'Epson', '30', 0, 'Epson-uIhcZ', 'Epson', NULL, '2023-05-25 03:50:50', '2023-05-25 03:50:50'),
 (26, 'Gopro', '28', 0, 'Gopro-gAuPw', 'Gopro', NULL, '2023-05-25 03:51:23', '2023-05-25 03:51:23'),
 (27, 'Sharp', '29', 0, 'Sharp-1DZPx', 'Sharp', NULL, '2023-05-25 03:51:56', '2023-05-25 03:51:56'),
-(28, 'Amazon', '27', 0, 'Amazon-KI7im', 'Amazon', NULL, '2023-05-25 03:52:30', '2023-05-25 03:52:30');
+(28, 'Amazon', '27', 0, 'Amazon-KI7im', 'Amazon', NULL, '2023-05-25 03:52:30', '2023-05-25 03:52:30'),
+(30, '2', NULL, 0, NULL, NULL, NULL, '2023-06-15 15:32:29', '2023-06-15 15:32:29'),
+(31, '3', NULL, 0, NULL, NULL, NULL, '2023-06-15 15:59:22', '2023-06-15 15:59:22');
 
 -- --------------------------------------------------------
 
@@ -2805,7 +2810,7 @@ CREATE TABLE `products` (
   `meta_description` longtext DEFAULT NULL,
   `meta_img` varchar(255) DEFAULT NULL,
   `pdf` varchar(255) DEFAULT NULL,
-  `slug` mediumtext NOT NULL,
+  `slug` mediumtext DEFAULT NULL,
   `rating` double(8,2) NOT NULL DEFAULT 0.00,
   `barcode` varchar(255) DEFAULT NULL,
   `digital` int(1) NOT NULL DEFAULT 0,
@@ -2823,7 +2828,9 @@ INSERT INTO `products` (`id`, `name`, `added_by`, `user_id`, `category_id`, `bra
 (1, 'Men Letter Graphic Colorblock Tee', 'admin', 1, 33, 28, '85,84,83', '85,84,83', 'youtube', NULL, 'men', '<p><strong>Men Letter Graphic Colorblock Tee is perfect for you.</strong></p>', 3.02, '1', NULL, 0, '[]', '[]', NULL, '[]', NULL, 1, 1, 1, 'Approved', 'quantity', 1, 1, 0, 0, 'lb', NULL, 11, 1, 4, 1.00, 'percent', 1685404800, 1686095940, NULL, NULL, NULL, 'free', '0', 0, 7, 0, 'Men Letter Graphic Colorblock Tee', 'Men Letter Graphic Colorblock Tee', '85,84,83', NULL, 'Men-Letter-Graphic-Colorblock-Tee-u5iGY', 0.00, NULL, 0, NULL, NULL, '2023-05-29 05:33:13', '2023-05-29 06:13:06'),
 (2, 'Custom Made Adjustable Fitory Mens Sandals', 'admin', 1, 33, 2, '134,129,131,132,133,130', '134,129,131,132,133,130', 'youtube', NULL, 'Men', '<p>We are making efforts to produce reliable products for the clients through doing well in every detail. Wear the classic design of Men\'s Sandals. Your moment in all life,FITORY is gonna be around.</p><p><br></p><p>No matter where you are, who you are and what you are passionate about we want to be able to provide you with a custom products that helps you Express Yourself...to help you express who you really are!</p>', 6.78, '1', NULL, 0, '[]', '[]', NULL, '[]', NULL, 1, 1, 1, 'Approved', 'quantity', 1, 1, 0, 0, NULL, NULL, NULL, 2, 5, 1.20, 'amount', 1686355200, 1687046340, NULL, NULL, NULL, 'free', '0', 0, 5, 0, 'Custom Made Adjustable Fitory Mens Sandals', 'Custom Made Adjustable Fitory Mens Sandals', '130,129,131,132,133,134', NULL, 'Custom-Made-Adjustable-Fitory-Mens-Sandals-S3xZP', 0.00, NULL, 0, NULL, NULL, '2023-06-10 21:24:19', '2023-06-10 21:24:19'),
 (5, 'Renewed Apple iPhone 11 Pro, US Version, Space Grey', 'admin', 1, 6, 4, '138,140,139,141', '140,138,139,141', 'youtube', 'https://www.youtube.com/watch?v=hVpkbiQ9E4c', 'phones', '<p><br></p>', 371.67, '1', NULL, 0, '[\"1\"]', '[{\"attribute_id\":\"1\",\"values\":[\"64 GB\",\"256 GB\",\"512 GB\"]}]', NULL, '[]', NULL, 1, 1, 1, 'Approved', 'quantity', 1, 1, 0, 0, NULL, NULL, NULL, 1, 5, 3.00, 'percent', 1686355200, 1687046340, NULL, NULL, NULL, 'free', '0', 0, 7, 0, 'Renewed Apple iPhone 11 Pro, US Version, Space Grey', 'Renewed Apple iPhone 11 Pro, US Version, Space Grey', '140,138,139,141', NULL, 'Renewed-Apple-iPhone-11-Pro-US-Version-Space-Grey-1NX1E', 0.00, NULL, 0, NULL, NULL, '2023-06-10 22:10:22', '2023-06-10 22:10:22'),
-(6, 'Cusorcart Men\'s Classic Fit Performance Work Polo', 'admin', 1, 33, 21, '143,142,144', '143,142,144', 'youtube', NULL, 'Men', '<p><strong>Product details</strong></p><ul><li> 100% Polyester</li><li> Nigeria Made</li><li> Button Closure</li><li> Machine Wash</li></ul><p><br></p><p><strong>Materials &amp; Care</strong></p><ul><li> Machine Washable</li><li>Cotton/Polyester/Spandex</li></ul>', 6.94, '1', NULL, 1, '[\"2\"]', '[{\"attribute_id\":\"2\",\"values\":[\"Medium\",\"Large\",\"X-Large\"]}]', NULL, '[]', NULL, 1, 1, 1, 'Approved', 'quantity', 1, 1, 0, 0, NULL, NULL, NULL, 1, 20, 2.30, 'percent', 1686441600, 1687132740, NULL, NULL, NULL, 'free', '0', 0, 4, 0, 'Cusorcart Men\'s Classic Fit Performance Work Polo', 'Cusorcart Men\'s Classic Fit Performance Work Polo', '143,142,144', NULL, 'Cusorcart-Mens-Classic-Fit-Performance-Work-Polo-Rrict', 0.00, NULL, 0, NULL, NULL, '2023-06-10 22:32:33', '2023-06-10 22:32:33');
+(6, 'Cusorcart Men\'s Classic Fit Performance Work Polo', 'admin', 1, 33, 21, '143,142,144', '143,142,144', 'youtube', NULL, 'Men', '<p><strong>Product details</strong></p><ul><li> 100% Polyester</li><li> Nigeria Made</li><li> Button Closure</li><li> Machine Wash</li></ul><p><br></p><p><strong>Materials &amp; Care</strong></p><ul><li> Machine Washable</li><li>Cotton/Polyester/Spandex</li></ul>', 6.94, '1', NULL, 1, '[\"2\"]', '[{\"attribute_id\":\"2\",\"values\":[\"Medium\",\"Large\",\"X-Large\"]}]', NULL, '[]', NULL, 1, 1, 1, 'Approved', 'quantity', 1, 1, 0, 0, NULL, NULL, NULL, 1, 20, 2.30, 'percent', 1686441600, 1687132740, NULL, NULL, NULL, 'free', '0', 0, 4, 0, 'Cusorcart Men\'s Classic Fit Performance Work Polo', 'Cusorcart Men\'s Classic Fit Performance Work Polo', '143,142,144', NULL, 'Cusorcart-Mens-Classic-Fit-Performance-Work-Polo-Rrict', 0.00, NULL, 0, NULL, NULL, '2023-06-10 22:32:33', '2023-06-10 22:32:33'),
+(9, 'Adjustable 2.4G Wireless Vertical Mouse', 'admin', 1, 6, 5, '146,145', '146,145', 'youtube', NULL, 'Electronics', '<p><strong>Adjustable 2.4G Wireless Vertical Mouse</strong> - the perfect solution for personalized comfort and improved productivity. This innovative mouse is designed with ergonomics in mind, allowing you to customize its shape and size to fit your hand perfectly.</p><p><br></p><p>With its adjustable features, you can effortlessly adapt the mouse to your preferred grip style, ensuring optimal comfort and reducing strain during long hours of computer use. The mouse offers various adjustment options, including the ability to modify its width, height, and even the angle of its body, providing a truly tailored experience.</p><p><br></p><p>Equipped with advanced tracking technology, the adjustable mouse delivers precise cursor control and smooth navigation across different surfaces. Its responsive buttons and scroll wheel offer a satisfying clicking experience, enhancing your efficiency while working, gaming, or browsing the web.</p><p>This versatile mouse is compatible with both Windows and Mac operating systems, ensuring seamless integration with your favorite devices. Its wireless connectivity option eliminates the hassle of tangled cords, offering freedom of movement and a clutter-free workspace.</p><p><br></p><p>Upgrade your computing experience with the Adjustable Mouse, and discover a new level of comfort, customization, and precision. Say goodbye to discomfort and hello to productivity with this ergonomic and adaptable companion.</p>', 34.50, '1', NULL, 0, '[]', '[]', NULL, '[]', NULL, 1, 1, 1, 'Approved', 'quantity', 1, 1, 0, 0, 'kg', NULL, 4, 1, 5, 16.67, 'amount', 1686787200, 1687478340, NULL, NULL, NULL, 'free', '0', 0, 4, 0, 'Adjustable 2.4G Wireless Vertical Mouse', 'Adjustable 2.4G Wireless Vertical Mouse', '146,145', NULL, 'Adjustable-24G-Wireless-Vertical-Mouse-x1Zkg', 0.00, NULL, 0, NULL, NULL, '2023-06-15 15:17:16', '2023-06-15 15:17:16'),
+(13, 'Crocs Boys\' Child Realtree Clogs(Ages 1-6)', 'seller', 10, 37, 30, '158,157,156,155,154,153', '158,157,155,156,154,153', 'youtube', NULL, 'baby', '<p><strong>Crocs Boys\' Child Realtree Clogs</strong> are a type of footwear specifically designed for infants and young toddlers. They are lightweight, comfortable, and offer protection for little feet while allowing them to breathe and stay cool in warm weather. </p><p><br></p><p><strong>Crocs Boys\' Child Realtree Clogs</strong> typically feature soft, flexible soles made from materials like rubber, leather, or fabric, which enable natural foot movement and promote healthy development. They come in various styles, including closed-toe, open-toe, and sandal-like designs, with adjustable straps or Velcro closures to ensure a secure fit. </p><p><br></p><p><strong>Crocs Boys\' Child Realtree Clogs</strong> often have cushioned insoles and gentle arch support to provide extra comfort. They are available in a range of colors, patterns, and sizes to suit different age groups, making them a popular choice for parents who want their little ones to explore their surroundings comfortably and in style.</p>', 23.67, '1', NULL, 0, '[]', '[]', NULL, '[]', NULL, 0, 1, 1, NULL, 'quantity', 1, 0, 0, 0, 'g', NULL, 0, 1, 5, 11.20, 'amount', NULL, NULL, NULL, NULL, NULL, 'free', '0', 0, NULL, 0, 'Crocs Boys\' Child Realtree Clogs', 'Crocs Boys\' Child Realtree Clogs', '158,157,155,156,154,153', NULL, 'Crocs-Boys-Child-Realtree-ClogsAges-1-6-pxnQS', 0.00, NULL, 0, NULL, NULL, '2023-06-15 16:26:05', '2023-06-15 16:26:05');
 
 -- --------------------------------------------------------
 
@@ -2854,7 +2861,11 @@ INSERT INTO `product_stocks` (`id`, `product_id`, `variant`, `sku`, `price`, `qt
 (9, 4, '', 'CMA-100S', 6.78, 25, NULL, '2023-06-10 21:26:17', '2023-06-10 21:26:17'),
 (10, 6, 'Medium', 'CMC-100S', 6.94, 10, 143, '2023-06-10 22:32:33', '2023-06-10 22:32:33'),
 (11, 6, 'Large', 'CMC-200M', 6.94, 10, 142, '2023-06-10 22:32:33', '2023-06-10 22:32:33'),
-(12, 6, 'X-Large', 'CMC-300L', 6.94, 10, 144, '2023-06-10 22:32:33', '2023-06-10 22:32:33');
+(12, 6, 'X-Large', 'CMC-300L', 6.94, 10, 144, '2023-06-10 22:32:33', '2023-06-10 22:32:33'),
+(15, 9, '', 'AWV-100M', 34.50, 34, NULL, '2023-06-15 15:17:16', '2023-06-15 15:17:16'),
+(16, 10, '', 'CBC-100', 23.67, 35, NULL, '2023-06-15 15:32:29', '2023-06-15 15:32:29'),
+(17, 11, '', 'CBC-100', 23.67, 35, NULL, '2023-06-15 15:32:50', '2023-06-15 15:32:50'),
+(20, 13, '', 'CBC-100', 23.67, 1, NULL, '2023-06-15 16:26:05', '2023-06-15 16:26:05');
 
 -- --------------------------------------------------------
 
@@ -2894,7 +2905,6 @@ INSERT INTO `product_taxes` (`id`, `product_id`, `tax_id`, `tax`, `tax_type`, `c
 (42, 9, 3, 1.00, 'percent', '2023-05-28 19:55:45', '2023-05-28 19:55:45'),
 (43, 10, 3, 1.00, 'percent', '2023-05-28 19:57:06', '2023-05-28 19:57:06'),
 (44, 11, 3, 1.00, 'percent', '2023-05-28 19:57:39', '2023-05-28 19:57:39'),
-(45, 12, 3, 1.00, 'percent', '2023-05-28 19:58:20', '2023-05-28 19:58:20'),
 (46, 13, 3, 1.00, 'percent', '2023-05-28 19:58:33', '2023-05-28 19:58:33'),
 (47, 14, 3, 1.00, 'percent', '2023-05-28 19:58:42', '2023-05-28 19:58:42'),
 (48, 15, 3, 1.00, 'percent', '2023-05-28 19:58:54', '2023-05-28 19:58:54'),
@@ -2910,7 +2920,14 @@ INSERT INTO `product_taxes` (`id`, `product_id`, `tax_id`, `tax`, `tax_type`, `c
 (68, 3, 3, 1.00, 'percent', '2023-06-10 21:25:54', '2023-06-10 21:25:54'),
 (69, 4, 3, 1.00, 'percent', '2023-06-10 21:26:17', '2023-06-10 21:26:17'),
 (70, 5, 3, 3.00, 'amount', '2023-06-10 22:10:22', '2023-06-10 22:10:22'),
-(71, 6, 3, 2.00, 'amount', '2023-06-10 22:32:33', '2023-06-10 22:32:33');
+(71, 6, 3, 2.00, 'amount', '2023-06-10 22:32:33', '2023-06-10 22:32:33'),
+(72, 7, 3, 2.70, 'amount', '2023-06-15 15:12:05', '2023-06-15 15:12:05'),
+(73, 8, 3, 2.70, 'amount', '2023-06-15 15:17:01', '2023-06-15 15:17:01'),
+(74, 9, 3, 2.70, 'amount', '2023-06-15 15:17:16', '2023-06-15 15:17:16'),
+(75, 10, 3, 0.00, 'amount', '2023-06-15 15:32:29', '2023-06-15 15:32:29'),
+(76, 11, 3, 0.00, 'amount', '2023-06-15 15:32:50', '2023-06-15 15:32:50'),
+(78, 12, 3, 0.00, 'amount', '2023-06-15 16:01:52', '2023-06-15 16:01:52'),
+(79, 13, 3, 0.00, 'amount', '2023-06-15 16:26:05', '2023-06-15 16:26:05');
 
 -- --------------------------------------------------------
 
@@ -2938,7 +2955,11 @@ INSERT INTO `product_translations` (`id`, `product_id`, `name`, `unit`, `descrip
 (30, 2, 'Custom Made Adjustable Fitory Mens Sandals', NULL, '<p>We are making efforts to produce reliable products for the clients through doing well in every detail. Wear the classic design of Men\'s Sandals. Your moment in all life,FITORY is gonna be around.</p><p><br></p><p>No matter where you are, who you are and what you are passionate about we want to be able to provide you with a custom products that helps you Express Yourself...to help you express who you really are!</p>', 'en', '2023-06-10 21:24:19', '2023-06-10 21:24:19'),
 (31, 3, 'Custom Made Adjustable Fitory Mens Sandals', NULL, '<p>We are making efforts to produce reliable products for the clients through doing well in every detail. Wear the classic design of Men\'s Sandals. Your moment in all life,FITORY is gonna be around.</p><p><br></p><p>No matter where you are, who you are and what you are passionate about we want to be able to provide you with a custom products that helps you Express Yourself...to help you express who you really are!</p>', 'en', '2023-06-10 21:25:54', '2023-06-10 21:25:54'),
 (32, 4, 'Custom Made Adjustable Fitory Mens Sandals', NULL, '<p>We are making efforts to produce reliable products for the clients through doing well in every detail. Wear the classic design of Men\'s Sandals. Your moment in all life,FITORY is gonna be around.</p><p><br></p><p>No matter where you are, who you are and what you are passionate about we want to be able to provide you with a custom products that helps you Express Yourself...to help you express who you really are!</p>', 'en', '2023-06-10 21:26:18', '2023-06-10 21:26:18'),
-(33, 6, 'Cusorcart Men\'s Classic Fit Performance Work Polo', NULL, '<p><strong>Product details</strong></p><ul><li> 100% Polyester</li><li> Nigeria Made</li><li> Button Closure</li><li> Machine Wash</li></ul><p><br></p><p><strong>Materials &amp; Care</strong></p><ul><li> Machine Washable</li><li>Cotton/Polyester/Spandex</li></ul>', 'en', '2023-06-10 22:32:33', '2023-06-10 22:32:33');
+(33, 6, 'Cusorcart Men\'s Classic Fit Performance Work Polo', NULL, '<p><strong>Product details</strong></p><ul><li> 100% Polyester</li><li> Nigeria Made</li><li> Button Closure</li><li> Machine Wash</li></ul><p><br></p><p><strong>Materials &amp; Care</strong></p><ul><li> Machine Washable</li><li>Cotton/Polyester/Spandex</li></ul>', 'en', '2023-06-10 22:32:33', '2023-06-10 22:32:33'),
+(36, 9, 'Adjustable 2.4G Wireless Vertical Mouse', 'kg', '<p><strong>Adjustable 2.4G Wireless Vertical Mouse</strong> - the perfect solution for personalized comfort and improved productivity. This innovative mouse is designed with ergonomics in mind, allowing you to customize its shape and size to fit your hand perfectly.</p><p><br></p><p>With its adjustable features, you can effortlessly adapt the mouse to your preferred grip style, ensuring optimal comfort and reducing strain during long hours of computer use. The mouse offers various adjustment options, including the ability to modify its width, height, and even the angle of its body, providing a truly tailored experience.</p><p><br></p><p>Equipped with advanced tracking technology, the adjustable mouse delivers precise cursor control and smooth navigation across different surfaces. Its responsive buttons and scroll wheel offer a satisfying clicking experience, enhancing your efficiency while working, gaming, or browsing the web.</p><p>This versatile mouse is compatible with both Windows and Mac operating systems, ensuring seamless integration with your favorite devices. Its wireless connectivity option eliminates the hassle of tangled cords, offering freedom of movement and a clutter-free workspace.</p><p><br></p><p>Upgrade your computing experience with the Adjustable Mouse, and discover a new level of comfort, customization, and precision. Say goodbye to discomfort and hello to productivity with this ergonomic and adaptable companion.</p>', 'en', '2023-06-15 15:17:16', '2023-06-15 15:17:16'),
+(37, 10, 'Crocs Boys\' Child Realtree Clogs(Ages 1-6)', 'g', '<p><strong>Crocs Boys\' Child Realtree Clogs</strong> are lightweight, comfortable, and offer protection for little feet while allowing them to breathe and stay cool in warm weather. </p><p><br></p><p><strong>Crocs Boys\' Child Realtree Clogs</strong> typically feature soft, flexible soles made from materials like rubber, leather, or fabric, which enable natural foot movement and promote healthy development. They come in various styles, including closed-toe, open-toe, and sandal-like designs, with adjustable straps or Velcro closures to ensure a secure fit. Baby sandals often have cushioned insoles and gentle arch support to provide extra comfort. </p><p><br></p><p><strong><span class=\"ql-cursor\">﻿</span>Crocs Boys\' Child Realtree Clogs</strong> are available in a range of colors, patterns, and sizes to suit different age groups, making them a popular choice for parents who want their little ones to explore their surroundings comfortably and in style.</p>', 'en', '2023-06-15 15:32:29', '2023-06-15 15:32:29'),
+(38, 11, 'Crocs Boys\' Child Realtree Clogs(Ages 1-6)', 'g', '<p><strong>Crocs Boys\' Child Realtree Clogs</strong> are lightweight, comfortable, and offer protection for little feet while allowing them to breathe and stay cool in warm weather. </p><p><br></p><p><strong>Crocs Boys\' Child Realtree Clogs</strong> typically feature soft, flexible soles made from materials like rubber, leather, or fabric, which enable natural foot movement and promote healthy development. They come in various styles, including closed-toe, open-toe, and sandal-like designs, with adjustable straps or Velcro closures to ensure a secure fit. Baby sandals often have cushioned insoles and gentle arch support to provide extra comfort. </p><p><br></p><p><strong><span class=\"ql-cursor\">﻿</span>Crocs Boys\' Child Realtree Clogs</strong> are available in a range of colors, patterns, and sizes to suit different age groups, making them a popular choice for parents who want their little ones to explore their surroundings comfortably and in style.</p>', 'en', '2023-06-15 15:32:50', '2023-06-15 15:32:50'),
+(40, 13, 'Crocs Boys\' Child Realtree Clogs(Ages 1-6)', 'g', '<p><strong>Crocs Boys\' Child Realtree Clogs</strong> are a type of footwear specifically designed for infants and young toddlers. They are lightweight, comfortable, and offer protection for little feet while allowing them to breathe and stay cool in warm weather. </p><p><br></p><p><strong>Crocs Boys\' Child Realtree Clogs</strong> typically feature soft, flexible soles made from materials like rubber, leather, or fabric, which enable natural foot movement and promote healthy development. They come in various styles, including closed-toe, open-toe, and sandal-like designs, with adjustable straps or Velcro closures to ensure a secure fit. </p><p><br></p><p><strong>Crocs Boys\' Child Realtree Clogs</strong> often have cushioned insoles and gentle arch support to provide extra comfort. They are available in a range of colors, patterns, and sizes to suit different age groups, making them a popular choice for parents who want their little ones to explore their surroundings comfortably and in style.</p>', 'en', '2023-06-15 16:26:05', '2023-06-15 16:26:05');
 
 -- --------------------------------------------------------
 
@@ -3064,7 +3085,7 @@ CREATE TABLE `sellers` (
 --
 
 INSERT INTO `sellers` (`id`, `user_id`, `verification_status`, `verification_info`, `cash_on_delivery_status`, `admin_to_pay`, `bank_name`, `bank_acc_name`, `bank_acc_no`, `bank_routing_no`, `bank_payment_status`, `created_at`, `updated_at`) VALUES
-(1, 5, 1, '[{\"type\":\"text\",\"label\":\"Name\",\"value\":\"Nnadi\"},{\"type\":\"select\",\"label\":\"Marital Status\",\"value\":\"Married\"},{\"type\":\"multi_select\",\"label\":\"Company\",\"value\":\"[\\\"AvTech\\\"]\"},{\"type\":\"select\",\"label\":\"Gender\",\"value\":\"Male\"},{\"type\":\"file\",\"label\":\"Image\",\"value\":\"uploads\\/verification_form\\/CRWqFifcbKqibNzllBhEyUSkV6m1viknGXMEhtiW.png\"}]', 1, 78.40, 'Access Bank', 'Nnadi Adaeze Precious', '0613743801', NULL, 1, '2018-10-07 04:42:57', '2023-05-29 23:37:54');
+(2, 10, 1, '[{\"type\":\"text\",\"label\":\"Name\",\"value\":\"Nnadi\"},{\"type\":\"select\",\"label\":\"Marital Status\",\"value\":\"Married\"},{\"type\":\"multi_select\",\"label\":\"Company\",\"value\":\"[\\\"AvTech\\\"]\"},{\"type\":\"select\",\"label\":\"Gender\",\"value\":\"Male\"},{\"type\":\"file\",\"label\":\"Image\",\"value\":\"uploads\\/verification_form\\/CRWqFifcbKqibNzllBhEyUSkV6m1viknGXMEhtiW.png\"}]', 1, 0.00, 'United Bank For Africa', 'Nnadi Chika Olisa', '2078455836', 20784, 1, '2023-06-15 15:52:14', '2023-06-15 16:29:53');
 
 -- --------------------------------------------------------
 
@@ -3153,6 +3174,9 @@ CREATE TABLE `shops` (
   `logo` varchar(255) DEFAULT NULL,
   `sliders` longtext DEFAULT NULL,
   `phone` varchar(255) DEFAULT NULL,
+  `country` varchar(255) DEFAULT NULL,
+  `state` varchar(255) DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
   `address` varchar(500) DEFAULT NULL,
   `facebook` varchar(255) DEFAULT NULL,
   `google` varchar(255) DEFAULT NULL,
@@ -3171,9 +3195,9 @@ CREATE TABLE `shops` (
 -- Dumping data for table `shops`
 --
 
-INSERT INTO `shops` (`id`, `user_id`, `name`, `logo`, `sliders`, `phone`, `address`, `facebook`, `google`, `twitter`, `youtube`, `slug`, `meta_title`, `meta_description`, `pick_up_point_id`, `shipping_cost`, `created_at`, `updated_at`) VALUES
-(1, 3, 'Demo Seller Shop', NULL, '69', NULL, 'House : Demo, Road : Demo, Section : Demo', 'www.facebook.com', 'www.google.com', 'www.twitter.com', 'www.youtube.com', 'Demo-Seller-Shop-1', 'Demo Seller Shop Title', 'Demo description', NULL, 0.00, '2018-11-27 10:23:13', '2023-05-25 21:11:08'),
-(2, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'demo-shop-2', NULL, NULL, NULL, 0.00, '2023-05-26 18:19:43', '2023-05-26 18:19:43');
+INSERT INTO `shops` (`id`, `user_id`, `name`, `logo`, `sliders`, `phone`, `country`, `state`, `city`, `address`, `facebook`, `google`, `twitter`, `youtube`, `slug`, `meta_title`, `meta_description`, `pick_up_point_id`, `shipping_cost`, `created_at`, `updated_at`) VALUES
+(1, 3, 'Demo Seller Shop', NULL, '69', NULL, NULL, NULL, NULL, 'House : Demo, Road : Demo, Section : Demo', 'www.facebook.com', 'www.google.com', 'www.twitter.com', 'www.youtube.com', 'Demo-Seller-Shop-1', 'Demo Seller Shop Title', 'Demo description', NULL, 0.00, '2018-11-27 10:23:13', '2023-05-25 21:11:08'),
+(3, 10, 'Baby Clothing Vendor, Lagos State Nigeria', '160', '177,176,175,174,173,172,171,170', '09033688922', 'Nigeria', 'Lagos', 'Alimosho', '234-CFSD Mall', NULL, NULL, NULL, NULL, 'Baby-Clothing-Vendor,-Lagos-State-Nigeria-3', 'Baby', 'baby', '[]', 0.00, '2023-06-15 15:52:14', '2023-06-15 17:37:27');
 
 -- --------------------------------------------------------
 
@@ -4948,7 +4972,10 @@ INSERT INTO `translations` (`id`, `lang`, `lang_key`, `lang_value`, `created_at`
 (1851, 'en', 'Unit in KG', 'Unit in KG', '2023-06-04 12:38:13', '2023-06-04 12:38:13'),
 (1852, 'en', 'Tracking Order', 'Tracking Order', '2023-06-05 23:53:02', '2023-06-05 23:53:02'),
 (1853, 'en', 'Global Tax', 'Global Tax', '2023-06-10 21:34:42', '2023-06-10 21:34:42'),
-(1854, 'en', 'Your email should be verified before order', 'Your email should be verified before order', '2023-06-10 21:35:25', '2023-06-10 21:35:25');
+(1854, 'en', 'Your email should be verified before order', 'Your email should be verified before order', '2023-06-10 21:35:25', '2023-06-10 21:35:25'),
+(1855, 'en', 'NewsLetter', 'NewsLetter', '2023-06-15 15:46:32', '2023-06-15 15:46:32'),
+(1856, 'en', 'An email has been sent.', 'An email has been sent.', '2023-06-15 15:50:03', '2023-06-15 15:50:03'),
+(1857, 'en', 'You do not have enough balance to send withdraw request', 'You do not have enough balance to send withdraw request', '2023-06-15 17:39:31', '2023-06-15 17:39:31');
 
 -- --------------------------------------------------------
 
@@ -5117,7 +5144,40 @@ INSERT INTO `uploads` (`id`, `file_original_name`, `file_name`, `user_id`, `file
 (141, '0yuIktHhf7IunTtGwi5XqTm0RPrduvRJa28ufqos', 'uploads/all/lKNwXmgkb2Zfbx1HbiPuctOZLRor8T1YsilLa3Pn.png', 1, 94344, 'png', 'image', '2023-06-10 21:58:00', '2023-06-10 21:58:00', NULL),
 (142, 'polo3', 'uploads/all/NuaBJjMUlHnjkFMdR5FMH9AbOIVSxUCsyhs3K8bE.png', 1, 109252, 'png', 'image', '2023-06-10 22:24:57', '2023-06-10 22:24:57', NULL),
 (143, 'polo', 'uploads/all/Tqt25AzcNLYoGlscZpjoJovOFP7jQiLmKsqEjDPs.png', 1, 64817, 'png', 'image', '2023-06-10 22:24:57', '2023-06-10 22:24:57', NULL),
-(144, 'polo2', 'uploads/all/1a4Rrlo3sNIwddGL2K9yVOLE8jhwRQYOkKekmwuP.png', 1, 113189, 'png', 'image', '2023-06-10 22:24:59', '2023-06-10 22:24:59', NULL);
+(144, 'polo2', 'uploads/all/1a4Rrlo3sNIwddGL2K9yVOLE8jhwRQYOkKekmwuP.png', 1, 113189, 'png', 'image', '2023-06-10 22:24:59', '2023-06-10 22:24:59', NULL),
+(145, 'Wireless', 'uploads/all/j35TR6YKXfgI92RmGsYcQwrlGVpb8Z3wtXhfNym4.jpg', 1, 24394, 'jpg', 'image', '2023-06-15 15:07:08', '2023-06-15 15:07:08', NULL),
+(146, 'Wireless2', 'uploads/all/gqMMP1CvMziBlZIDVZfNc4BQCLniy5SNYSdG9WWL.jpg', 1, 24819, 'jpg', 'image', '2023-06-15 15:07:09', '2023-06-15 15:07:09', NULL),
+(147, 'baby1', 'uploads/all/Qp5wRpT12FXLszO8Ie72zcJJ8Iu9sPXbtet76wrH.png', 5, 226985, 'png', 'image', '2023-06-15 15:25:47', '2023-06-15 15:25:47', NULL),
+(148, 'baby5', 'uploads/all/GoY6McJDPgPJblrvCIG5UtK4nYtYdtKThlTvWv9p.png', 5, 157346, 'png', 'image', '2023-06-15 15:25:47', '2023-06-15 15:25:47', NULL),
+(149, 'baby6', 'uploads/all/CntmGDO3JJpTHTRz901N7SBbJcduMyuYqYc8Wzc6.png', 5, 138275, 'png', 'image', '2023-06-15 15:25:48', '2023-06-15 15:25:48', NULL),
+(150, 'baby3', 'uploads/all/bYPUFnxneVucu40HqlWT1iB0iXU3ukwDIHdzSfvx.png', 5, 251059, 'png', 'image', '2023-06-15 15:25:51', '2023-06-15 15:25:51', NULL),
+(151, 'baby2', 'uploads/all/Iys4dtjmpQZm686Tf8NxeSMUVYivpmg61ppwpBkd.png', 5, 215448, 'png', 'image', '2023-06-15 15:25:51', '2023-06-15 15:25:51', NULL),
+(152, 'baby4', 'uploads/all/Pyqt0ki3umGxquGZao71XJWEsvazWoQXcNwHFHMX.png', 5, 325041, 'png', 'image', '2023-06-15 15:25:53', '2023-06-15 15:25:53', NULL),
+(153, 'baby6', 'uploads/all/qm74PImsA2wekLMFeM12MwV3JSvicWTfPrT4214w.png', 10, 138275, 'png', 'image', '2023-06-15 15:55:34', '2023-06-15 15:55:34', NULL),
+(154, 'baby1', 'uploads/all/Ja5WwuHOuVgoH0hbFFF2pO5LHp1uwEmmrNrVaAaq.png', 10, 226985, 'png', 'image', '2023-06-15 15:55:35', '2023-06-15 15:55:35', NULL),
+(155, 'baby5', 'uploads/all/v1x51gOA8qvT5i185K6xuS94rFhbnw3M6Cph9TvV.png', 10, 157346, 'png', 'image', '2023-06-15 15:55:36', '2023-06-15 15:55:36', NULL),
+(156, 'baby2', 'uploads/all/rUZQp9pEuInUDZlH52pnYW2EvU2ijV6xFH0r6ZWr.png', 10, 215448, 'png', 'image', '2023-06-15 15:55:37', '2023-06-15 15:55:37', NULL),
+(157, 'baby3', 'uploads/all/xcA1Q1Km78Kt1dF18qK63i3wgbLlYNtk1MStcf24.png', 10, 251059, 'png', 'image', '2023-06-15 15:55:38', '2023-06-15 15:55:38', NULL),
+(158, 'baby4', 'uploads/all/NKOanBZp30lrcfqZMXehqUG85FWU4cdR1TbcQZu5.png', 10, 325041, 'png', 'image', '2023-06-15 15:55:40', '2023-06-15 15:55:40', NULL),
+(159, '20221219_101221', 'uploads/all/BRu3ZUJNx6dMzoChIrtcQwi36FGUt4DmkOtWi6TX.jpg', 10, 33233, 'jpg', 'image', '2023-06-15 16:28:32', '2023-06-15 16:28:32', NULL),
+(160, 'shop', 'uploads/all/e1YQwu6K0uypcZzddkdtLLJqLYf8UltRDlrZDXHy.jpg', 10, 40961, 'jpg', 'image', '2023-06-15 16:34:32', '2023-06-15 16:34:32', NULL),
+(161, 'Shopie', 'uploads/all/ySCsavTTufOCPeSlFJqZuNF3yvfpB9ZXVLNB9qAW.jpg', 10, 31747, 'jpg', 'image', '2023-06-15 16:37:56', '2023-06-15 16:37:56', NULL),
+(162, 'images', 'uploads/all/fpBwbvMuYpyMiyUoWEPi9hIHTdQFFeYQ26MkH5An.jpg', 10, 12525, 'jpg', 'image', '2023-06-15 17:08:45', '2023-06-15 17:08:45', NULL),
+(163, '360_F_306694930_S3Z8H9Qk1MN79ZUe7bEWqTFuonRZdemw', 'uploads/all/vDoBoKgsIQwQazaynf6u6XLy30DOKlLtgHHfJZfB.jpg', 10, 45279, 'jpg', 'image', '2023-06-15 17:09:57', '2023-06-15 17:09:57', NULL),
+(164, 'OG-Adjust-your-marketing-to-the-current-economic-situation-768x478', 'uploads/all/GXYkHZRBXItYJUZ3wAfj8uMkXaMFTx6MhMMp48EX.jpg', 10, 32540, 'jpg', 'image', '2023-06-15 17:09:58', '2023-06-15 17:09:58', NULL),
+(165, 'online-shopping-concept-perfect-landing-260nw-1654537690', 'uploads/all/QwhNiwMJPcPEKt67cUewx97YK7ULGoQyd1QTJsWI.webp', 10, 13116, 'webp', 'image', '2023-06-15 17:09:59', '2023-06-15 17:09:59', NULL),
+(166, 'images (1)', 'uploads/all/T0KhaHNKKRaz8EwUiarvIsutzHbqZIHR1NMEto6f.jpg', 10, 13791, 'jpg', 'image', '2023-06-15 17:31:55', '2023-06-15 17:31:55', NULL),
+(167, 'download', 'uploads/all/EXY9wpnDcSjT72BJz7kjYNwt7E34Q6pAGkjMlyB3.png', 10, 39143, 'png', 'image', '2023-06-15 17:31:56', '2023-06-15 17:31:56', NULL),
+(168, 'creative-social-media-image-sizes', 'uploads/all/pIfrSMRxIN59t1HZpZOkAfzSFjjMQF2VXt3fTxvN.webp', 10, 50500, 'webp', 'image', '2023-06-15 17:31:58', '2023-06-15 17:31:58', NULL),
+(169, 'THE-ULTIMATE-GUIDE-TO-SOCIAL-MEDIA-IMAGE-SIZES-2022-UPDATE', 'uploads/all/5KxszWzW7eqeSu0CDawTtdF2f2P97wtbgwGTVJv4.jpg', 10, 167041, 'jpg', 'image', '2023-06-15 17:32:01', '2023-06-15 17:32:01', NULL),
+(170, '42-2048x1072', 'uploads/all/tFOie74wm4UNIbJGY8VHjsGqEv9AkPCbvbOTbD1o.png', 10, 93133, 'png', 'image', '2023-06-15 17:36:15', '2023-06-15 17:36:15', NULL),
+(171, '43-2048x1072', 'uploads/all/foqP8vwCf7wnQy0VMLEg6hVb1euB8OoVEmoybolz.png', 10, 104470, 'png', 'image', '2023-06-15 17:36:17', '2023-06-15 17:36:17', NULL),
+(172, '40-2048x1072', 'uploads/all/o4H23lWTkyyR7PNki2I9ELsGurjUK02EZwcEJTyf.png', 10, 103210, 'png', 'image', '2023-06-15 17:36:19', '2023-06-15 17:36:19', NULL),
+(173, '39-2048x1072', 'uploads/all/tAHHEgBGwIYvEtx0MAEIKbxNCNK7o9uC0jCM1dnY.png', 10, 86191, 'png', 'image', '2023-06-15 17:36:21', '2023-06-15 17:36:21', NULL),
+(174, '41-2048x1072', 'uploads/all/vJBTex5N9ZKxvNaBxHyhS7F9YRBhHMQ0oUeT1CQG.png', 10, 113214, 'png', 'image', '2023-06-15 17:36:23', '2023-06-15 17:36:23', NULL),
+(175, '38-2048x1072', 'uploads/all/L7gHKbiGKyboUN4vTjhzkXdVicQGrVD61QrYJEDj.png', 10, 110778, 'png', 'image', '2023-06-15 17:36:25', '2023-06-15 17:36:25', NULL),
+(176, '37-2048x1072', 'uploads/all/7fjiDuk7DatoDzoo8Xo3OkJEypOU19hz53fDYfe2.png', 10, 93015, 'png', 'image', '2023-06-15 17:36:31', '2023-06-15 17:36:31', NULL),
+(177, '36-2048x1072', 'uploads/all/weAupCTPjpKUmcyVp3CExFWzhZgWKkoAlOLCbQU1.png', 10, 109823, 'png', 'image', '2023-06-15 17:36:35', '2023-06-15 17:36:35', NULL);
 
 -- --------------------------------------------------------
 
@@ -5158,12 +5218,13 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `referred_by`, `provider_id`, `user_type`, `name`, `email`, `email_verified_at`, `verification_code`, `new_email_verificiation_code`, `password`, `remember_token`, `avatar`, `avatar_original`, `address`, `country`, `city`, `postal_code`, `phone`, `balance`, `banned`, `referral_code`, `customer_package_id`, `remaining_uploads`, `created_at`, `updated_at`) VALUES
-(1, NULL, NULL, 'admin', 'Nnadi', 'admin@admin.com', NULL, 'eyJpdiI6IjVlYWNPYy9MM2VqQ2orUkE3RmlKakE9PSIsInZhbHVlIjoiSTI0bjZrd1htREk2TFBCU3lidGd1Zz09IiwibWFjIjoiMWZkNjhkNmE5MGJjNTEyZDIxOTcxMGM5NTlhMTg3OWE3YzYyYTU5MTcyMTUzM2JhYjQ2NzI4NzRhZGRiZjA2NSIsInRhZyI6IiJ9', NULL, '$2y$10$GW32NfSKwQwhij./pbosCOsAnl0Qe2X7dLm3nVzCM6PxKoKIVJPFi', 'EunJCcdrGBbWeT0IzrZpL3PKAyV3NDX08stNVjEKYGNYBIbMnPEfvNJ3mtRz', NULL, '82', NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2023-05-29 22:26:14', '2023-06-10 21:50:43'),
+(1, NULL, NULL, 'admin', 'Nnadi', 'admin@admin.com', NULL, 'eyJpdiI6IjVlYWNPYy9MM2VqQ2orUkE3RmlKakE9PSIsInZhbHVlIjoiSTI0bjZrd1htREk2TFBCU3lidGd1Zz09IiwibWFjIjoiMWZkNjhkNmE5MGJjNTEyZDIxOTcxMGM5NTlhMTg3OWE3YzYyYTU5MTcyMTUzM2JhYjQ2NzI4NzRhZGRiZjA2NSIsInRhZyI6IiJ9', NULL, '$2y$10$GW32NfSKwQwhij./pbosCOsAnl0Qe2X7dLm3nVzCM6PxKoKIVJPFi', 'ZuRu5LT6wFgGZTQWWU0KJ8puR6xAcCRfnnC7eb5E0rEaG11cjiGGpca3HgzO', NULL, '82', NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2023-05-29 22:26:14', '2023-06-10 21:50:43'),
 (2, NULL, NULL, 'staff', 'Chime', 'beekyhe@gmail.com', NULL, 'eyJpdiI6IkpVNUt6VEtJcWpIT0ZWQXAvTzhjWmc9PSIsInZhbHVlIjoiQ1lDOG80Sjc1L05HVVE5eXYwYk5zUT09IiwibWFjIjoiNmU1MjdmYjMzM2FmY2FkZThlYzBjYWExMGMyNjVjZDVjMGM5OGUwZTUzMDdlYTQzZTYzNmUyOTRiOTY5MjIzMCIsInRhZyI6IiJ9', NULL, '$2y$10$9cuqD0CjC9dOwfKFUtZucubpti2ErHr3Ug8NSCGPNFdB1uc4fMot.', 'juJtfrmCiGe9SegCMYkga6knrVi8jFfVAKbr7BjsCXWwGiWZmN8ifdbhMq2I', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2023-05-29 22:29:24', '2023-05-29 22:29:24'),
 (3, NULL, NULL, 'customer', 'Ugo', 'chimennadi66@gmail.com', NULL, 'eyJpdiI6InJuUHl0OEQzOUNIOW5xb1AxVDZXWkE9PSIsInZhbHVlIjoibHdiMVBVQ2IvdHNTVVJNSlpzZjcxUT09IiwibWFjIjoiOGRiMWUxOTQ0NDkyYjI4OTVkMjc0ODY5ZTBlMTMzYzJhZTI3M2I3ZmI1ZDE2ZGQzNTA2N2MwNmRkNjk5N2VhYiIsInRhZyI6IiJ9', NULL, '$2y$10$BYohnu5mXhad86/1P0ymsuN/uRMfOa3O2.iNDVs78mDqLqzstwO9y', 'Zpy6Hk1KiYiDP9H0O3SMzKk7zA71iLxBbPa6BlBL2S9A3kkwexBO1pCx1bUi', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2023-05-29 22:31:48', '2023-05-29 22:31:49'),
 (4, NULL, NULL, 'delivery_boy', 'Oly', 'olynnadi@gmail.com', NULL, 'eyJpdiI6InpLVk16NG1EbVIwK25MTncyU2liOEE9PSIsInZhbHVlIjoiR1RxK0tsQTc3Q1NqV0Z1K296ZjVtQT09IiwibWFjIjoiMjc5ZjM3OThmMmE5OWMwYzJiMWZhZTc0MWMzMjQ0ODM0OTA0YmEzNTU0OThmZjZhOGI3Nzg4NzgzYmE0YTJlOCIsInRhZyI6IiJ9', NULL, '$2y$10$0E1XjDg.BjqozasaPHoCXuo3c34kj/9s9FQ9uOKDUj.LXaBsl56LS', 'BIeAzN1vU7ss4FxwyddL2hHdcCMkhjT9mCmyaBCTBpsBVUpkPEZYn0kRPW1J', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2023-05-29 22:35:44', '2023-05-29 22:35:44'),
-(5, NULL, NULL, 'seller', 'Ada', 'ada@gmail.com', NULL, 'eyJpdiI6ImlBWWZ5emNtUTRPb3BRWmJHWUV2K0E9PSIsInZhbHVlIjoicE5wMGF6emNDYXVzb0x5Smh3TFJOZz09IiwibWFjIjoiYTkyNDE5Y2NkMjMxOTdjY2QwZGYxZWU3NmQxOTlmMDQ0MGMyYTU5MWY2MTZlZTkyY2EwMjZjZjgwYTJjZTU1OCIsInRhZyI6IiJ9', 'SmsQ9iBFcklg9JjN5lGAYWxF5W4IDtNh', '$2y$10$u1bBhvcbn/H3xRDXqMd9u.eNd2C0G4JcyBy2GV.HkXYymLhhPnQIG', 'NePMKRnQurcHSGjFap1yrKmRpntIKnwuPoWNxQ9ZrnsgoSPImhACltQSWTcg', NULL, '111', NULL, NULL, NULL, NULL, '09033688922', 0.00, 0, NULL, NULL, 0, '2023-05-29 23:11:10', '2023-05-29 23:37:54'),
-(6, NULL, NULL, 'logistic', 'Ife', 'ife@gmail.com', NULL, 'eyJpdiI6IlJiQ2lqUFliQ1orMGI0MythcVE3ZEE9PSIsInZhbHVlIjoid1dldmU2L3JFWmxRcnZzZ2xVdzVEUT09IiwibWFjIjoiOWFmODg3M2VjYTY2MTA0NmQ2NmYxMjUzYjhkNGEwYmVhN2VmNDJmOWI1NjgxYjVlZWNmYmI4ZmE1NTYxOTY4OCIsInRhZyI6IiJ9', NULL, '$2y$10$Nth4iUpKN9Rvi.UcQMGBYuoflInddp62YThN2CUJtE1iu1G3Xlt1.', '2oYGxuCp8uDP7J6XheGHJnRGzHoVuXIBRn0Z40b7hAf4jVkYjtxDq1UGuRoh', NULL, '113', '234-CFSD Mall', NULL, NULL, NULL, '09033688922', 0.00, 0, NULL, NULL, 0, '2023-05-30 07:30:51', '2023-06-03 23:02:31');
+(5, NULL, NULL, 'seller', 'Ada', 'ada@gmail.com', NULL, 'eyJpdiI6ImlBWWZ5emNtUTRPb3BRWmJHWUV2K0E9PSIsInZhbHVlIjoicE5wMGF6emNDYXVzb0x5Smh3TFJOZz09IiwibWFjIjoiYTkyNDE5Y2NkMjMxOTdjY2QwZGYxZWU3NmQxOTlmMDQ0MGMyYTU5MWY2MTZlZTkyY2EwMjZjZjgwYTJjZTU1OCIsInRhZyI6IiJ9', 'SmsQ9iBFcklg9JjN5lGAYWxF5W4IDtNh', '$2y$10$u1bBhvcbn/H3xRDXqMd9u.eNd2C0G4JcyBy2GV.HkXYymLhhPnQIG', 'UJSuVphKy2xC3ajB9YpBWDnQDEdG5RpCo36TiTHheJ8dAJOuW07nbrdmmoQf', NULL, '111', NULL, NULL, NULL, NULL, '09033688922', 0.00, 0, NULL, NULL, 0, '2023-05-29 23:11:10', '2023-05-29 23:37:54'),
+(6, NULL, NULL, 'logistic', 'Ife', 'ife@gmail.com', NULL, 'eyJpdiI6IlJiQ2lqUFliQ1orMGI0MythcVE3ZEE9PSIsInZhbHVlIjoid1dldmU2L3JFWmxRcnZzZ2xVdzVEUT09IiwibWFjIjoiOWFmODg3M2VjYTY2MTA0NmQ2NmYxMjUzYjhkNGEwYmVhN2VmNDJmOWI1NjgxYjVlZWNmYmI4ZmE1NTYxOTY4OCIsInRhZyI6IiJ9', NULL, '$2y$10$Nth4iUpKN9Rvi.UcQMGBYuoflInddp62YThN2CUJtE1iu1G3Xlt1.', '2oYGxuCp8uDP7J6XheGHJnRGzHoVuXIBRn0Z40b7hAf4jVkYjtxDq1UGuRoh', NULL, '113', '234-CFSD Mall', NULL, NULL, NULL, '09033688922', 0.00, 0, NULL, NULL, 0, '2023-05-30 07:30:51', '2023-06-03 23:02:31'),
+(10, NULL, NULL, 'seller', 'Chika', 'beekyhe003@gmail.com', NULL, 'eyJpdiI6IjlkTHVFMWYycVd0dkJOU2MrVVB1MWc9PSIsInZhbHVlIjoicWJEcXI5TVBWRmVIYnZHa0NveEdmQT09IiwibWFjIjoiNjI3OTIwNjI1ZTc5OWEwYTBmNTJiMzA2MmFiYTlhZGMxY2Y2NTMyMzU3YzU4YzgzOTM1Yzk2MTViOGM4NTNkMiIsInRhZyI6IiJ9', NULL, '$2y$10$hWY9IkNSOe47DWOIraybou/igTOWZ6tOUl0wict8ymZZjl0ndY.v.', 'zWDDIfItIys3mdL1yXGFPAtLEtr0FJAoz6ENohjXu8yWwqc7vYy7FchcQpMI', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2023-06-15 15:52:09', '2023-06-15 15:52:09');
 
 -- --------------------------------------------------------
 
@@ -5741,7 +5802,7 @@ ALTER TABLE `addons`
 -- AUTO_INCREMENT for table `addresses`
 --
 ALTER TABLE `addresses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `app_settings`
@@ -5753,7 +5814,7 @@ ALTER TABLE `app_settings`
 -- AUTO_INCREMENT for table `attributes`
 --
 ALTER TABLE `attributes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `attribute_translations`
@@ -5795,7 +5856,7 @@ ALTER TABLE `blog_categories`
 -- AUTO_INCREMENT for table `brands`
 --
 ALTER TABLE `brands`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `brand_translations`
@@ -6065,25 +6126,25 @@ ALTER TABLE `policies`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `product_stocks`
 --
 ALTER TABLE `product_stocks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `product_taxes`
 --
 ALTER TABLE `product_taxes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT for table `product_translations`
 --
 ALTER TABLE `product_translations`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `proxypay_payments`
@@ -6119,7 +6180,7 @@ ALTER TABLE `searches`
 -- AUTO_INCREMENT for table `sellers`
 --
 ALTER TABLE `sellers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `seller_withdraw_requests`
@@ -6143,7 +6204,7 @@ ALTER TABLE `shipping_details`
 -- AUTO_INCREMENT for table `shops`
 --
 ALTER TABLE `shops`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `sliders`
@@ -6185,19 +6246,19 @@ ALTER TABLE `ticket_replies`
 -- AUTO_INCREMENT for table `translations`
 --
 ALTER TABLE `translations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1855;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1858;
 
 --
 -- AUTO_INCREMENT for table `uploads`
 --
 ALTER TABLE `uploads`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=145;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=178;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `wallets`
