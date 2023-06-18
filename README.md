@@ -82,27 +82,14 @@ Laravel-based e-commerce application, a B2B(Business-to-business) online store w
 -   [Facebook API](https://developers.facebook.com/)
 -   [Twitter API](https://apps.twitter.com/)
 
-#### Add More Socialite Logins
-
--   See full list of providers: [https://socialiteproviders.github.io](https://socialiteproviders.github.io/#providers)
-
-###### **Steps**:
-
-#### Laravel Development Packages Used References
-
--   https://laravel.com/docs/master/authentication
--   https://laravel.com/docs/master/authorization
--   https://laravel.com/docs/master/routing
--   https://laravel.com/docs/master/migrations
--   https://laravel.com/docs/master/queries
--   https://laravel.com/docs/master/views
--   https://laravel.com/docs/master/eloquent
--   https://laravel.com/docs/master/eloquent-relationships
--   https://laravel.com/docs/master/requests
--   https://laravel.com/docs/master/errors
 
 
 ### Screenshots
+
+-- You can create your own database with name cusorcart
+-- Admin Email -- admin@admin.com
+-- Admin Password -- 123456(This is used for all the passwords)
+
 
 ![Login](https://github.com/Chimennadi/cusorcart/blob/main/screenshots/login.png)
 ![Register](https://github.com/Chimennadi/cusorcart/blob/main/screenshots/register.png)
