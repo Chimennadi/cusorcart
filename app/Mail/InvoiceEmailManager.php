@@ -26,13 +26,13 @@ class InvoiceEmailManager extends Mailable
      *
      * @return $this
      */
-     public function build()
-     {
-         return $this->view($this->array['view'])
-                     ->from($this->array['from'], env('MAIL_FROM_NAME'))
-                     ->subject($this->array['subject'])
-                     ->with([
-                         'order' => $this->array['order']
-                     ]);
-     }
+    public function build()
+    {
+        return $this->view($this->array['view'])
+                    ->from($this->array['from'], env('MAIL_FROM_NAME'))
+                    ->subject($this->array['subject'])
+                    ->with([
+                        'order' => $this->array['order']
+                    ]);
+    }
 }

@@ -2,8 +2,7 @@
 
 @section('content')
 
-<section style="background-color:white" class="pt-5 mb-4">
-</section>
+<section style="background-color:white" class="pt-5 mb-4"></section>
 
 
 @endsection
