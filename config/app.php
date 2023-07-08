@@ -191,6 +191,7 @@ return [
         MehediIitdu\CoreComponentRepository\CoreComponentRepositoryServiceProvider::class,
         Unicodeveloper\Paystack\PaystackServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -218,7 +219,8 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
         'PDF' => Barryvdh\DomPDF\Facade\Pdf::class,
         'Paystack' => Unicodeveloper\Paystack\Facades\Paystack::class,
-        'Image' => Intervention\Image\Facades\Image::class
+        'Image' => Intervention\Image\Facades\Image::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
     ])->toArray(),
 
 ];

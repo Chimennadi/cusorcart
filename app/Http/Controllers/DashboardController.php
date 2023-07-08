@@ -26,9 +26,9 @@ use Auth;
 use Mail;
 use App\Mail\SecondEmailVerifyMailManager;
 use Illuminate\Support\Str;
-use App\Imports\UsersImport;
-use App\Imports\CountryImport;
-use App\Imports\CityImport;
+use App\UsersImport;
+use App\CountryImport;
+use App\CityImport;
 
 use Maatwebsite\Excel\Facades\Excel;
 
