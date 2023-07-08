@@ -21,7 +21,6 @@
     -   [Optionally Build Cache](#optionally-build-cache)
 -   [Socialite](#socialite)
     -   [Get Socialite Login API Keys](#get-socialite-login-api-keys)
-    -   [Add More Socialite Logins](#add-more-socialite-logins)
 -   [Other API keys](#other-api-keys)
 -   [Screenshots](#screenshots)
 -   [Opening an Issue](#opening-an-issue)
