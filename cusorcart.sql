@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 15, 2023 at 08:42 PM
+-- Generation Time: Jul 08, 2023 at 04:09 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -604,7 +604,43 @@ INSERT INTO `categories` (`id`, `parent_id`, `level`, `name`, `tax`, `order_leve
 (34, 32, 1, 'Women', 1, 1, 3.00, NULL, NULL, 1, 0, 0, 'women-sztow', 'Women', 'Women', '2023-06-09 01:15:13', '2023-06-09 00:15:13'),
 (35, 32, 1, 'Boys', NULL, 1, 0.00, NULL, NULL, 1, 0, 0, 'boys-iumrv', 'Boys', 'Boys', '2023-06-09 01:15:56', '2023-06-09 00:15:56'),
 (36, 32, 1, 'Girls', NULL, 1, 0.00, NULL, NULL, 1, 0, 0, 'girls-uqmsy', 'Girls', 'Girls', '2023-06-09 01:16:33', '2023-06-09 00:16:33'),
-(37, 32, 1, 'Baby', NULL, 1, 0.00, NULL, NULL, 1, 0, 0, 'baby-mydqg', 'Baby', 'Baby', '2023-06-09 01:17:15', '2023-06-09 00:17:15');
+(37, 32, 1, 'Baby', NULL, 1, 0.00, NULL, NULL, 1, 0, 0, 'baby-mydqg', 'Baby', 'Baby', '2023-06-09 01:17:15', '2023-06-09 00:17:15'),
+(38, 11, 1, 'Baby Shampoo & Wash', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Baby-Shampoo--Wash-cpmBu', 'Baby Shampoo & Wash', 'Baby Shampoo & Wash', '2023-07-07 19:59:32', '2023-07-07 19:59:32'),
+(40, 11, 1, 'Premium Beauty', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Premium-Beauty-oiZm6', 'Premium Beauty', 'Premium Beauty', '2023-07-07 20:03:09', '2023-07-07 20:03:09'),
+(41, 11, 1, 'Professional Skin Care', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Professional-Skin-Care-0xfjR', 'Professional Skin Care', 'Professional Skin Care', '2023-07-07 20:03:56', '2023-07-07 20:03:56'),
+(42, 11, 1, 'Salon & Spa', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Salon--Spa-oqLUu', 'Salon & Spa', 'Salon & Spa', '2023-07-07 20:05:07', '2023-07-07 20:05:07'),
+(43, 11, 1, 'Men\'s Grooming', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Mens-Grooming-tOQTw', 'Men\'s Grooming', 'Men\'s Grooming', '2023-07-07 20:05:59', '2023-07-07 20:05:59'),
+(44, 11, 1, 'Vitamins & Dietary Supplements', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Vitamins--Dietary-Supplements-FTCFR', 'Vitamins & Dietary Supplements', 'Vitamins & Dietary Supplements', '2023-07-07 20:06:54', '2023-07-07 20:06:54'),
+(45, 11, 1, 'Health Care', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Health-Care-3qbDb', 'Health Care', 'Health Care', '2023-07-07 20:07:39', '2023-07-07 20:07:39'),
+(46, 11, 1, 'Sports Nutrition', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Sports-Nutrition-0NkNI', 'Sports Nutrition', 'Sports Nutrition', '2023-07-07 20:08:37', '2023-07-07 20:08:37'),
+(47, 11, 1, 'Medical Supplies & Equipment', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Medical-Supplies--Equipment-j6bI7', 'Medical Supplies & Equipment', 'Medical Supplies & Equipment', '2023-07-07 20:09:38', '2023-07-07 20:09:38'),
+(48, 11, 1, 'Health & Wellness', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Health--Wellness-lEsyj', 'Health & Wellness', 'Health & Wellness', '2023-07-07 20:10:25', '2023-07-07 20:10:25'),
+(49, 4, 1, 'Children\'s Books(Hard Copy)', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Childrens-BooksHard-Copy-jp5cW', 'Children\'s Books(Hard Copy)', 'Children\'s Books(Hard Copy)', '2023-07-07 20:12:04', '2023-07-07 20:12:04'),
+(50, 4, 1, 'Textbooks (Hard Copy)', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Textbooks-Hard-Copy-tpaAz', 'Textbooks (Hard Copy)', 'Textbooks (Hard Copy)', '2023-07-07 20:12:54', '2023-07-07 20:12:54'),
+(51, 4, 1, 'Comics & Graphic Novels (Hard Copy)', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Comics--Graphic-Novels-Hard-Copy-SXma8', 'Comics & Graphic Novels (Hard Copy)', 'Comics & Graphic Novels (Hard Copy)', '2023-07-07 20:14:00', '2023-07-07 20:14:00'),
+(52, 4, 1, 'Magazines (Hard Copy)', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Magazines-Hard-Copy-igX32', 'Magazines (Hard Copy)', 'Magazines (Hard Copy)', '2023-07-07 20:14:44', '2023-07-07 20:14:44'),
+(53, 7, 1, 'Computers, Tablets, & PC Products', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Computers-Tablets--PC-Products-De4Sc', 'Computers, Tablets, & PC Products', 'Computers, Tablets, & PC Products', '2023-07-07 20:16:33', '2023-07-07 20:16:33'),
+(54, 7, 1, 'Monitors', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Monitors-MFf9l', 'Monitors', 'Monitors', '2023-07-07 20:17:30', '2023-07-07 20:17:30'),
+(55, 7, 1, 'Accessories', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Accessories-wZtQt', 'Accessories', 'Accessories', '2023-07-07 20:18:16', '2023-07-07 20:18:16'),
+(56, 7, 1, 'Networking', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Networking-0ZBfb', 'Networking', 'Networking', '2023-07-07 20:19:01', '2023-07-07 20:19:01'),
+(57, 7, 1, 'Drives & Storage', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Drives--Storage-OFn5x', 'Drives & Storage', 'Drives & Storage', '2023-07-07 20:19:59', '2023-07-07 20:19:59'),
+(58, 7, 1, 'Computer Parts & Components', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Computer-Parts--Components-ncMEp', 'Computer Parts & Components', 'Computer Parts & Components', '2023-07-07 20:20:52', '2023-07-07 20:20:52'),
+(59, 7, 1, 'Printers & Ink', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Printers--Ink-d1auB', 'Printers & Ink', 'Printers & Ink', '2023-07-07 20:21:45', '2023-07-07 20:21:45'),
+(60, 7, 1, 'Software', 2, 5, 5.00, NULL, NULL, 0, 0, 1, 'Software-2HAZb', 'Software', 'Software', '2023-07-07 20:22:30', '2023-07-07 20:22:30'),
+(61, 5, 1, 'E-Book', 2, 5, 5.00, NULL, NULL, 0, 0, 1, 'E-Book-3HaMw', 'E-Book', 'E-Book', '2023-07-07 20:23:24', '2023-07-07 20:23:24'),
+(62, 5, 1, 'Children\'s Books (Electronic Copy)', 2, 5, 5.00, NULL, NULL, 0, 0, 1, 'Childrens-Books-Electronic-Copy-3kFlF', 'Children\'s Books (Electronic Copy)', 'Children\'s Books (Electronic Copy)', '2023-07-07 20:24:30', '2023-07-07 20:24:30'),
+(63, 5, 1, 'Textbooks (Electronic Copy)', 2, 5, 5.00, NULL, NULL, 0, 0, 1, 'Textbooks-Electronic-Copy-9ANcR', 'Textbooks (Electronic Copy)', 'Textbooks (Electronic Copy)', '2023-07-07 20:26:08', '2023-07-07 20:26:08'),
+(64, 5, 1, 'Comics & Graphic Novels (Electronic Copy)', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Comics--Graphic-Novels-Electronic-Copy-7uETH', 'Comics & Graphic Novels (Electronic Copy)', 'Comics & Graphic Novels (Electronic Copy)', '2023-07-07 20:27:12', '2023-07-07 20:27:12'),
+(65, 5, 1, 'Magazines (Electronic Copy)', 2, 5, 5.00, NULL, NULL, 0, 0, 1, 'Magazines-Electronic-Copy-4SF0P', 'Magazines (Electronic Copy)', 'Magazines (Electronic Copy)', '2023-07-07 20:28:11', '2023-07-07 20:28:11'),
+(66, 5, 1, 'Textbook Access Codes', 2, 5, 5.00, NULL, NULL, 0, 0, 1, 'Textbook-Access-Codes-R9yKy', 'Textbook Access Codes', 'Textbook Access Codes', '2023-07-07 20:29:02', '2023-07-07 20:29:02'),
+(67, 5, 1, 'Result Check Access Codes', 2, 5, 5.00, NULL, NULL, 0, 0, 1, 'Result-Check-Access-Codes-s1PQ3', 'Result Check Access Codes', 'Result Check Access Codes', '2023-07-07 20:29:54', '2023-07-07 20:29:54'),
+(68, 5, 1, 'E-Learning Software Access Codes', 2, 5, 5.00, NULL, NULL, 0, 0, 1, 'E-Learning-Software-Access-Codes-2Qd0B', 'E-Learning Software Access Codes', 'E-Learning Software Access Codes', '2023-07-07 20:30:51', '2023-07-07 20:30:51'),
+(69, 6, 1, 'Bluetooth & Wireless Speakers', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Bluetooth--Wireless-Speakers-ifhYS', 'Bluetooth & Wireless Speakers', 'Bluetooth & Wireless Speakers', '2023-07-07 20:32:00', '2023-07-07 20:32:00'),
+(70, 6, 1, 'Camera, Photo & Video', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Camera-Photo--Video-mKufd', 'Camera, Photo & Video', 'Camera, Photo & Video', '2023-07-07 20:33:05', '2023-07-07 20:33:05'),
+(71, 6, 1, 'Car Electronics', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Car-Electronics-pg1ls', 'Car Electronics', 'Car Electronics', '2023-07-07 20:34:06', '2023-07-07 20:34:06'),
+(72, 6, 1, 'Electronics', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Electronics-EvYjh', 'Electronics', 'Electronics', '2023-07-07 20:35:12', '2023-07-07 20:35:12'),
+(73, 6, 1, 'Headphones', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Headphones-anLoa', 'Headphones', 'Headphones', '2023-07-07 20:36:03', '2023-07-07 20:36:03'),
+(74, 6, 1, 'Home Audio & Theater', 2, 5, 5.00, NULL, NULL, 0, 0, 0, 'Home-Audio--Theater-uzxxg', 'Home Audio & Theater', 'Home Audio & Theater', '2023-07-07 20:37:48', '2023-07-07 20:37:48');
 
 -- --------------------------------------------------------
 
@@ -659,7 +695,43 @@ INSERT INTO `category_translations` (`id`, `category_id`, `name`, `lang`, `creat
 (32, 34, 'Women', 'en', '2023-05-26 18:44:18', '2023-05-26 18:44:18'),
 (33, 35, 'Boys', 'en', '2023-05-26 18:45:02', '2023-05-26 18:45:02'),
 (34, 36, 'Girls', 'en', '2023-05-26 18:45:56', '2023-05-26 18:45:56'),
-(35, 37, 'Baby', 'en', '2023-05-26 18:46:39', '2023-05-26 18:46:39');
+(35, 37, 'Baby', 'en', '2023-05-26 18:46:39', '2023-05-26 18:46:39'),
+(36, 38, 'Baby Shampoo & Wash', 'en', '2023-07-07 19:59:32', '2023-07-07 19:59:32'),
+(38, 40, 'Premium Beauty', 'en', '2023-07-07 20:03:09', '2023-07-07 20:03:09'),
+(39, 41, 'Professional Skin Care', 'en', '2023-07-07 20:03:56', '2023-07-07 20:03:56'),
+(40, 42, 'Salon & Spa', 'en', '2023-07-07 20:05:07', '2023-07-07 20:05:07'),
+(41, 43, 'Men\'s Grooming', 'en', '2023-07-07 20:05:59', '2023-07-07 20:05:59'),
+(42, 44, 'Vitamins & Dietary Supplements', 'en', '2023-07-07 20:06:55', '2023-07-07 20:06:55'),
+(43, 45, 'Health Care', 'en', '2023-07-07 20:07:39', '2023-07-07 20:07:39'),
+(44, 46, 'Sports Nutrition', 'en', '2023-07-07 20:08:37', '2023-07-07 20:08:37'),
+(45, 47, 'Medical Supplies & Equipment', 'en', '2023-07-07 20:09:38', '2023-07-07 20:09:38'),
+(46, 48, 'Health & Wellness', 'en', '2023-07-07 20:10:26', '2023-07-07 20:10:26'),
+(47, 49, 'Children\'s Books(Hard Copy)', 'en', '2023-07-07 20:12:05', '2023-07-07 20:12:05'),
+(48, 50, 'Textbooks (Hard Copy)', 'en', '2023-07-07 20:12:54', '2023-07-07 20:12:54'),
+(49, 51, 'Comics & Graphic Novels (Hard Copy)', 'en', '2023-07-07 20:14:00', '2023-07-07 20:14:00'),
+(50, 52, 'Magazines (Hard Copy)', 'en', '2023-07-07 20:14:44', '2023-07-07 20:14:44'),
+(51, 53, 'Computers, Tablets, & PC Products', 'en', '2023-07-07 20:16:33', '2023-07-07 20:16:33'),
+(52, 54, 'Monitors', 'en', '2023-07-07 20:17:30', '2023-07-07 20:17:30'),
+(53, 55, 'Accessories', 'en', '2023-07-07 20:18:16', '2023-07-07 20:18:16'),
+(54, 56, 'Networking', 'en', '2023-07-07 20:19:01', '2023-07-07 20:19:01'),
+(55, 57, 'Drives & Storage', 'en', '2023-07-07 20:20:00', '2023-07-07 20:20:00'),
+(56, 58, 'Computer Parts & Components', 'en', '2023-07-07 20:20:52', '2023-07-07 20:20:52'),
+(57, 59, 'Printers & Ink', 'en', '2023-07-07 20:21:46', '2023-07-07 20:21:46'),
+(58, 60, 'Software', 'en', '2023-07-07 20:22:30', '2023-07-07 20:22:30'),
+(59, 61, 'E-Book', 'en', '2023-07-07 20:23:24', '2023-07-07 20:23:24'),
+(60, 62, 'Children\'s Books (Electronic Copy)', 'en', '2023-07-07 20:24:30', '2023-07-07 20:24:30'),
+(61, 63, 'Textbooks (Electronic Copy)', 'en', '2023-07-07 20:26:08', '2023-07-07 20:26:08'),
+(62, 64, 'Comics & Graphic Novels (Electronic Copy)', 'en', '2023-07-07 20:27:13', '2023-07-07 20:27:13'),
+(63, 65, 'Magazines (Electronic Copy)', 'en', '2023-07-07 20:28:11', '2023-07-07 20:28:11'),
+(64, 66, 'Textbook Access Codes', 'en', '2023-07-07 20:29:02', '2023-07-07 20:29:02'),
+(65, 67, 'Result Check Access Codes', 'en', '2023-07-07 20:29:54', '2023-07-07 20:29:54'),
+(66, 68, 'E-Learning Software Access Codes', 'en', '2023-07-07 20:30:51', '2023-07-07 20:30:51'),
+(67, 69, 'Bluetooth & Wireless Speakers', 'en', '2023-07-07 20:32:01', '2023-07-07 20:32:01'),
+(68, 70, 'Camera, Photo & Video', 'en', '2023-07-07 20:33:05', '2023-07-07 20:33:05'),
+(69, 71, 'Car Electronics', 'en', '2023-07-07 20:34:06', '2023-07-07 20:34:06'),
+(70, 72, 'Electronics', 'en', '2023-07-07 20:35:12', '2023-07-07 20:35:12'),
+(71, 73, 'Headphones', 'en', '2023-07-07 20:36:03', '2023-07-07 20:36:03'),
+(72, 74, 'Home Audio & Theater', 'en', '2023-07-07 20:37:48', '2023-07-07 20:37:48');
 
 -- --------------------------------------------------------
 
@@ -2830,7 +2902,7 @@ INSERT INTO `products` (`id`, `name`, `added_by`, `user_id`, `category_id`, `bra
 (5, 'Renewed Apple iPhone 11 Pro, US Version, Space Grey', 'admin', 1, 6, 4, '138,140,139,141', '140,138,139,141', 'youtube', 'https://www.youtube.com/watch?v=hVpkbiQ9E4c', 'phones', '<p><br></p>', 371.67, '1', NULL, 0, '[\"1\"]', '[{\"attribute_id\":\"1\",\"values\":[\"64 GB\",\"256 GB\",\"512 GB\"]}]', NULL, '[]', NULL, 1, 1, 1, 'Approved', 'quantity', 1, 1, 0, 0, NULL, NULL, NULL, 1, 5, 3.00, 'percent', 1686355200, 1687046340, NULL, NULL, NULL, 'free', '0', 0, 7, 0, 'Renewed Apple iPhone 11 Pro, US Version, Space Grey', 'Renewed Apple iPhone 11 Pro, US Version, Space Grey', '140,138,139,141', NULL, 'Renewed-Apple-iPhone-11-Pro-US-Version-Space-Grey-1NX1E', 0.00, NULL, 0, NULL, NULL, '2023-06-10 22:10:22', '2023-06-10 22:10:22'),
 (6, 'Cusorcart Men\'s Classic Fit Performance Work Polo', 'admin', 1, 33, 21, '143,142,144', '143,142,144', 'youtube', NULL, 'Men', '<p><strong>Product details</strong></p><ul><li> 100% Polyester</li><li> Nigeria Made</li><li> Button Closure</li><li> Machine Wash</li></ul><p><br></p><p><strong>Materials &amp; Care</strong></p><ul><li> Machine Washable</li><li>Cotton/Polyester/Spandex</li></ul>', 6.94, '1', NULL, 1, '[\"2\"]', '[{\"attribute_id\":\"2\",\"values\":[\"Medium\",\"Large\",\"X-Large\"]}]', NULL, '[]', NULL, 1, 1, 1, 'Approved', 'quantity', 1, 1, 0, 0, NULL, NULL, NULL, 1, 20, 2.30, 'percent', 1686441600, 1687132740, NULL, NULL, NULL, 'free', '0', 0, 4, 0, 'Cusorcart Men\'s Classic Fit Performance Work Polo', 'Cusorcart Men\'s Classic Fit Performance Work Polo', '143,142,144', NULL, 'Cusorcart-Mens-Classic-Fit-Performance-Work-Polo-Rrict', 0.00, NULL, 0, NULL, NULL, '2023-06-10 22:32:33', '2023-06-10 22:32:33'),
 (9, 'Adjustable 2.4G Wireless Vertical Mouse', 'admin', 1, 6, 5, '146,145', '146,145', 'youtube', NULL, 'Electronics', '<p><strong>Adjustable 2.4G Wireless Vertical Mouse</strong> - the perfect solution for personalized comfort and improved productivity. This innovative mouse is designed with ergonomics in mind, allowing you to customize its shape and size to fit your hand perfectly.</p><p><br></p><p>With its adjustable features, you can effortlessly adapt the mouse to your preferred grip style, ensuring optimal comfort and reducing strain during long hours of computer use. The mouse offers various adjustment options, including the ability to modify its width, height, and even the angle of its body, providing a truly tailored experience.</p><p><br></p><p>Equipped with advanced tracking technology, the adjustable mouse delivers precise cursor control and smooth navigation across different surfaces. Its responsive buttons and scroll wheel offer a satisfying clicking experience, enhancing your efficiency while working, gaming, or browsing the web.</p><p>This versatile mouse is compatible with both Windows and Mac operating systems, ensuring seamless integration with your favorite devices. Its wireless connectivity option eliminates the hassle of tangled cords, offering freedom of movement and a clutter-free workspace.</p><p><br></p><p>Upgrade your computing experience with the Adjustable Mouse, and discover a new level of comfort, customization, and precision. Say goodbye to discomfort and hello to productivity with this ergonomic and adaptable companion.</p>', 34.50, '1', NULL, 0, '[]', '[]', NULL, '[]', NULL, 1, 1, 1, 'Approved', 'quantity', 1, 1, 0, 0, 'kg', NULL, 4, 1, 5, 16.67, 'amount', 1686787200, 1687478340, NULL, NULL, NULL, 'free', '0', 0, 4, 0, 'Adjustable 2.4G Wireless Vertical Mouse', 'Adjustable 2.4G Wireless Vertical Mouse', '146,145', NULL, 'Adjustable-24G-Wireless-Vertical-Mouse-x1Zkg', 0.00, NULL, 0, NULL, NULL, '2023-06-15 15:17:16', '2023-06-15 15:17:16'),
-(13, 'Crocs Boys\' Child Realtree Clogs(Ages 1-6)', 'seller', 10, 37, 30, '158,157,156,155,154,153', '158,157,155,156,154,153', 'youtube', NULL, 'baby', '<p><strong>Crocs Boys\' Child Realtree Clogs</strong> are a type of footwear specifically designed for infants and young toddlers. They are lightweight, comfortable, and offer protection for little feet while allowing them to breathe and stay cool in warm weather. </p><p><br></p><p><strong>Crocs Boys\' Child Realtree Clogs</strong> typically feature soft, flexible soles made from materials like rubber, leather, or fabric, which enable natural foot movement and promote healthy development. They come in various styles, including closed-toe, open-toe, and sandal-like designs, with adjustable straps or Velcro closures to ensure a secure fit. </p><p><br></p><p><strong>Crocs Boys\' Child Realtree Clogs</strong> often have cushioned insoles and gentle arch support to provide extra comfort. They are available in a range of colors, patterns, and sizes to suit different age groups, making them a popular choice for parents who want their little ones to explore their surroundings comfortably and in style.</p>', 23.67, '1', NULL, 0, '[]', '[]', NULL, '[]', NULL, 0, 1, 1, NULL, 'quantity', 1, 0, 0, 0, 'g', NULL, 0, 1, 5, 11.20, 'amount', NULL, NULL, NULL, NULL, NULL, 'free', '0', 0, NULL, 0, 'Crocs Boys\' Child Realtree Clogs', 'Crocs Boys\' Child Realtree Clogs', '158,157,155,156,154,153', NULL, 'Crocs-Boys-Child-Realtree-ClogsAges-1-6-pxnQS', 0.00, NULL, 0, NULL, NULL, '2023-06-15 16:26:05', '2023-06-15 16:26:05');
+(13, 'Crocs Boys\' Child Realtree Clogs(Ages 1-6)', 'seller', 10, 37, 30, '158,157,156,155,154,153', '158,157,155,156,154,153', 'youtube', NULL, 'baby', '<p><strong>Crocs Boys\' Child Realtree Clogs</strong> are a type of footwear specifically designed for infants and young toddlers. They are lightweight, comfortable, and offer protection for little feet while allowing them to breathe and stay cool in warm weather. </p><p><br></p><p><strong>Crocs Boys\' Child Realtree Clogs</strong> typically feature soft, flexible soles made from materials like rubber, leather, or fabric, which enable natural foot movement and promote healthy development. They come in various styles, including closed-toe, open-toe, and sandal-like designs, with adjustable straps or Velcro closures to ensure a secure fit. </p><p><br></p><p><strong>Crocs Boys\' Child Realtree Clogs</strong> often have cushioned insoles and gentle arch support to provide extra comfort. They are available in a range of colors, patterns, and sizes to suit different age groups, making them a popular choice for parents who want their little ones to explore their surroundings comfortably and in style.</p>', 23.67, '1', NULL, 0, '[]', '[]', NULL, '[]', NULL, 1, 1, 1, 'Approved', 'quantity', 1, 1, 0, 0, 'g', NULL, 0, 1, 5, 11.20, 'amount', NULL, NULL, NULL, NULL, NULL, 'free', '0', 0, NULL, 0, 'Crocs Boys\' Child Realtree Clogs', 'Crocs Boys\' Child Realtree Clogs', '158,157,155,156,154,153', NULL, 'Crocs-Boys-Child-Realtree-ClogsAges-1-6-pxnQS', 0.00, NULL, 0, NULL, NULL, '2023-06-15 16:26:05', '2023-07-07 19:50:48');
 
 -- --------------------------------------------------------
 
@@ -5224,7 +5296,7 @@ INSERT INTO `users` (`id`, `referred_by`, `provider_id`, `user_type`, `name`, `e
 (4, NULL, NULL, 'delivery_boy', 'Oly', 'olynnadi@gmail.com', NULL, 'eyJpdiI6InpLVk16NG1EbVIwK25MTncyU2liOEE9PSIsInZhbHVlIjoiR1RxK0tsQTc3Q1NqV0Z1K296ZjVtQT09IiwibWFjIjoiMjc5ZjM3OThmMmE5OWMwYzJiMWZhZTc0MWMzMjQ0ODM0OTA0YmEzNTU0OThmZjZhOGI3Nzg4NzgzYmE0YTJlOCIsInRhZyI6IiJ9', NULL, '$2y$10$0E1XjDg.BjqozasaPHoCXuo3c34kj/9s9FQ9uOKDUj.LXaBsl56LS', 'BIeAzN1vU7ss4FxwyddL2hHdcCMkhjT9mCmyaBCTBpsBVUpkPEZYn0kRPW1J', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2023-05-29 22:35:44', '2023-05-29 22:35:44'),
 (5, NULL, NULL, 'seller', 'Ada', 'ada@gmail.com', NULL, 'eyJpdiI6ImlBWWZ5emNtUTRPb3BRWmJHWUV2K0E9PSIsInZhbHVlIjoicE5wMGF6emNDYXVzb0x5Smh3TFJOZz09IiwibWFjIjoiYTkyNDE5Y2NkMjMxOTdjY2QwZGYxZWU3NmQxOTlmMDQ0MGMyYTU5MWY2MTZlZTkyY2EwMjZjZjgwYTJjZTU1OCIsInRhZyI6IiJ9', 'SmsQ9iBFcklg9JjN5lGAYWxF5W4IDtNh', '$2y$10$u1bBhvcbn/H3xRDXqMd9u.eNd2C0G4JcyBy2GV.HkXYymLhhPnQIG', 'UJSuVphKy2xC3ajB9YpBWDnQDEdG5RpCo36TiTHheJ8dAJOuW07nbrdmmoQf', NULL, '111', NULL, NULL, NULL, NULL, '09033688922', 0.00, 0, NULL, NULL, 0, '2023-05-29 23:11:10', '2023-05-29 23:37:54'),
 (6, NULL, NULL, 'logistic', 'Ife', 'ife@gmail.com', NULL, 'eyJpdiI6IlJiQ2lqUFliQ1orMGI0MythcVE3ZEE9PSIsInZhbHVlIjoid1dldmU2L3JFWmxRcnZzZ2xVdzVEUT09IiwibWFjIjoiOWFmODg3M2VjYTY2MTA0NmQ2NmYxMjUzYjhkNGEwYmVhN2VmNDJmOWI1NjgxYjVlZWNmYmI4ZmE1NTYxOTY4OCIsInRhZyI6IiJ9', NULL, '$2y$10$Nth4iUpKN9Rvi.UcQMGBYuoflInddp62YThN2CUJtE1iu1G3Xlt1.', '2oYGxuCp8uDP7J6XheGHJnRGzHoVuXIBRn0Z40b7hAf4jVkYjtxDq1UGuRoh', NULL, '113', '234-CFSD Mall', NULL, NULL, NULL, '09033688922', 0.00, 0, NULL, NULL, 0, '2023-05-30 07:30:51', '2023-06-03 23:02:31'),
-(10, NULL, NULL, 'seller', 'Chika', 'beekyhe003@gmail.com', NULL, 'eyJpdiI6IjlkTHVFMWYycVd0dkJOU2MrVVB1MWc9PSIsInZhbHVlIjoicWJEcXI5TVBWRmVIYnZHa0NveEdmQT09IiwibWFjIjoiNjI3OTIwNjI1ZTc5OWEwYTBmNTJiMzA2MmFiYTlhZGMxY2Y2NTMyMzU3YzU4YzgzOTM1Yzk2MTViOGM4NTNkMiIsInRhZyI6IiJ9', NULL, '$2y$10$hWY9IkNSOe47DWOIraybou/igTOWZ6tOUl0wict8ymZZjl0ndY.v.', 'zWDDIfItIys3mdL1yXGFPAtLEtr0FJAoz6ENohjXu8yWwqc7vYy7FchcQpMI', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2023-06-15 15:52:09', '2023-06-15 15:52:09');
+(10, NULL, NULL, 'seller', 'Chika', 'beekyhe003@gmail.com', NULL, 'eyJpdiI6IjlkTHVFMWYycVd0dkJOU2MrVVB1MWc9PSIsInZhbHVlIjoicWJEcXI5TVBWRmVIYnZHa0NveEdmQT09IiwibWFjIjoiNjI3OTIwNjI1ZTc5OWEwYTBmNTJiMzA2MmFiYTlhZGMxY2Y2NTMyMzU3YzU4YzgzOTM1Yzk2MTViOGM4NTNkMiIsInRhZyI6IiJ9', NULL, '$2y$10$hWY9IkNSOe47DWOIraybou/igTOWZ6tOUl0wict8ymZZjl0ndY.v.', 'XuJhOBGB4paNn2eaNwknmW2KVmtUW6bSw0khBERbl7ydK7XfiZ6PYaprJYkJ', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0.00, 0, NULL, NULL, 0, '2023-06-15 15:52:09', '2023-06-15 15:52:09');
 
 -- --------------------------------------------------------
 
@@ -5880,13 +5952,13 @@ ALTER TABLE `carts`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 
 --
 -- AUTO_INCREMENT for table `category_translations`
 --
 ALTER TABLE `category_translations`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- AUTO_INCREMENT for table `cities`
