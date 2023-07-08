@@ -80,9 +80,9 @@ Laravel-based e-commerce application, a B2B(Business-to-business) online store w
 
 ### Screenshots
 
--- You can create your own database with name cusorcart
--- Admin Email -- admin@admin.com
--- Admin Password -- 123456(This is used for all the passwords)
+1. You can create your own database with name cusorcart
+2. Admin Email -- admin@admin.com
+3. Admin Password -- 123456(This is used for all the passwords)
 
 
 ![Login](https://github.com/Chimennadi/cusorcart/blob/main/screenshots/login.png)
