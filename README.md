@@ -1,4 +1,4 @@
-## Laravel E-commerce Website
+## Laravel B2B E-commerce Shopping System
 
 #### Laravel-based e-commerce application. An online store with essential features such as product catalog, shopping cart, order management, user authentication, and payment integration.
 
