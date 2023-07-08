@@ -2,8 +2,6 @@
 
 #### Laravel-based e-commerce application. An online store with essential features such as product catalog, shopping cart, order management, user authentication, and payment integration.
 
-[![StyleCI](https://styleci.io/repos/44714043/shield?branch=master)](https://styleci.io/repos/44714043)
-[![MadeWithLaravel.com shield](https://madewithlaravel.com/storage/repo-shields/1342-shield.svg)](https://madewithlaravel.com/p/cusorcart/shield-link)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 [![GitHub Stars](https://img.shields.io/github/stars/Chimennadi/cusorcart?style=social)](https://github.com/Chimennadi)
@@ -38,17 +36,14 @@ Laravel-based e-commerce application, a B2B(Business-to-business) online store w
 
 1. Run `git clone https://github.com/Chimennadi/cusorcart.git cusorcart`
 2. Create a MySQL database for the project
-    - `mysql -u root -p`, if using Vagrant: `mysql -u homestead -psecret`
-    - `create database cusorcart;`
-    - `\q`
-3. From the projects root run `cp .env.example .env`
+    - `create database cusorcart;` import the cusorcart file located at the root folder to your MYSQL database.
 4. Configure your `.env` file
 5. Install composer, php-mysql, php-ext and php-dom (dependent on your distribution, For Debian run `apt install composer php-mysql php-ext php-dom`)
 6. Run `composer update` from the projects root folder
 7. From the projects root folder run:
 
 7. From the projects root folder run `sudo chmod -R 755 ../cusorcart`
-8. From the projects root folder run `php artisan key:generate`
+8. From the projects root folder run `php artisan key:generate`: Optional
 10. From the projects root folder run `composer dump-autoload`
 12. Compile the front end assets with [npm steps](#using-npm) or [yarn steps](#using-yarn).
 
@@ -73,7 +68,6 @@ Laravel-based e-commerce application, a B2B(Business-to-business) online store w
 
 1. From the projects root folder run `php artisan config:cache`
 
-###### And thats it with the caveat of setting up and configuring your development environment. I recommend [Laravel Homestead](https://laravel.com/docs/master/homestead)
 
 
 #### Get Socialite Login API Keys:
@@ -92,32 +86,52 @@ Laravel-based e-commerce application, a B2B(Business-to-business) online store w
 
 
 ![Login](https://github.com/Chimennadi/cusorcart/blob/main/screenshots/login.png)
+
+--------------------------------------------------------------------------------------
+
 ![Register](https://github.com/Chimennadi/cusorcart/blob/main/screenshots/register.png)
+
+--------------------------------------------------------------------------------------
+
 ![FrontPage](https://github.com/Chimennadi/cusorcart/blob/main/screenshots/frontpage.png)
+
+--------------------------------------------------------------------------------------
 
 `Admin Panel`
 
 ![Admin Panel](https://github.com/Chimennadi/cusorcart/blob/main/screenshots/admin.png)
 
+--------------------------------------------------------------------------------------
+
 `Seller Panel`
 
 ![Seller Panel](https://github.com/Chimennadi/cusorcart/blob/main/screenshots/seller.png)
+
+-------------------------------------------------------------------------------------
 
 `Staff Panel`
 
 ![Staff Panel](https://github.com/Chimennadi/cusorcart/blob/main/screenshots/staff.png)
 
+--------------------------------------------------------------------------------------
+
 `Customer Panel`
 
 ![Customer Panel](https://github.com/Chimennadi/cusorcart/blob/main/screenshots/customer.png)
+
+--------------------------------------------------------------------------------------
 
 `Delivery Panel`
 
 ![Delivery Boy Panel](https://github.com/Chimennadi/cusorcart/blob/main/screenshots/delivery_boy.png)
 
+--------------------------------------------------------------------------------------
+
 `Email Verification`
 
 ![Email Verification](https://github.com/Chimennadi/cusorcart/blob/main/screenshots/email_register.png)
+
+---------------------------------------------------------------------------------------
 
 `MYSQL Database`
 
