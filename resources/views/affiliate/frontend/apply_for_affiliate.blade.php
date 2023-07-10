@@ -70,11 +70,7 @@
                                             <div class="form-group">
                                                 <div class="input-group input-group--style-1">
                                                     <input id="password-field"  type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="{{ translate('Password') }}" name="password">
-                                                   
-                                                   <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password" aria-hidden="true"></span>
-                                                    <!--<span class="input-group-addon">-->
-                                                    <!--    <i class="las la-lock"></i>-->
-                                                    <!--</span>-->
+                                                    <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password" aria-hidden="true"></span>
                                                 </div>
                                             </div>
                                         </div>
