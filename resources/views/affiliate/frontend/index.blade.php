@@ -15,15 +15,15 @@
                     </div>
                     <div class="row gutters-10">
                         <div class="col-md-4 mx-auto mb-3" >
-                          <div class="bg-grad-1 text-white rounded-lg overflow-hidden">
-                            <span class="size-30px rounded-circle mx-auto bg-soft-primary d-flex align-items-center justify-content-center mt-3">
-                                <i class="las la-dollar-sign la-2x text-white"></i>
-                            </span>
-                            <div class="px-3 pt-3 pb-3">
-                                <div class="h4 fw-700 text-center">{{ single_price(Auth::user()->affiliate_user->balance) }}</div>
-                                <div class="opacity-50 text-center">{{ translate('Affiliate Balance') }}</div>
+                            <div class="bg-grad-1 text-white rounded-lg overflow-hidden">
+                                <span class="size-30px rounded-circle mx-auto bg-soft-primary d-flex align-items-center justify-content-center mt-3">
+                                    <i class="las la-dollar-sign la-2x text-white"></i>
+                                </span>
+                                <div class="px-3 pt-3 pb-3">
+                                    <div class="h4 fw-700 text-center">{{ single_price(Auth::user()->affiliate_user->balance) }}</div>
+                                    <div class="opacity-50 text-center">{{ translate('Affiliate Balance') }}</div>
+                                </div>
                             </div>
-                          </div>
                         </div>
                         <div class="col-md-4 mx-auto mb-3" >
                             <a href="{{ route('affiliate.payment_settings') }}">
@@ -36,12 +36,12 @@
                             </a>
                         </div>
                         <div class="col-md-4 mx-auto mb-3" >
-                          <div class="p-3 rounded mb-3 c-pointer text-center bg-white shadow-sm hov-shadow-lg has-transition" onclick="show_affiliate_withdraw_modal()">
-                              <span class="size-60px rounded-circle mx-auto bg-secondary d-flex align-items-center justify-content-center mb-3">
-                                  <i class="las la-plus la-3x text-white"></i>
-                              </span>
-                              <div class="fs-18 text-primary">{{  translate('Affiliate Withdraw Request') }}</div>
-                          </div>
+                            <div class="p-3 rounded mb-3 c-pointer text-center bg-white shadow-sm hov-shadow-lg has-transition" onclick="show_affiliate_withdraw_modal()">
+                                <span class="size-60px rounded-circle mx-auto bg-secondary d-flex align-items-center justify-content-center mb-3">
+                                    <i class="las la-plus la-3x text-white"></i>
+                                </span>
+                                <div class="fs-18 text-primary">{{  translate('Affiliate Withdraw Request') }}</div>
+                            </div>
                         </div>
                     </div>
 
@@ -213,81 +213,6 @@
                             </div>
                         </div>
                     </div>
-                    {{-- <div class="row">
-                        <div class="col-md-6">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="mb-0 h6">{{ translate('Affiliate payment history')}}</h5>
-                                </div>
-                                  <div class="card-body">
-                                      <table class="table aiz-table mb-0">
-                                          <thead>
-                                              <tr>
-                                                  <th>#</th>
-                                                  <th>{{ translate('Date') }}</th>
-                                                  <th>{{translate('Amount')}}</th>
-                                                  <th>{{translate('Payment Method')}}</th>
-                                              </tr>
-                                          </thead>
-                                          <tbody>
-                                              @foreach ($affiliate_payments as $key => $affiliate_payment)
-                                                  <tr>
-                                                      <td>{{ $key+1 }}</td>
-                                                      <td>{{ date('d-m-Y', strtotime($affiliate_payment->created_at)) }}</td>
-                                                      <td>{{ single_price($affiliate_payment->amount) }}</td>
-                                                      <td>{{ ucfirst(str_replace('_', ' ', $affiliate_payment ->payment_method)) }}</td>
-                                                  </tr>
-                                              @endforeach
-
-                                          </tbody>
-                                      </table>
-                                      <div class="aiz-pagination">
-                                          {{ $affiliate_payments->links() }}
-                                      </div>
-                                  </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="mb-0 h6">{{ translate('Affiliate withdraw request history')}}</h5>
-                                </div>
-                                  <div class="card-body">
-                                      <table class="table aiz-table mb-0">
-                                          <thead>
-                                              <tr>
-                                                  <th>#</th>
-                                                  <th>{{ translate('Date') }}</th>
-                                                  <th>{{ translate('Amount')}}</th>
-                                                  <th>{{ translate('Status')}}</th>
-                                              </tr>
-                                          </thead>
-                                          <tbody>
-                                              @foreach ($affiliate_withdraw_requests as $key => $affiliate_withdraw_request)
-                                                  <tr>
-                                                      <td>{{ $key+1 }}</td>
-                                                      <td>{{ date('d-m-Y', strtotime($affiliate_withdraw_request->created_at)) }}</td>
-                                                      <td>{{ single_price($affiliate_withdraw_request->amount) }}</td>
-                                                      <td>
-                                                          @if($affiliate_withdraw_request->status == 1)
-                                                              <span class="badge badge-inline badge-success">{{translate('Approved')}}</span>
-                                                          @elseif($affiliate_withdraw_request->status == 2)
-                                                              <span class="badge badge-inline badge-danger">{{translate('Rejected')}}</span>
-                                                          @else
-                                                              <span class="badge badge-inline badge-info">{{translate('Pending')}}</span>
-                                                          @endif
-                                                      </td>
-                                                  </tr>
-                                              @endforeach
-                                          </tbody>
-                                      </table>
-                                      <div class="aiz-pagination">
-                                          {{ $affiliate_withdraw_requests->links() }}
-                                      </div>
-                                  </div>
-                            </div>
-                        </div>
-                    </div> --}}
                 </div>
             </div>
         </div>
