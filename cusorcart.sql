@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 08, 2023 at 11:48 PM
+-- Generation Time: Jul 10, 2023 at 09:19 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -116,7 +116,22 @@ INSERT INTO `attributes` (`id`, `name`, `created_at`, `updated_at`) VALUES
 (1, 'Size', '2020-02-24 05:55:07', '2020-02-24 05:55:07'),
 (2, 'Fabric Sizes', '2020-02-24 05:55:13', '2023-05-28 19:37:28'),
 (3, 'Gender', '2023-05-28 13:07:29', '2023-05-28 13:07:29'),
-(4, 'Shoe Size', '2023-06-15 16:27:14', '2023-06-15 16:27:14');
+(4, 'Shoe Size', '2023-06-15 16:27:14', '2023-06-15 16:27:14'),
+(5, 'Quality', '2023-07-10 06:06:23', '2023-07-10 06:06:23'),
+(6, 'Color', '2023-07-10 06:06:35', '2023-07-10 06:06:35'),
+(7, 'Innovation', '2023-07-10 06:07:21', '2023-07-10 06:07:21'),
+(8, 'Design', '2023-07-10 06:07:32', '2023-07-10 06:07:32'),
+(9, 'Content', '2023-07-10 06:07:44', '2023-07-10 06:07:44'),
+(10, 'Smell', '2023-07-10 06:07:53', '2023-07-10 06:07:53'),
+(11, 'Taste', '2023-07-10 06:08:04', '2023-07-10 06:08:04'),
+(12, 'Feel', '2023-07-10 06:08:17', '2023-07-10 06:08:17'),
+(13, 'Quantity', '2023-07-10 06:08:28', '2023-07-10 06:08:28'),
+(14, 'Material makeup or ingredients', '2023-07-10 06:08:55', '2023-07-10 06:08:55'),
+(15, 'Price', '2023-07-10 06:09:09', '2023-07-10 06:09:09'),
+(16, 'Reliability', '2023-07-10 06:09:31', '2023-07-10 06:09:31'),
+(17, 'Verification and safety', '2023-07-10 06:09:48', '2023-07-10 06:09:48'),
+(18, 'Packaging', '2023-07-10 06:10:01', '2023-07-10 06:10:01'),
+(19, 'Marketing claims', '2023-07-10 06:10:24', '2023-07-10 06:10:24');
 
 -- --------------------------------------------------------
 
@@ -140,7 +155,22 @@ CREATE TABLE `attribute_translations` (
 INSERT INTO `attribute_translations` (`id`, `attribute_id`, `name`, `lang`, `created_at`, `updated_at`) VALUES
 (1, 3, 'Gender', 'en', '2023-05-28 13:07:29', '2023-05-28 13:07:29'),
 (2, 2, 'Fabric Sizes', 'en', '2023-05-28 19:37:28', '2023-05-28 19:37:28'),
-(3, 1, 'Size', 'en', '2023-06-10 22:03:40', '2023-06-10 22:03:40');
+(3, 1, 'Size', 'en', '2023-06-10 22:03:40', '2023-06-10 22:03:40'),
+(4, 5, 'Quality', 'en', '2023-07-10 06:06:23', '2023-07-10 06:06:23'),
+(5, 6, 'Color', 'en', '2023-07-10 06:06:35', '2023-07-10 06:06:35'),
+(6, 7, 'Innovation', 'en', '2023-07-10 06:07:21', '2023-07-10 06:07:21'),
+(7, 8, 'Design', 'en', '2023-07-10 06:07:33', '2023-07-10 06:07:33'),
+(8, 9, 'Content', 'en', '2023-07-10 06:07:44', '2023-07-10 06:07:44'),
+(9, 10, 'Smell', 'en', '2023-07-10 06:07:54', '2023-07-10 06:07:54'),
+(10, 11, 'Taste', 'en', '2023-07-10 06:08:04', '2023-07-10 06:08:04'),
+(11, 12, 'Feel', 'en', '2023-07-10 06:08:17', '2023-07-10 06:08:17'),
+(12, 13, 'Quantity', 'en', '2023-07-10 06:08:28', '2023-07-10 06:08:28'),
+(13, 14, 'Material makeup or ingredients', 'en', '2023-07-10 06:08:55', '2023-07-10 06:08:55'),
+(14, 15, 'Price', 'en', '2023-07-10 06:09:09', '2023-07-10 06:09:09'),
+(15, 16, 'Reliability', 'en', '2023-07-10 06:09:31', '2023-07-10 06:09:31'),
+(16, 17, 'Verification and safety', 'en', '2023-07-10 06:09:48', '2023-07-10 06:09:48'),
+(17, 18, 'Packaging', 'en', '2023-07-10 06:10:01', '2023-07-10 06:10:01'),
+(18, 19, 'Marketing claims', 'en', '2023-07-10 06:10:24', '2023-07-10 06:10:24');
 
 -- --------------------------------------------------------
 
@@ -5587,7 +5617,19 @@ INSERT INTO `translations` (`id`, `lang`, `lang_key`, `lang_value`, `created_at`
 (1856, 'en', 'An email has been sent.', 'An email has been sent.', '2023-06-15 15:50:03', '2023-06-15 15:50:03'),
 (1857, 'en', 'You do not have enough balance to send withdraw request', 'You do not have enough balance to send withdraw request', '2023-06-15 17:39:31', '2023-06-15 17:39:31'),
 (1858, 'en', 'City Upload', 'City Upload', '2023-07-08 16:40:06', '2023-07-08 16:40:06'),
-(1859, 'en', 'City File Upload Csv', 'City File Upload Csv', '2023-07-08 16:40:06', '2023-07-08 16:40:06');
+(1859, 'en', 'City File Upload Csv', 'City File Upload Csv', '2023-07-08 16:40:06', '2023-07-08 16:40:06'),
+(1860, 'en', 'State Upload', 'State Upload', '2023-07-10 05:47:50', '2023-07-10 05:47:50'),
+(1861, 'en', 'State File Upload Csv', 'State File Upload Csv', '2023-07-10 05:47:50', '2023-07-10 05:47:50'),
+(1862, 'en', 'Save Product', 'Save Product', '2023-07-10 05:51:19', '2023-07-10 05:51:19'),
+(1863, 'en', 'Step 1', 'Step 1', '2023-07-10 05:56:05', '2023-07-10 05:56:05'),
+(1864, 'en', 'Download the skeleton file and fill it with proper data', 'Download the skeleton file and fill it with proper data', '2023-07-10 05:56:05', '2023-07-10 05:56:05'),
+(1865, 'en', 'You can download the example file to understand how the data must be filled', 'You can download the example file to understand how the data must be filled', '2023-07-10 05:56:05', '2023-07-10 05:56:05'),
+(1866, 'en', 'Once you have downloaded and filled the skeleton file, upload it in the form below and submit', 'Once you have downloaded and filled the skeleton file, upload it in the form below and submit', '2023-07-10 05:56:05', '2023-07-10 05:56:05'),
+(1867, 'en', 'After uploading products you need to edit them and set product\'s images and choices', 'After uploading products you need to edit them and set product\'s images and choices', '2023-07-10 05:56:05', '2023-07-10 05:56:05'),
+(1868, 'en', 'Step 2', 'Step 2', '2023-07-10 05:56:05', '2023-07-10 05:56:05'),
+(1869, 'en', 'Category and Brand should be in numerical id', 'Category and Brand should be in numerical id', '2023-07-10 05:56:05', '2023-07-10 05:56:05'),
+(1870, 'en', 'You can download the pdf to get Category and Brand id', 'You can download the pdf to get Category and Brand id', '2023-07-10 05:56:05', '2023-07-10 05:56:05'),
+(1871, 'en', 'Upload Product File', 'Upload Product File', '2023-07-10 05:56:05', '2023-07-10 05:56:05');
 
 -- --------------------------------------------------------
 
@@ -6426,13 +6468,13 @@ ALTER TABLE `app_settings`
 -- AUTO_INCREMENT for table `attributes`
 --
 ALTER TABLE `attributes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `attribute_translations`
 --
 ALTER TABLE `attribute_translations`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `attribute_values`
@@ -6858,7 +6900,7 @@ ALTER TABLE `ticket_replies`
 -- AUTO_INCREMENT for table `translations`
 --
 ALTER TABLE `translations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1860;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1872;
 
 --
 -- AUTO_INCREMENT for table `uploads`
